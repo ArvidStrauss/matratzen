@@ -1,0 +1,24 @@
+---
+import type { Block } from '../../content.config';
+import Section from '../Section.astro';
+
+type Props = Extract<Block, { component: 'linkList' }>;
+const { heading, links } = Astro.props;
+---
+
+<Section class="!py-10">
+  <div class="flex flex-col gap-4 lg:flex-row lg:items-center">
+    <p class="shrink-0 font-semibold text-brand-800">{heading}</p>
+    <ul class="flex flex-wrap gap-2">
+      {
+        links.map((link) => (
+          <li>
+            <a href={link.href} class="inline-block rounded-full border border-sand-200 bg-sand-50 px-4 py-2 text-sm text-ink/80 hover:border-brand-300 hover:text-brand-700">
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Section>

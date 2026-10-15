@@ -1,0 +1,20 @@
+---
+import { formatEuro } from '../lib/format';
+
+interface Props {
+  from: number;
+  regular?: number;
+  prefix?: string;
+  suffix?: string;
+  size?: 'md' | 'lg';
+}
+
+const { from, regular, prefix = 'ab', suffix, size = 'md' } = Astro.props;
+---
+
+<p class="flex flex-wrap items-baseline gap-x-2">
+  {regular !== undefined && <s class="text-sm text-muted">{formatEuro(regular)}</s>}
+  <span class="text-sm text-muted [.tone-dark_&]:text-brand-100">{prefix}</span>
+  <span class:list={['font-bold text-brand-700 [.tone-dark_&]:text-white', size === 'lg' ? 'text-3xl' : 'text-xl']}>{formatEuro(from)}</span>
+  {suffix && <span class="text-sm text-muted">{suffix}</span>}
+</p>

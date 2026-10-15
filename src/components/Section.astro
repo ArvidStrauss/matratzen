@@ -1,0 +1,21 @@
+---
+interface Props {
+  tone?: 'plain' | 'sand' | 'brand' | 'accent';
+  class?: string;
+  innerClass?: string;
+}
+
+const { tone = 'plain', class: className, innerClass } = Astro.props;
+const tones = {
+  plain: 'bg-white',
+  sand: 'bg-sand-100',
+  brand: 'bg-brand-800 text-white tone-dark',
+  accent: 'bg-accent-100',
+};
+---
+
+<section class:list={[tones[tone], 'py-14 sm:py-20', className]}>
+  <div class:list={['container-page', innerClass]}>
+    <slot />
+  </div>
+</section>

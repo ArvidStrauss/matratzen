@@ -1,0 +1,18 @@
+---
+import { getEntries } from 'astro:content';
+import type { Block } from '../../content.config';
+import Section from '../Section.astro';
+import SectionHeading from '../SectionHeading.astro';
+import ProductCard from '../ProductCard.astro';
+
+type Props = Extract<Block, { component: 'productGrid' }>;
+const { heading, cta } = Astro.props;
+const products = await getEntries(Astro.props.products);
+---
+
+<Section tone="sand">
+  <SectionHeading heading={heading} />
+  <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+    {products.map((p) => <ProductCard product={p.data} cta={cta} />)}
+  </div>
+</Section>

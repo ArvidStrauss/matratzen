@@ -1,0 +1,16 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  src: string;
+  alt: string;
+  class?: string;
+  loading?: 'lazy' | 'eager';
+}
+
+const { src, alt, class: className, loading = 'lazy' } = Astro.props;
+// Source URLs may contain umlauts; normalise to a single encoding.
+const url = encodeURI(decodeURI(src));
+---
+
+<Image src={url} alt={alt} inferSize class={className} loading={loading} decoding="async" format="webp" quality={80} />

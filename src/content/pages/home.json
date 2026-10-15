@@ -1,0 +1,403 @@
+{
+  "path": "/",
+  "title": "Matratzen und Boxspring in Lübeck, Kiel, Hamburg",
+  "body": [
+    {
+      "component": "promoTiles",
+      "tiles": [
+        {
+          "title": "Boxspring Design-Wochen",
+          "subtitle": "25% auf Boxspring-Gestelle »",
+          "href": "/produkte/boxspringbetten/boxspringbetten-angebote/",
+          "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2018/12/boxspringbett-designwochen-kaufen-aktion.jpg", "alt": "" }
+        },
+        {
+          "title": "Filiale Hamburg",
+          "subtitle": "040 / 52 90 1000",
+          "href": "/filialen/filiale-hamburg/",
+          "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2018/09/gesunde-matratzen-filiale-hamburg.jpg", "alt": "" },
+          "tour360": true
+        },
+        {
+          "title": "Matratzen Lübeck",
+          "subtitle": "0451 / 7 70 07",
+          "href": "/matratzen-luebeck/",
+          "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2018/09/gesunde-matratzen-filiale-luebeck.jpg", "alt": "" },
+          "tour360": true
+        },
+        {
+          "title": "Filiale Kiel",
+          "subtitle": "0451 / 7 70 07",
+          "href": "/filialen/filiale-kiel/",
+          "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2019/07/gesunde-matratzen-filiale-neu-kiel.jpg", "alt": "" },
+          "tour360": true
+        },
+        {
+          "title": "Testsieger-Wochen",
+          "subtitle": "Riesenauswahl getesteter Matratzen »",
+          "href": "/produkte/testsieger-matratzen/",
+          "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2021/11/Testsiegerwochen-kaufen-header-teaser.jpg", "alt": "" }
+        }
+      ]
+    },
+    {
+      "component": "hero",
+      "headingLines": ["Gesunde Matratzen Manufaktur seit 1991", "Matratzen & Boxspring"],
+      "subheading": "Riesenauswahl [getestete Matratzen](/produkte/testsieger-matratzen/), [Matratzen aus eigener Fertigung](/produkte/silwa-schlafsystem/), [Boxspringbetten](/produkte/boxspringbetten/) und [Wasserbetten](/produkte/wasserbetten/)",
+      "seal": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2025/06/Siegel-Echte-Fachhandel.jpg", "alt": "Siegel Echte Fachhandel" },
+      "introTitle": "Führend in der Schlafberatung und Matratzenauswahl:",
+      "bullets": [
+        "seit **1991** vertrauen über zehntausende Kunden unserer produktneutralen, zertifizierten Schlafberatung",
+        "große Ausstellung getesteter Matratzen, viele Marken",
+        "bewährte [Rückgaberechte](/rueckgaberecht/) bis zu 111 Tagen",
+        "unsere mit Physiotherapeuten entwickelte Liegevermessung",
+        "eigene Matratzen- und Wasserbetten-Entwicklung und Produktion"
+      ],
+      "rating": {
+        "title": "Unser Ziel sind stets zufriedene Kunden",
+        "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/05/bewertungen-grafik.png", "alt": "Bewertungen Gesunde Matratzen Grafik" },
+        "cta": { "label": "Mehr Bewertungen hier »", "href": "/bewertungen/" }
+      },
+      "aside": {
+        "title": "KOSTENLOSE COMPUTER MATRATZEN-VERMESSUNG für jedermann.",
+        "video": "https://gesunde-matratzen.de/wp-content/uploads/2023/11/Silwa_Vermessung_Video.mp4",
+        "poster": "https://gesunde-matratzen.de/wp-content/uploads/2023/11/video-silwa-vermessung-2023.jpg",
+        "caption": "Zertifizierte Schlafberater gehen auf Ihre persönlichen, ergonomischen Liegeansprüche ein.",
+        "text": [
+          "Wir ermitteln bei jeder Schlafberatung gratis Ihr persönliches Liegeprofil in wenigen Minuten. Die perfekte Druckentlastung, der richtige Härtegrad, die ergonomische richtige Zoneneinteilung für Ihre Schulter-/Beckenentlastung sowie das passende Bettklima, ob wärmer oder kälter, wird gezielt mit Ihnen besprochen. Vertrauen Sie unserer zertifizierten Schlafberatung und unseren Physiotherapeuten.",
+          "**Gratis Vermessung auch auf Boxspring-Matratzen!**"
+        ],
+        "cta": { "label": "Nähere Infos zu unserer Vermessungsstation »", "href": "/produkte/silwa-schlafsystem/silwa-vermessung/" }
+      }
+    },
+    {
+      "component": "categoryPrices",
+      "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2021/07/Fast-alles-fuer-den-gesunden-Schlaf.png", "alt": "Angebote rund ums Thema Schlafen" },
+      "items": [
+        { "label": "SILWA System-Matratzen aus eigener Herstellung", "price": 199, "href": "/produkte/silwa-schlafsystem/" },
+        { "label": "Getestete Matratzen", "price": 199, "href": "/produkte/testsieger-matratzen/" },
+        { "label": "Marken-Matratzen", "price": 199, "href": "/produkte/marken-matratzen/" },
+        { "label": "SILWA System-Lattenroste aus eigener Herstellung", "price": 239, "href": "/produkte/silwa-schlafsystem/lattenroste/" },
+        { "label": "Lattenroste", "price": 165, "href": "/produkte/lattenroste/" },
+        { "label": "Bettgestelle", "price": 407, "href": "/produkte/bettgestelle/" },
+        { "label": "Boxspringbetten", "price": 899, "href": "/produkte/boxspringbetten/" },
+        { "label": "Komplettbetten", "price": 999, "href": "/komplettbetten/" },
+        { "label": "Wasserbetten", "price": 799, "href": "/produkte/wasserbetten/" }
+      ]
+    },
+    {
+      "component": "productGrid",
+      "heading": "Unsere Empfehlungen für Sie im Matratzen-Bereich",
+      "products": ["silwa-classic-15", "breckle-pro-body-s-592", "irisette-sinus-lotus", "silwa-4-feelings-21", "silwa-hybrid"],
+      "cta": { "label": "Beratungstermin", "href": "/beratungstermin/" }
+    },
+    {
+      "component": "mediaText",
+      "heading": "SILWA Komfort- und Pflegebetten in unseren Filialen Hamburg und Lübeck",
+      "headingHref": "/silwa-libra-komfort-und-pflegebetten/",
+      "body": [
+        "Unsere Komfort- und Seniorenbetten schaffen Ihnen mehr Lebensqualität – ob im fortschreitenden Alter oder zur flexiblen Unterstützung in der Pflege. Jetzt unsere modernen und komfortablen Betten entdecken und Lebensqualität steigern!"
+      ],
+      "price": { "from": 2899, "suffix": "zzgl. Matratzen" },
+      "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2025/07/Komfort-und-Pflegebett-Silwa-Deluxe-Komfort.jpg", "alt": "Komfort- und Pflegebett Silwa Deluxe Komfort" },
+      "imageHref": "/silwa-libra-komfort-und-pflegebetten/",
+      "ctas": [{ "label": "Ausführliche Infos zum Silwa Libra Komfort »", "href": "/silwa-libra-komfort-und-pflegebetten/" }],
+      "tone": "sand"
+    },
+    {
+      "component": "mediaText",
+      "heading": "Getestete Matratzen",
+      "body": [
+        "Größte aktuelle Ausstellung getesteter Matratzen im Norden mit bis zu 50 % Marken-Rabatt und vielen Rückgaberechten bis zu 90 Tagen. Getestete Matratze schon ab 199 €, Matratzen schon ab 199 €. Liegen Sie unbedingt Probe, da Schaum-Qualität, Härtegrade, Zonierungen je nach Modell deutlich abweichen."
+      ],
+      "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2018/12/testsieger-matratzen-kaufen-neu-mobil.png", "alt": "Testsieger und getestete Matratzen" },
+      "imageHref": "/testsieger-matratzen/",
+      "imageFit": "contain",
+      "reverse": true
+    },
+    {
+      "component": "mediaText",
+      "heading": "Gesund und günstig: Unsere SILWA-Gesundheitsmarke",
+      "headingHref": "/produkte/silwa-schlafsystem/",
+      "body": [
+        "Gemeinsam mit Technikern, Orthopäden, Chiropraktikern haben wir ein optimiertes Matratzen-Lattenrost-System für ergonomisch richtiges Liegen geschaffen. Höchste Schadstoff-Prüfungen, Dauerbelastungstests und schlafklimatische Anforderungen erfüllt SILWA. Liegen Sie bei uns 111 Tage Probe.",
+        "Mit unserer [Vermessungsstation](/produkte/silwa-schlafsystem/silwa-vermessung/) finden wir die perfekte Matratzen-Zonierung für Sie."
+      ],
+      "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2021/07/silwa-schlafsystem-kaufen-binde-home.png", "alt": "SILWA Schlafsystem" },
+      "imageHref": "/silwa-schlafsystem/",
+      "imageFit": "contain",
+      "ctas": [{ "label": "Bis zu 111 Tage Rückgaberecht! »", "href": "/silwa-schlafsystem/" }],
+      "tone": "brand"
+    },
+    {
+      "component": "cardGrid",
+      "heading": "Aktion Designwochen: 25% auf Boxspringbett-Gestelle",
+      "headingHref": "/produkte/boxspringbetten/boxspringbetten-angebote/",
+      "intro": [
+        "Wir bauen Boxspringmatratzen selbst – Hochwertig, günstig und viele Rückgaberechte:",
+        "**90 Tage zuhause Testen für Boxspring-Matratzen | 10 Jahre Matratzen-Garantie | Boxspringbetten ab 899,00 €**"
+      ],
+      "columns": 4,
+      "cards": [
+        { "eyebrow": "180 x 200 cm", "price": 1699, "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2022/11/boxspringbett-angebote-balance-seattle.jpg", "alt": "Boxspringbett Angebot Balance Seattle" } },
+        { "eyebrow": "180 x 200 cm", "price": 1799, "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2022/11/boxspringbett-angebote-akkala-2.jpg", "alt": "Boxspringbett Angebot Delux Akkala" } },
+        { "eyebrow": "180 x 200 cm", "price": 2299, "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2022/11/boxspringbett-angebote-posio.jpg", "alt": "Boxspringbett Angebot Delux Posio" } },
+        { "eyebrow": "180 x 200 cm", "price": 2699, "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2022/11/boxspringbett-angebote-star-silber-500.jpg", "alt": "Boxspringbett Angebot Star Silber 500" } }
+      ],
+      "ctas": [{ "label": "Weitere TOP-Angebote finden Sie hier »", "href": "/produkte/boxspringbetten/boxspringbetten-angebote/" }]
+    },
+    {
+      "component": "mediaText",
+      "eyebrow": "TOP ANGEBOT nur für kurze Zeit",
+      "heading": "Kombination aus Matratze und Lattenrost zum Hammerpreis",
+      "body": [
+        "**Orthopädische 7-Zonen Matratze SILWA Classic 18 und Ergonomischer Lattenrost SILWA Pro NV**",
+        "Sofort lieferbar in 90 x 200 cm",
+        "30 Tage Rückgaberecht auf das Set"
+      ],
+      "price": { "from": 489, "regular": 798 },
+      "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2018/07/set-angebot-silwa-classic-20-pro-nv.png", "alt": "Set Angebot Matratze Silwa Classic 20 und Lattenrahmen Silwa Pro NV" },
+      "imageHref": "/aktionstage/",
+      "imageFit": "contain",
+      "ctas": [{ "label": "Zum Angebot »", "href": "/aktionstage/" }],
+      "tone": "accent"
+    },
+    {
+      "component": "mediaText",
+      "heading": "Darum lohnt sich der Kauf bei uns",
+      "headingLevel": "h3",
+      "body": ["Das orthopädische Konzept von SILWA: 5 Entwicklungsziele sind wichtig"],
+      "bullets": [
+        "hohe Druckentlastung mit unterschiedlichen Härtegraden und Einsinktiefen möglich",
+        "Optimierte Ergonomie mit gezielter Schulterentlastung, Lendenstütze und Beckenzone für viele unterschiedliche Körpergewichte",
+        "Lattenrost-SILWA-Anmessung für die orthopädisch richtige Lagerung und Zonierung des Systems",
+        "Flexibles Schlafklima je nach Wärmebedarf durch Topper-Ergänzung",
+        "Erfüllung höchster Schadstoff- und Dauerbelastungsprüfungen mit jährlichem Nachweis"
+      ]
+    },
+    {
+      "component": "cardGrid",
+      "eyebrow": "SILWA Boxspring Manufaktur",
+      "columns": 2,
+      "imageFit": "contain",
+      "cards": [
+        { "eyebrow": "NEUHEIT", "title": "25 Jahre Federbruch Garantie", "href": "/boxspring-federbruch-garantie/", "linkLabel": "Mehr Info Federbruch" },
+        {
+          "eyebrow": "NEUHEIT",
+          "title": "5 Jahre Fleckenschutz",
+          "href": "/fleckenschutz-boxspringbetten-und-polsterbetten/",
+          "linkLabel": "Mehr Info Fleckenschutz",
+          "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2019/07/Fleckenschutz-Teaser_17753457.png", "alt": "Fleckenschutz Service Garantie: Boxspringbetten und Polsterbetten" }
+        }
+      ],
+      "tone": "sand"
+    },
+    {
+      "component": "mediaText",
+      "heading": "Alternative zum Boxspringbett",
+      "body": [
+        "**Polster-Komplettbett in Boxspring-Optik mit Matratzen und Lattenrost schon ab 999,- €**",
+        "Mit 90 Tagen Rückgaberecht auf Matratze und Lattenrost.",
+        "Alle Betten auch mit ergonomischem Anmess-Lattenrahmen [SILWA Alu](/produkte/silwa-schlafsystem/silwa-alu-systemrahmen/) erhältlich."
+      ],
+      "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2019/02/polsterbetten-komplettbetten-binde-mobil.jpg", "alt": "Polsterbetten Komplettbetten Angebote" },
+      "imageHref": "/polster-komplettbetten-angebote/",
+      "ctas": [{ "label": "Mehr Infos Polster-Komplettangeboten »", "href": "/produkte/boxspringbetten/polster-komplettbetten-angebote/" }],
+      "reverse": true
+    },
+    {
+      "component": "mediaText",
+      "heading": "Qualitäts-Massagesessel",
+      "headingHref": "/massagesessel-hamburg/",
+      "body": [
+        "SILWA Sessel überzeugen durch ihr neuartiges Design – Entspannung rund um die Uhr.",
+        "**Kompetenz bei Gesunde-Matratzen**",
+        "Wir sind seit Jahren Ergonomie-Experte im Liegen – jetzt auch im [Sitzen](/massagesessel-hamburg/)!"
+      ],
+      "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2021/06/Massagesessel-teaser-home-flach.jpg", "alt": "SILWA Massagesessel Hamburg" },
+      "imageHref": "/massagesessel-hamburg/",
+      "imageFit": "contain",
+      "tone": "sand"
+    },
+    {
+      "component": "cardGrid",
+      "heading": "Wasserbetten mit Qualität",
+      "headingHref": "/produkte/wasserbetten/",
+      "intro": [
+        "Wir produzieren seit über 30 Jahren alle Varianten von Wasserbetten.",
+        "Ab 799,- € für die Einsteigervariante für zwei Personen bis hin zum Alleskönner, dem Luxus-Modell SILWAmare.",
+        "Bei uns erhalten Sie nur schadstoffarme und besonders rückenfreundliche Betten. Gerne helfen wir Ihnen mit Ihren Fragen und bieten Ihnen kundenfreundliche Rückgaberecht an."
+      ],
+      "columns": 3,
+      "imageFit": "contain",
+      "cards": [
+        { "title": "Prestige-Comfort", "text": ["Günstiges Einstiegsbett!"], "href": "/produkte/wasserbetten/", "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2018/08/wasserbett-binde-home-prestige-comfort.png", "alt": "Wasserbett Prestige-Comfort" } },
+        { "title": "SILWApronto", "text": ["Unser Bestseller Wasserbett!"], "href": "/produkte/wasserbetten/", "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2018/08/wasserbett-binde-home-silwa-pronto.png", "alt": "Wasserbett SILWApronto" } },
+        { "title": "SILWAmare", "text": ["Unser Premium Wasserbett!"], "href": "/produkte/wasserbetten/", "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2018/08/wasserbett-binde-home-silwa-mare.png", "alt": "Wasserbett SILWAmare" } }
+      ]
+    },
+    {
+      "component": "mediaText",
+      "heading": "Wir sind eine Matratzen-Manufaktur.",
+      "headingHref": "/ueber-uns/",
+      "body": [
+        "Wir bauen Visko-, Kaltschaum und Taschenfederkern-Matratzen seit 2012 selbst – maßgeschneidert und rückengerecht von der Matratze bis hin zum kompletten Schlafsystem mit passenden Kissen und Decken."
+      ],
+      "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2018/07/matratzen-manufaktur-logo-grau.png", "alt": "Gesunde Matratzen Matratzen-Manufaktur" },
+      "imageHref": "/ueber-uns/",
+      "imageFit": "contain",
+      "reverse": true
+    },
+    {
+      "component": "cardGrid",
+      "heading": "Unser Groß-Sortiment umfasst fast alles zum Thema gesunder Schlaf",
+      "columns": 3,
+      "cards": [
+        {
+          "title": "Neutrale Beratung",
+          "text": ["Unsere produktneutrale Schlafberatung im Vollsortiment hilft Ihnen, ein wirklich optimiertes Schlafsystem für Ihre Ansprüche zu finden. Nutzen Sie unsere ausführliche zertifizierte Schlafberatung. Gern schalten wir unseren Physiotherapeuten Sacha Knappe zur Beratung ein."],
+          "href": "https://gesunde-matratzen.de/wp-content/uploads/2019/03/natuerlich-wasserbetten.mp4",
+          "isVideo": true,
+          "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2019/04/video-unabhaengige-beratung.jpg", "alt": "Neutrale Beratung Video" }
+        },
+        {
+          "title": "Tempur-Visko-Matratzen – 30 Tage-Test",
+          "text": ["NEU: Gleich 3 Liegegefühle von weich bis fest mit maximaler, einzigartiger Druckentlastung warten auf Sie. Bei uns mit Ersatzbezug inklusive."],
+          "href": "/produkte/tempur-sortiment/",
+          "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/04/produkte-tempur.jpg", "alt": "Tempur Schlafsystem" }
+        },
+        {
+          "title": "Moderne Boxspringbetten schon ab 899,- €",
+          "text": ["Schon seit 1997 führen wir Boxspring-Betten namenhafter Hersteller. In den großen Boxspring-Ausstellungen sind viele Boxspring-Matratzen mit bis zu 90 Tagen Rückgaberecht. Wählen Sie unter Hunderten von Stoffen und Kopfteilen. Wir führen auch Modul-Boxspring-Betten."],
+          "href": "/produkte/boxspringbetten/",
+          "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/04/produkte-boxspring.jpg", "alt": "Gesunde Matratzen Boxspringbetten" }
+        },
+        {
+          "title": "Lattenrost-Riesenauswahl",
+          "text": ["Vom einfachen Federleisten-Lattenrost ab 99,- € bis hin zum vollflächig gefederten Teller-Lattenrahmen finden Sie Vieles für jede Preislage. Für Rückenleiden setzen wir ergonomische Lattenroste mit extremer Leisten-Höhen-Verstellung ein. Per Computer-Vermessung stellen wir Ihnen Schulterentlastungszonen und Lordosenstützen gerne ein."],
+          "href": "/produkte/lattenroste/",
+          "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/04/produkte-lattenroste.jpg", "alt": "Lattenroste und Systemrahmen" }
+        },
+        {
+          "title": "Exklusive Bettgestelle",
+          "text": ["Wir führen 5 bewährte Qualitätsmarken wie z.B. Hasena im Massiv-Holz und Polster mit über 1.000 Gestell-Varianten. Schneller Aufbau und hervorragende Verarbeitung sind langjährig erprobt genau wie gute Lieferqualität. Wir setzen eigene Monteure ein und entsorgen selbstverständlich Ihre alten Betten."],
+          "href": "/produkte/bettgestelle/",
+          "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/04/produkte-bettgestelle.jpg", "alt": "Gesunde Matratzen Bettgestelle" }
+        },
+        {
+          "title": "Schnäppchen-Markt",
+          "text": ["Wir reduzieren – Sie sparen! Matratzen, Betten, Decken, Kissen: Günstige Schnäppchen mit unseren reduzierten Ausstellungs- und Messeartikel! Kommen Sie vorbei!"],
+          "href": "/produkte/schnaeppchen-markt-matratzen/",
+          "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/04/produkte-schnaeppchen.jpg", "alt": "Gesunde Matratzen Schnäppchenmarkt" }
+        },
+        {
+          "title": "Kissen für Kopf- und Nacken",
+          "text": ["So unterschiedlich die Schlafposition ist, so unterschiedlich ist es auch, welches Kissen man verwenden sollte und auf welche Art und Weise man sein Kissen zum Einsatz bringt – Seiten-, Rückenschläfer- & Nackenstützkissen. Kissen schon ab 22,- €."],
+          "href": "/produkte/kissen/"
+        },
+        {
+          "title": "Modische Bettwaren",
+          "text": ["Erholsamer Schlaf hängt neben dem Liegegefühl auch davon ab, dass die Details stimmen. Dann wird es so richtig gemütlich im Bett. Ob Kissen, Bettdecken oder Bettwäsche – wir erfüllen alle Wünsche. Schlafvergnügen bis ins Detail."],
+          "href": "/produkte/bettwaren/"
+        },
+        {
+          "title": "Qualitäts-Wasserbetten",
+          "text": ["Seit 1991 produzieren wir Wasserbetten in allen Varianten. Vom Einstiegswasserbett für 2 Personen ab 799,- € bis hin zum Luxus-Modell SILWAmare. Alle Betten sind besonders schadstoffarm und besonders rückenfreundlich. Wir beraten Sie umfassend und bieten Ihnen viele Rückgaberechte."],
+          "href": "/produkte/wasserbetten/"
+        }
+      ],
+      "tone": "sand"
+    },
+    {
+      "component": "appointmentCta",
+      "heading": "Beratungstermin vereinbaren",
+      "href": "/beratungstermin/",
+      "text": "Sie können uns gerne jederzeit zu unseren Öffnungszeiten in den Filialen aufsuchen. Gern können Sie auch einen Beratungstermin vereinbaren oder uns anrufen. Liegen Sie Vieles Probe.",
+      "branches": [
+        { "label": "Filiale Lübeck", "branch": "luebeck" },
+        { "label": "Filiale Hamburg", "branch": "hamburg" }
+      ]
+    },
+    {
+      "component": "cardGrid",
+      "heading": "Warum bei uns kaufen – unsere Top-Themen",
+      "columns": 3,
+      "cards": [
+        {
+          "title": "Ergonomische SILWA-Körper-Vermessung",
+          "text": ["Mit unser Computer-Liegediagnostik und Schlafberatung simulieren wir verschiedene Liegegefühle direkt auf Ihrer Wunsch-Matratze. Die Optimierung von Schulter- oder Beckenentlastung und Lordosenstützen dauert nur wenige Minuten und gibt Ihnen einzigartige Einblicke auf das, was ergonomisch für Sie persönlich passend ist."],
+          "href": "/produkte/silwa-schlafsystem/silwa-vermessung/",
+          "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/04/vorteile-silwa-vermessung.jpg", "alt": "Gesunde Matratzen Top Thema Silwa Vermessung" }
+        },
+        {
+          "title": "Innovative Riesenauswahl zum gesunden Schlafen",
+          "text": ["Ausgehend von einer sehr großen Matratzen-Auswahl mit über 10 getesteten Matratzen haben wir in den letzten Jahrzehnten ständig unser Sortiment sinnvoll erweitert. Wir sind darauf spezialisiert, Rückenprobleme und Schlafstörungen zu erkennen und Lösungen zu bieten, die meist viele Rückgaberechte beinhalten. Nur so macht seriöse Beratung Sinn."],
+          "href": "/produkte/",
+          "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/04/vorteile-riesenauswahl.jpg", "alt": "Gesunde Matratzen Riesenauswahl" }
+        },
+        {
+          "title": "Eigene Matratzen- und Wasserbetten-Herstellung",
+          "text": ["Die langjährige Schlafberater-Praxis zeigte, dass es noch Vieles gibt, um Schlafsysteme ergonomischer, individueller und preisgünstiger anzubieten. Unsere Stärke liegt in der medizinischen Schlafergonomie und besonders schadstoffarmen und allergiefreundlichen Produkten. Viele Zertifikate beweisen dies."],
+          "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/04/vorteile-ersatzteillager.jpg", "alt": "Gesunde Matratzen Ersatzteillager" }
+        },
+        {
+          "title": "Gute Bewertungen sprechen für uns",
+          "text": ["Ihre Meinung ist uns ganz besonders wichtig. Die Bewertungen setzen sich aus eKomi, Trusted Shop und eigenen Kundenbewertungen zusammen. Sie entstammen zum Teil unserer internen, telefonischen Qualitätskontrolle nach Warenlieferung und Aufbau."],
+          "href": "/bewertungen/",
+          "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/04/vorteile-bewertungen.jpg", "alt": "Gesunde Matratzen Bewertungen" }
+        },
+        {
+          "title": "Bis zu 111 Tagen Probeliegen",
+          "text": ["Kaufen Sie bei uns ohne Risiko. Moderne, innovative Schlafsysteme bedürfen häufig der Eingewöhnung und nachträglicher Einstellungen. Sollten wir Sie nicht gänzlich zufrieden stellen, können Sie viele Produkte bei uns zurückgeben gegen Kaufpreiserstattung. Tageweise ist bei uns Kissen-und Matratzen-Ausleihen möglich."],
+          "href": "/rueckgaberecht/",
+          "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/04/vorteile-rueckgaberecht.jpg", "alt": "Gesunde Matratzen Rückgaberecht" }
+        },
+        {
+          "title": "Großes Express-Liefergebiet",
+          "text": ["Lieferung durch unsere eigenen Monteure und Fahrzeuge bis in Ihr Schlafzimmer, kostenlose Lieferungs-Avisierung und Entsorgung Ihrer alter Matratze, einfache Organisation von Produktrückgaben über unseren Kundenservice."],
+          "href": "/lieferung-und-expressliefergebiet/",
+          "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2018/02/expresslieferzone-blauer-bereich.png", "alt": "Gesunde Matratzen Expresslieferzone" }
+        }
+      ]
+    },
+    {
+      "component": "testimonials",
+      "heading": "Gute Kundenmeinungen sprechen für uns",
+      "intro": "Abkürzungen: Q = Qualitätskontrolle | E = eKomi | TS = Trusted Shop | GB = Google Business",
+      "items": [
+        { "author": "Herr C. aus Hamburg", "meta": "11.25 (Q)", "text": ["Die Matratze Silwa Pur wirkt sehr langlebig und stabil. Sie bietet eine gute Körperanpassung, ohne dass man zu tief einsinkt. Der Bezug fühlt sich angenehm an und ist waschbar. Rundum ein gutes Produkt."] },
+        { "author": "Herr D. aus Hamburg", "meta": "10.25 (Q)", "text": ["Das Boxspringbett Silwa Delux ist ein echter Hingucker im Schlafzimmer. Die Polsterung ist angenehm weich, aber dennoch formstabil. Beim Liegen fühlt man sich wie auf Wolken. Ich würde es jederzeit wieder kaufen."] },
+        { "author": "Herr L. aus Hamburg", "meta": "11.25 (Q)", "text": ["Beim Wasserbett gefällt mir besonders die Möglichkeit, die Temperatur individuell einzustellen. Dadurch ist es im Sommer kühl und im Winter wunderbar warm. Das Liegegefühl ist einzigartig. Auch die Stabilität des Rahmens überzeugt."] }
+      ],
+      "cta": { "label": "Mehr Kundenmeinungen hier »", "href": "/bewertungen/" }
+    },
+    {
+      "component": "cardGrid",
+      "heading": "Gute Presseartikel und Verfilmungen bestätigen unsere hohe Schlaf-Kompetenz",
+      "columns": 2,
+      "cards": [
+        {
+          "title": "Wir beraten Sie in jeder Lage",
+          "text": ["Auf rund 3.000 m² bieten wir Ihnen ein umfassendes Sortiment an Schlafsystemen bestehend aus getesteten Matratzen, Kalt- und Viskoschaum, Federkern, Latexmatratzen, Boxspring- und Wasserbetten."],
+          "href": "https://www.youtube.com/watch?v=G1MfHjtOIk4",
+          "isVideo": true,
+          "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/04/video-wir-beraten-sie-in-jeder-lage.jpg", "alt": "Wir beraten sie in jeder Lage Video" }
+        },
+        {
+          "title": "Redakteure loben Kundenservice",
+          "text": ["Der Sender stellt dabei die Vorteile eines Wasserbettes von natürlich Wasserbetten heraus und zeigt dessen Aufbau. In zwei Qualitätsstufen wählbar, können Sie sich so bequem an Ihrem Rechner über die Eigenschaften eines Wasserbettes informieren."],
+          "href": "https://gesunde-matratzen.de/wp-admin/images/WasserbettenBeitrag_DSL.mp4",
+          "isVideo": true,
+          "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/04/video-rtl.jpg", "alt": "Redakteure loben Kundenservice von natürlich Wasserbetten Video" }
+        }
+      ],
+      "tone": "sand"
+    },
+    {
+      "component": "branchList",
+      "heading": "Unsere Filialen sind ganz in Ihrer Nähe – Parkplätze häufig vor der Tür",
+      "linkLabel": "Zur Filialanfahrt",
+      "branches": ["luebeck", "hamburg"]
+    }
+  ]
+}

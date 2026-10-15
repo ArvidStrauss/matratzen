@@ -1,0 +1,26 @@
+{
+  "name": "SILWA Classic 15 KS Kaltschaummatratze",
+  "href": "/produkte/silwa-schlafsystem/silwa-classic-matratzen/silwa-classic-15-kaltschaum-matratze/",
+  "image": {
+    "src": "https://gesunde-matratzen.de/wp-content/uploads/2019/02/silwa-classic-15-kaltschaummatratze-doppeltuch.png",
+    "alt": "Silwa Classic 15 Kaltschaummatratze Doppeltuch-Bezug"
+  },
+  "badge": "Rabatt",
+  "description": "7 Zonen-HR-Premium Schaum-Kern mit profiliertem Wellenschnitt, hervorragende Querbelüftung (Öko-Tex getestet, LGA-Test)",
+  "priceRegular": 325,
+  "priceFrom": 199,
+  "size": "90 x 200 cm",
+  "returnPolicy": { "label": "30 Tage Rückgaberecht / Geld-Zurück-Garantie", "href": "/rueckgaberecht/" },
+  "certificates": {
+    "heading": "Geprüfte Qualität",
+    "intro": "Zu den Zertifikaten:",
+    "image": {
+      "src": "https://gesunde-matratzen.de/wp-content/uploads/2019/01/lga-qualitaets-zertifikat-kerne.jpg",
+      "alt": "LGA Zertifikat SILWA Kerne"
+    },
+    "links": [
+      { "label": "LGA Zertifikat LH 60130757 0001", "href": "https://gesunde-matratzen.de/wp-content/uploads/2018/12/LH-60130757-001-LGA-schadstoffgeprüft-HR.pdf" },
+      { "label": "LGA Zertifikat LH 60094704 0001", "href": "https://gesunde-matratzen.de/wp-content/uploads/2018/12/LH-60094704-001-LGA-Qualitaets-Zertifikat.pdf" }
+    ]
+  }
+}

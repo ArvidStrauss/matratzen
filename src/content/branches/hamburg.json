@@ -1,0 +1,19 @@
+{
+  "name": "Filiale Hamburg",
+  "href": "/filialen/filiale-hamburg/",
+  "company": "Bei natürlich Wasserbetten Hamburg",
+  "street": "Erdkampsweg 3",
+  "zip": "22335",
+  "city": "Hamburg",
+  "region": "Hamburg",
+  "phone": "040 / 52 90 1000",
+  "fax": "040 / 52 90 1002",
+  "email": "hamburg@gesunde-matratzen.de",
+  "hours": ["Mo., Di., Do., Fr. 10:00 – 18:00 Uhr", "Mittwochs geschlossen", "Sa. 10:00 – 15.00 Uhr", "und nach Terminvereinbarung"],
+  "mapsHref": "https://www.google.de/maps/place/nat%C3%BCrlich+Wasserbetten+Hamburg+Boxspring/@53.6266882,10.0228371,17z/data=!3m1!4b1!4m5!3m4!1s0x47b188537d42af83:0x85e2add30b9087be!8m2!3d53.6266882!4d10.0250258?hl=de",
+  "image": {
+    "src": "https://gesunde-matratzen.de/wp-content/uploads/2018/09/gesunde-matratzen-filiale-hamburg.jpg",
+    "alt": "Filiale Hamburg"
+  },
+  "order": 1
+}

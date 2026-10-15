@@ -1,0 +1,198 @@
+{
+  "global": {
+    "siteName": "Gesunde Matratzen",
+    "logo": {
+      "src": "https://gesunde-matratzen.de/wp-content/uploads/2026/05/Gesunde-Matratzen-Manufaktur-Logo-270x121-1.png",
+      "alt": "Gesunde Matratzen Logo"
+    },
+    "appointmentCta": { "label": "Hier einfach Termin vereinbaren", "href": "/beratungstermin/" },
+    "navigation": [
+      {
+        "label": "Matratzen & Roste",
+        "children": [
+          {
+            "label": "Getestete Matratzen und Marken",
+            "note": "ab 199 €",
+            "href": "/testsieger-matratzen/",
+            "children": [
+              { "label": "Getestete Matratzen", "href": "/testsieger-matratzen/" },
+              { "label": "Test-Matratzen-Ratgeber", "note": "Infos für den Kauf", "href": "/testsieger-matratzen/testsieger-matratzen-erfahrung/" },
+              { "label": "Silwa System-Matratzen", "href": "/produkte/silwa-schlafsystem/" },
+              { "label": "Marken Matratzen", "href": "/marken-matratzen/" },
+              { "label": "Tempur Matratzen", "href": "/produkte/tempur-sortiment/tempur-matratzen/" },
+              { "label": "Topper", "href": "/produkte/topper/" },
+              { "label": "Schnäppchen-Markt", "href": "/produkte/schnaeppchen-markt-matratzen/" },
+              { "label": "Set-Angebot", "note": "Top-Angebot", "href": "/set-angebot-silwa-classic-20-und-silwa-pro/" },
+              { "label": "7-Zonen-Matratzen", "href": "/produkte/silwa-schlafsystem/7-zonen-matratzen/" }
+            ]
+          },
+          {
+            "label": "Silwa System-Matratzen",
+            "note": "Unsere Gesundheitsmarke",
+            "href": "/produkte/silwa-schlafsystem/",
+            "children": [
+              { "label": "Silwa Vermessungsstation", "href": "/produkte/silwa-schlafsystem/silwa-vermessung/" },
+              { "label": "Kalt- und Gelschaum Matratzen", "note": "ab 199 €", "href": "/silwa-classic-matratzen/" },
+              { "label": "Federkern Matratzen", "href": "/silwa-spring-matratzen/" },
+              { "label": "Visko-Matratzen", "href": "/silwa-pur-matratzen/" },
+              { "label": "Silwa Nature – die Natürliche (Latex)", "href": "/silwa-nature-matratze/" },
+              { "label": "Silwa 4 feelings Matratze mit 4 Härtegraden", "href": "/produkte/silwa-schlafsystem/silwa-4-feelings-matratzen/" },
+              { "label": "Silwa Dreams Boxspring Matratze", "href": "/produkte/silwa-schlafsystem/silwa-dreams-boxspringmatratze/" },
+              { "label": "Silwa XXL", "href": "/silwa-xxl/" },
+              { "label": "Schaummatratze fürs Wasserbett", "href": "/silwa-hybrid-kaltschaummatratze-fuers-wasserbett/" },
+              { "label": "Boot und Caravan Matratze SILWA-Hobby", "href": "/produkte/silwa-schlafsystem/boot-und-caravan-matratze-silwa-hobby/" },
+              { "label": "Silwa Matratzen Bezüge", "href": "/produkte/silwa-schlafsystem/silwa-matratzen-bezuege/" },
+              { "label": "Silwa Topper", "href": "/produkte/silwa-schlafsystem/silwa-topper/" }
+            ]
+          },
+          {
+            "label": "Silwa System-Lattenroste",
+            "note": "Unsere Gesundheitsmarke",
+            "href": "/produkte/silwa-schlafsystem/lattenroste/",
+            "children": [
+              { "label": "Silwa Alu Zonierungsrahmen", "href": "/silwa-alu-systemrahmen/" },
+              { "label": "Silwa Pro Rahmen", "href": "/silwa-pro-federleistenrahmen/" },
+              { "label": "Silwa Comfort Rahmen", "href": "/silwa-comfort-tellerrahmen/" },
+              { "label": "Silwa Motion Lattenrahmen", "href": "/produkte/silwa-schlafsystem/silwa-motion-lattenrahmen/" },
+              { "label": "Silwa Viado Rahmen", "href": "/silwa-viado-rahmen/" },
+              { "label": "Silwa XXL", "href": "/silwa-xxl/" }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Komfort- & Pflegebetten",
+        "children": [
+          { "label": "SILWA Libra Komfort- und Pflegebetten", "href": "/silwa-libra-komfort-und-pflegebetten/" },
+          { "label": "SILWA Relaxe Komfortliege spezial", "href": "/produkte/boxspringbetten/silwa-relaxe-boxspringbett/" }
+        ]
+      },
+      {
+        "label": "Boxspring & Gestelle",
+        "children": [
+          {
+            "label": "Boxspringbetten",
+            "href": "/produkte/boxspringbetten/",
+            "children": [
+              { "label": "Boxspringbetten Kollektionen", "href": "/produkte/boxspringbetten/" },
+              { "label": "Boxspringbetten Angebote", "note": "Designwochen", "href": "/produkte/boxspringbetten/boxspringbetten-angebote/" }
+            ]
+          },
+          {
+            "label": "Bettgestelle",
+            "href": "/produkte/bettgestelle/",
+            "children": [
+              { "label": "Bettgestelle Angebote", "note": "Bis zu 25% sparen", "href": "/produkte/bettgestelle/bettgestelle-angebote/" },
+              { "label": "Bettgestelle Übersicht", "href": "/produkte/bettgestelle/" },
+              { "label": "Silwa Kombi Gestelle", "note": "NEUHEIT", "href": "/silwa-kombi-gestelle/" },
+              { "label": "Betten-Ratgeber", "note": "Infos für den Kauf", "href": "/betten-ratgeber/" },
+              { "label": "Hasena-Ratgeber", "note": "Infos für den Kauf", "href": "/hasena-ratgeber/" }
+            ]
+          },
+          {
+            "label": "Komplettbetten",
+            "href": "/komplettbetten/",
+            "children": [
+              { "label": "Komplettbetten Angebote", "href": "/komplettbetten/" },
+              { "label": "Polster-Komplettbetten Angebote", "href": "/produkte/boxspringbetten/polster-komplettbetten-angebote/" }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Andere Schlafsystem",
+        "children": [
+          { "label": "Wasserbetten", "href": "/produkte/wasserbetten/" },
+          { "label": "SILWA Air Luftbett", "href": "/silwa-air-luftbett/" },
+          { "label": "SILWA Hybrid (Kaltschaummatratze für‘s Wasserbett)", "href": "/silwa-hybrid-kaltschaummatratze-fuers-wasserbett/" }
+        ]
+      },
+      {
+        "label": "Bettwaren",
+        "children": [
+          {
+            "label": "Kissen",
+            "href": "/kissen/",
+            "children": [
+              { "label": "Kissen", "href": "/kissen/" },
+              { "label": "Tempur Kissen und Decken", "href": "/produkte/tempur-sortiment/tempur-kissen/" },
+              { "label": "Silwa Kissen", "href": "/produkte/silwa-schlafsystem/silwa-vario-kissen/" }
+            ]
+          },
+          {
+            "label": "Bettdecken",
+            "href": "/decken/",
+            "children": [
+              { "label": "Bettdecken", "href": "/decken/" },
+              { "label": "Bettwäsche", "href": "/produkte/bettwaesche/" }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Service",
+        "children": [
+          { "label": "Bewertungen", "href": "/bewertungen/", "children": [{ "label": "Unsere Bewertungen", "href": "/bewertungen/" }] },
+          {
+            "label": "Über uns",
+            "href": "/ueber-uns/",
+            "children": [
+              { "label": "Über uns", "href": "/ueber-uns/" },
+              { "label": "Kompetenz-Zentrum", "href": "/kompetenz-zentrum/" },
+              { "label": "Zertifizierte Beratung", "href": "/zertifizierte-beratung/" },
+              { "label": "Physiotherapeutische Schlafberatung", "href": "/physiotherapeutische-schlafberatung/" }
+            ]
+          },
+          { "label": "Finanzierung", "href": "/finanzierung/", "children": [{ "label": "Mehr Infos…", "href": "/finanzierung/" }] }
+        ]
+      },
+      {
+        "label": "Filialen",
+        "href": "/filialen/",
+        "children": [
+          { "label": "Filiale Hamburg", "href": "/filialen/filiale-hamburg/" },
+          { "label": "Matratzen Lübeck", "href": "/matratzen-luebeck/" },
+          { "label": "Filiale Kiel", "href": "/filialen/filiale-kiel/" }
+        ]
+      },
+      { "label": "Kontakt", "href": "/beratungstermin/" }
+    ],
+    "footer": {
+      "heading": "Gesunde-Matratzen.de",
+      "address": "Im Hause natürlich Wasserbetten GmbH, Bei der Lohmühle 21a, 23554 Lübeck",
+      "phone": { "label": "0451 / 7 70 07", "href": "tel:+4945177007" },
+      "email": { "label": "info@gesunde-matratzen.de", "href": "mailto:info@gesunde-matratzen.de" },
+      "columns": [
+        {
+          "heading": "Quick Links",
+          "links": [
+            { "label": "Über uns", "href": "/ueber-uns/" },
+            { "label": "Bewertungen", "href": "/bewertungen/" },
+            { "label": "Kontakt", "href": "/kontakt/" }
+          ]
+        },
+        {
+          "heading": "Service",
+          "links": [
+            { "label": "Kompetenz-Zentrum", "href": "/kompetenz-zentrum/" },
+            { "label": "Finanzierung", "href": "/finanzierung/" },
+            { "label": "Lieferung", "href": "/lieferung-und-expressliefergebiet/" }
+          ]
+        },
+        {
+          "heading": "Filialen",
+          "links": [
+            { "label": "Lübeck", "note": "0451 / 7 70 07", "href": "/matratzen-luebeck/" },
+            { "label": "Hamburg", "note": "040 / 52 90 1000", "href": "/filialen/filiale-hamburg/" }
+          ]
+        }
+      ],
+      "copyright": "Copyright natürlich Wasserbetten GmbH. Alle Rechte vorbehalten.",
+      "legal": [
+        { "label": "Impressum", "href": "/impressum/" },
+        { "label": "Datenschutz", "href": "/datenschutz/" },
+        { "label": "AGBs", "href": "/agbs/" }
+      ]
+    }
+  }
+}

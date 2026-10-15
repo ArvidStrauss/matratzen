@@ -1,0 +1,78 @@
+---
+import type { Block } from '../../content.config';
+import Section from '../Section.astro';
+import SectionHeading from '../SectionHeading.astro';
+import Img from '../Img.astro';
+import Md from '../Md.astro';
+import Price from '../Price.astro';
+import { isExternal } from '../../lib/format';
+
+type Props = Extract<Block, { component: 'mediaText' }>;
+const { eyebrow, heading, headingLevel, headingHref, body, bullets, outro, price, image, imageHref, imageFit, ctas, reverse, tone } = Astro.props;
+const hasText = !!(heading || body.length || bullets.length);
+const onlyImage = image && !hasText;
+---
+
+<Section tone={tone}>
+  {
+    onlyImage ? (
+      <a href={imageHref} class="block">
+        <Img src={image.src} alt={image.alt} class="mx-auto h-auto w-full max-w-4xl rounded-card" />
+      </a>
+    ) : (
+      <div class:list={['grid items-center gap-10', image && 'lg:grid-cols-2 lg:gap-16']}>
+        <div class:list={[image && reverse && 'lg:order-2', !image && 'max-w-3xl']}>
+          <SectionHeading eyebrow={eyebrow} heading={heading} href={headingHref} level={headingLevel} class="!mb-5" />
+          <div class="space-y-4 leading-relaxed text-ink/80 [.tone-dark_&]:text-brand-50">
+            {body.map((t) => (
+              <Md text={t} />
+            ))}
+          </div>
+          {bullets.length > 0 && (
+            <ul class="mt-5 space-y-2.5">
+              {bullets.map((b) => (
+                <li class="flex gap-3">
+                  <span class="mt-2 size-1.5 shrink-0 rounded-full bg-brand-500 [.tone-dark_&]:bg-accent-400" />
+                  <Md text={b} as="span" class="text-ink/80 [.tone-dark_&]:text-brand-50" />
+                </li>
+              ))}
+            </ul>
+          )}
+          {outro.length > 0 && (
+            <div class="mt-5 space-y-4 leading-relaxed text-ink/80">
+              {outro.map((t) => (
+                <Md text={t} />
+              ))}
+            </div>
+          )}
+          {price && (
+            <div class="mt-6">
+              <Price {...price} size="lg" />
+            </div>
+          )}
+          {ctas.length > 0 && (
+            <div class="mt-7 flex flex-wrap gap-3">
+              {ctas.map((cta, i) => (
+                <a
+                  href={cta.href}
+                  class={i === 0 && !isExternal(cta.href) ? (tone === 'brand' ? 'btn bg-white text-brand-800 hover:bg-brand-100' : 'btn-primary') : 'btn-ghost'}
+                  target={isExternal(cta.href) ? '_blank' : undefined}
+                  rel={isExternal(cta.href) ? 'noopener' : undefined}
+                >
+                  {cta.label}
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+        {image && (
+          <div class:list={[reverse && 'lg:order-1']}>
+            <a href={imageHref} class:list={['block overflow-hidden rounded-card', imageFit === 'contain' ? 'bg-white p-6 shadow-card' : 'shadow-card']}>
+              <Img src={image.src} alt={image.alt} class:list={[imageFit === 'cover' ? 'aspect-[4/3] h-auto w-full object-cover' : 'mx-auto max-h-80 w-auto object-contain']} />
+            </a>
+          </div>
+        )}
+      </div>
+    )
+  }
+</Section>

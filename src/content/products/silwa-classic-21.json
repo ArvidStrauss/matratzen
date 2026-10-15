@@ -1,0 +1,27 @@
+{
+  "name": "SILWA Classic 21 NEW KS Kaltschaummatratze",
+  "href": "/silwa-classic-matratzen/silwa-classic-21-new-kaltschaum-matratze/",
+  "image": {
+    "src": "https://gesunde-matratzen.de/wp-content/uploads/2022/06/silwa-classic-21-new-kaltschaummatratze-produktbild.png",
+    "alt": "Silwa Classic 21 NEW Kaltschaummatratze"
+  },
+  "description": "2 in 1 Matratze (weich und fest), 7 Zonen-HR-Premium Schaum-Kern als Monokern mit Würfel-/Wellenschnitt (Öko-Tex getestet, LGA-Test)",
+  "priceRegular": 699,
+  "priceFrom": 599,
+  "size": "90 x 200 cm",
+  "returnPolicy": { "label": "30 Tage Rückgaberecht / Geld-Zurück-Garantie", "href": "/rueckgaberecht/" },
+  "certificates": {
+    "heading": "Geprüfte Qualität",
+    "intro": "Zu den Zertifikaten:",
+    "image": {
+      "src": "https://gesunde-matratzen.de/wp-content/uploads/2019/01/lga-qualitaets-zertifikat-kerne.jpg",
+      "alt": "LGA Zertifikat SILWA Kerne"
+    },
+    "links": [
+      { "label": "LGA Zertifikat LH 60130757 0001", "href": "https://gesunde-matratzen.de/wp-content/uploads/2018/12/LH-60130757-001-LGA-schadstoffgeprüft-HR.pdf" },
+      { "label": "LGA Zertifikat LH 60094704 0001", "href": "https://gesunde-matratzen.de/wp-content/uploads/2018/12/LH-60094704-001-LGA-Qualitaets-Zertifikat.pdf" }
+    ]
+  },
+  "detailsLink": { "label": "Zur Produktbeschreibung »", "href": "/silwa-classic-matratzen/silwa-classic-21-new-kaltschaum-matratze/" },
+  "pricesLink": { "label": "Mehr Größen und Preise »", "href": "https://gesunde-matratzen.de/wp-content/uploads/2022/06/SILWA-Classic21-NEW-Preise.pdf" }
+}

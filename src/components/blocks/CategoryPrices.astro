@@ -1,0 +1,30 @@
+---
+import type { Block } from '../../content.config';
+import Section from '../Section.astro';
+import SectionHeading from '../SectionHeading.astro';
+import { formatEuro } from '../../lib/format';
+
+type Props = Extract<Block, { component: 'categoryPrices' }>;
+const { heading, items } = Astro.props;
+---
+
+<Section class="!py-10">
+  <SectionHeading heading={heading} />
+  <ul class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+    {
+      items.map((item) => (
+        <li>
+          <a
+            href={item.href}
+            class="group flex h-full items-center justify-between gap-4 rounded-2xl border border-sand-200 bg-sand-50 px-5 py-4 transition hover:border-brand-300 hover:bg-white hover:shadow-card"
+          >
+            <span class="text-sm leading-snug font-semibold text-ink/85 group-hover:text-brand-700">{item.label}</span>
+            <span class="shrink-0 text-sm whitespace-nowrap text-muted">
+              ab <span class="text-base font-bold text-brand-700">{formatEuro(item.price)}</span>
+            </span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</Section>

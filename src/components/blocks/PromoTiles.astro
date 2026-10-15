@@ -1,0 +1,33 @@
+---
+import type { Block } from '../../content.config';
+import Img from '../Img.astro';
+
+type Props = Extract<Block, { component: 'promoTiles' }>;
+const { tiles } = Astro.props;
+---
+
+<section class="bg-white pt-6">
+  <div class="container-page">
+    <ul class="-mx-5 flex snap-x gap-3 overflow-x-auto px-5 pb-2 sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible sm:px-0 lg:grid-cols-5">
+      {
+        tiles.map((tile, i) => (
+          <li class:list={['w-64 shrink-0 snap-start sm:w-auto', i === 0 && 'sm:col-span-2 lg:col-span-1']}>
+            <a href={tile.href} class="group relative block aspect-[4/5] overflow-hidden rounded-card bg-sand-200 sm:aspect-[4/3] lg:aspect-[3/4]">
+              <Img src={tile.image.src} alt={tile.image.alt} class="absolute inset-0 size-full object-cover transition duration-500 group-hover:scale-105" loading="eager" />
+              <span class="absolute inset-0 bg-gradient-to-t from-brand-950/85 via-brand-950/20 to-transparent" />
+              {tile.tour360 && (
+                <span class="absolute top-3 right-3 rounded-full bg-white/90 px-2.5 py-1 text-xs font-bold text-brand-800" title="Zeichen für 360° Ansicht">
+                  360°
+                </span>
+              )}
+              <span class="absolute inset-x-0 bottom-0 p-4 text-white">
+                <span class="block text-lg leading-tight font-bold">{tile.title}</span>
+                <span class="mt-1 block text-sm text-white/85">{tile.subtitle}</span>
+              </span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

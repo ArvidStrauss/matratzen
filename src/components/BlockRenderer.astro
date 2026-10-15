@@ -1,0 +1,46 @@
+---
+import type { Block } from '../content.config';
+import PromoTiles from './blocks/PromoTiles.astro';
+import Hero from './blocks/Hero.astro';
+import CategoryPrices from './blocks/CategoryPrices.astro';
+import MediaText from './blocks/MediaText.astro';
+import ProductGrid from './blocks/ProductGrid.astro';
+import ProductVariants from './blocks/ProductVariants.astro';
+import CardGrid from './blocks/CardGrid.astro';
+import Testimonials from './blocks/Testimonials.astro';
+import AppointmentCta from './blocks/AppointmentCta.astro';
+import BranchList from './blocks/BranchList.astro';
+import BranchHero from './blocks/BranchHero.astro';
+import Gallery from './blocks/Gallery.astro';
+import LinkList from './blocks/LinkList.astro';
+
+interface Props {
+  blocks: Block[];
+}
+
+// One Astro component per Storyblok block name.
+const registry = {
+  promoTiles: PromoTiles,
+  hero: Hero,
+  categoryPrices: CategoryPrices,
+  mediaText: MediaText,
+  productGrid: ProductGrid,
+  productVariants: ProductVariants,
+  cardGrid: CardGrid,
+  testimonials: Testimonials,
+  appointmentCta: AppointmentCta,
+  branchList: BranchList,
+  branchHero: BranchHero,
+  gallery: Gallery,
+  linkList: LinkList,
+} satisfies Record<Block['component'], unknown>;
+
+const { blocks } = Astro.props;
+---
+
+{
+  blocks.map((block) => {
+    const Component = registry[block.component] as any;
+    return <Component {...block} />;
+  })
+}

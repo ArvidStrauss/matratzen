@@ -1,0 +1,214 @@
+{
+  "path": "/silwa-classic-matratzen/",
+  "title": "Classic Matratzen in Lübeck kaufen",
+  "body": [
+    {
+      "component": "hero",
+      "eyebrow": "Unser Sieger im Kaltschaumbereich: SILWA Classic 22 NEW",
+      "headingLines": ["Unsere Kaltschaummatratzen SILWA Classic"],
+      "ctas": [{ "label": "Unser SILWA Qualitätsversprechen für Material & Verarbeitung »", "href": "/silwa-qualitaetsversprechen/" }]
+    },
+    {
+      "component": "productVariants",
+      "products": ["silwa-classic-15", "silwa-classic-18", "silwa-classic-20", "silwa-classic-21", "silwa-classic-22"],
+      "appointment": { "label": "Beratungstermin", "href": "/beratungstermin/" }
+    },
+    {
+      "component": "mediaText",
+      "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/09/finanzierung-zweitdrittel.jpg", "alt": "0% Sonderzins zu 36 Monaten Laufzeit" },
+      "imageHref": "/finanzierung/",
+      "imageFit": "contain"
+    },
+    {
+      "component": "mediaText",
+      "heading": "7-Zonen Premium HR-Schaum-Kern mit Raumgewicht 50, überprüft auf Schadstoffe und Druckbelastung",
+      "body": ["**Sandwichaufbau**"],
+      "bullets": [
+        "Orthopädische Schulterentlastungs- Zone für Seitenschläfer",
+        "Bessere Anpassung und Haltbarkeit durch Sandwichkern",
+        "Tencel-Bezug, abnehmbarer Bezug mit Wendeschlaufen"
+      ],
+      "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/04/silwa-classic-sandwichaufbau.png", "alt": "Silwa Classic Matratze Sandwichaufbau" },
+      "imageFit": "contain",
+      "tone": "sand"
+    },
+    {
+      "component": "mediaText",
+      "heading": "Unser Sieger im Kaltschaumbereich: SILWA Classic 22",
+      "body": ["**Geprüfte Qualität SILWA-Kerne**"],
+      "bullets": [
+        "TÜV-Rheinland LGA Schadstofftest und Dauerbelastungstest des HR-Premium-Kerns",
+        "ÖKO-TEX zertifiziert (Schadstoffe)",
+        "Made in Germany"
+      ],
+      "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/04/silwa-schlafsystem-10-jahre-garantie-e1696434614632.png", "alt": "Silwa Schlafsystem 10 Jahre Garantie Siegel" },
+      "imageFit": "contain",
+      "ctas": [
+        { "label": "LGA Zertifikat LH 60130757 0001", "href": "https://gesunde-matratzen.de/wp-content/uploads/2018/12/LH-60130757-001-LGA-schadstoffgeprüft-HR.pdf" },
+        { "label": "LGA Zertifikat LH 60094704 0001", "href": "https://gesunde-matratzen.de/wp-content/uploads/2018/12/LH-60094704-001-LGA-Qualitaets-Zertifikat.pdf" },
+        { "label": "ÖKO-TEX Zertifikat S97-0364", "href": "https://gesunde-matratzen.de/wp-content/uploads/2018/12/S97-0364-Oeko-Tex-Standard-100.pdf" }
+      ],
+      "reverse": true
+    },
+    {
+      "component": "testimonials",
+      "heading": "Kundenmeinungen SILWA Classic Kaltschaummatratzen",
+      "items": [
+        {
+          "author": "Herr A. aus Hamburg-Billstedt",
+          "product": "SILWA Classic 18 DUO",
+          "text": [
+            "Unser Gästebett soll komfortabel aber nicht zu kostspielig sein. Das Gestell von Dico im Zusammenspiel mit der Classic 18 in einer mittleren Härte schien uns dafür genau das richtige zu sein.",
+            "Unsere Gäste wachen erholt auf und sind begeistert. Vielen Dank für die Beratung."
+          ]
+        },
+        {
+          "author": "Herr C. aus Hamburg-Eppendorf",
+          "product": "SILWA Classic 20 DUO",
+          "text": [
+            "Meine Frau hat mich in den Laden Natürlich Wasserbetten geschleppt. Erst war ich nicht überzeugt meine wunderbare 15 Jahre alte Matratze zu tauschen.",
+            "Jedoch hat mir die Beratung über die Classic 20 Duo so gefallen, dass ich eingelenkt habe und siehe da ich habe bereits 90 Tage darauf probe geschlafen und will sie nicht mehr hergeben."
+          ]
+        },
+        {
+          "author": "Herr P. aus Norderstedt",
+          "product": "SILWA Classic 20",
+          "text": [
+            "Ich schlafe jetzt seit zwei Monaten auf den Matratzen sehr sehr gut. Ich habe genug Halt und gleichzeitig kann ich auf der Seite schlafen, ohne das meine Schulter hochgedrückt wird.",
+            "Ich hätte viel früher Wert auf eine gute Matratze legen sollen, vielen Dank hierfür."
+          ]
+        },
+        {
+          "author": "Frau B. aus Hamburg-Öjendorf",
+          "product": "SILWA Classic 22 NEW",
+          "text": [
+            "Wir brauchten eine gute, haltbare Matratze für unsere Ferienwohnung. Sie sollte gut belüftet sein, nicht zu weich und nicht zu hart. Vor allem sollte aber der Bezug auch einfach abzunehmen sein. Das beste an der Matratze ist: die Reißverschlüsse sind oben und unten Abzippbar.",
+            "Falls nun etwas passieren sollte ist es nun keine Arbeit mehr. Bisher haben wir nur gute Rückmeldungen bekommen und sogar schon eine Anfrage von einem Kunden bekommen woher ich diese Matratze habe."
+          ]
+        }
+      ]
+    },
+    {
+      "component": "mediaText",
+      "heading": "Neuartiger SILWA Flex-Bezug",
+      "body": [
+        "Aus 5 Stoffen für jeden Anspruch wählbar.",
+        "Stellen Sie sich Ihren Flex-Bezug selbst zusammen. [Mehr Infos zum Flex-Bezug hier »](/produkte/silwa-schlafsystem/silwa-matratzen-bezuege/)"
+      ],
+      "tone": "brand"
+    },
+    {
+      "component": "cardGrid",
+      "columns": 3,
+      "cards": [
+        {
+          "title": "Unser Service für Sie im Überblick",
+          "bullets": [
+            "30/90 Tage [Rückgaberecht](/rueckgaberecht/) (Einbehalt 59,-/99,- €)",
+            "10 Jahre Garantie",
+            "Sofort lieferbar",
+            "Kerntausch bis 90 Tage möglich (79,-€)"
+          ]
+        },
+        {
+          "title": "Spitzenqualität zum Spitzenpreis",
+          "bullets": [
+            "LGA zertifizierte Premium HR-Schäume von Eurofoam RG 50-55 garantiert",
+            "TOP-Stoffqualität von Lava, sehr bi-elastischer Bezug",
+            "Anmessung der SILWA Matratzen mit der SILWA [Liegediagnostik](/produkte/silwa-schlafsystem/silwa-vermessung/) in allen Filialen gratis. Zertifizierte Schlafberater erwarten Sie!",
+            "30/90 Tage Rückgaberecht auf alle Breiten. (Einbehalt 59,-/99,- €). Vermeiden Sie Fehlkäufe!",
+            "Hohe Kernhöhen (vorher 18 cm) mit konturoptimierten Kernschnitten",
+            "Hohe Rückstellkraft durch Premium HR-Schäume",
+            "Hohe Formstabilität durch hohe Raumgewichte",
+            "Gute Klimaregulierung",
+            "Hohe Luftdurchlässigkeit",
+            "Lieferung in drei Härtegraden für beste Körperanpassung für 50-130 kg Körpergewicht",
+            "Auf Wunsch auf versteppte Komfort-Bezüge und Coolness-Bezüge möglich"
+          ]
+        },
+        {
+          "title": "Matratzen-Bezüge der Extraklasse",
+          "bullets": [
+            "Hochwertiger bi-elastischer Super-Stretch-Bezug von dem deutschen Qualitäts-Stoffhersteller Lava, veredelt von der deutschen Manufaktur Kunz und Rummel.",
+            "Genormte Reißverschlüsse sorgen dafür, dass jederzeit ein Bezugsdeckel nachgekauft werden kann.",
+            "Die besondere Zusammensetzung und Verarbeitung machen den Bezug noch anpassungsfähiger und dehnbarer.",
+            "Durch Verwendung von Lyocell, einer nachhaltigen Faser auf natürlicher Basis, wird der Feuchtigkeitstransport und die Haltbarkeit verbessert.",
+            "Durch unterschiedliche Arten von Bezügen können die Liegeeigenschaften individuell angepasst und verändert werden (Coolness-Bezug, Scharfschurwolle-Bezug möglich)."
+          ]
+        }
+      ],
+      "ctas": [{ "label": "Unser SILWA Qualitätsversprechen für Material & Verarbeitung »", "href": "/silwa-qualitaetsversprechen/" }]
+    },
+    {
+      "component": "cardGrid",
+      "heading": "Finden Sie Ihre Matratze",
+      "columns": 3,
+      "cards": [
+        { "title": "Fühlen Sie sich wohl!", "text": ["Hautsympatischer Bezug und 7-Zonen-Anpassung."] },
+        { "title": "Sie liegen richtig!", "text": ["4 verschiedene Höhen in 3 verschiedenen Härtegraden."] },
+        { "title": "Das Schlafgefühl stimmt!", "text": ["Atmungsaktiver Kern mit hohem Raumgewicht 50 kg/m3 und Bezug mit einer langen Lebensdauer."] },
+        {
+          "title": "SILWA ist sauber und die Hygiene stimmt!",
+          "text": ["Alle Stoffe und Schäume sind Öko-Tex Standard 100, Babyklasse 1", "(höchste Unbedenklichkeits-Klasse)", "Alle Bezüge sind bei 60°C waschbar."]
+        },
+        { "title": "Sie können volles Vertrauen haben!", "text": ["30/90 Tage Rückgaberecht (Einbehalt 59,-/99,- €), 10 Jahre Garantie (pro rata)."] },
+        { "title": "Matratzen nach Maß auf den Zentimeter genau.", "text": ["Kurze Lieferzeiten!"] }
+      ],
+      "tone": "sand"
+    },
+    {
+      "component": "mediaText",
+      "heading": "Wir legen beim Versand Wert darauf, dass unsere Matratzen nicht gerollt und nicht vakuumiert werden. So kommt Qualität auch an!",
+      "headingLevel": "h3",
+      "tone": "accent"
+    },
+    {
+      "component": "appointmentCta",
+      "heading": "Beratungstermin vereinbaren",
+      "href": "/beratungstermin/",
+      "text": "Sie können uns gerne jederzeit zu unseren Öffnungszeiten in den Filialen aufsuchen. Gern können Sie auch einen Beratungstermin vereinbaren oder uns anrufen. Liegen Sie Vieles Probe.",
+      "branches": [
+        { "label": "Filiale Lübeck", "branch": "luebeck" },
+        { "label": "Filiale Hamburg", "branch": "hamburg" }
+      ]
+    },
+    {
+      "component": "mediaText",
+      "heading": "Vermeiden Sie Fehlkäufe!",
+      "body": [
+        "80% der Kunden fühlen sich beim Matratzenkauf überfordert, da es eine große Auswahl auf dem Markt gibt.",
+        "**Worauf Sie besonders achten sollten:**"
+      ],
+      "bullets": [
+        "Bevorzugte Schlafposition",
+        "Körpergewicht",
+        "Druckempfindlichkeit",
+        "Allergien / Unverträglichkeiten",
+        "Körpergröße",
+        "Körperstatur",
+        "Wärmeempfinden / Schwitzen",
+        "Beschwerden / Erkrankungen"
+      ],
+      "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/04/kompetenz-zentrum-schlafberatung-mit-liegediagnostik.png", "alt": "Kompetenz-Zentrum Schlafberatung mit Liegediagnostik Logo" },
+      "imageHref": "/kompetenz-zentrum/",
+      "imageFit": "contain",
+      "ctas": [{ "label": "Zertifizierte Schlafberater »", "href": "/zertifizierte-beratung/" }]
+    },
+    {
+      "component": "mediaText",
+      "eyebrow": "natürlich Wasserbetten Kompetenz im Rücken",
+      "heading": "Liegediagnostik \"SILWA\"",
+      "body": ["**Liegediagnostik seit 2002**"],
+      "bullets": [
+        "Computergesteuerte Vermessung, zur individuellen Lattenrost-Anpassung",
+        "Vollautomatische Lattenrost-Einstellung mit Feinjustierung",
+        "[Zertifizierte Schlafberater](/zertifizierte-beratung/)"
+      ],
+      "image": { "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/04/silwa-liegediagnostik-teaser.jpg", "alt": "Liegediagnostik Silwa Abbildung" },
+      "imageHref": "/silwa-vermessungs-station/",
+      "ctas": [{ "label": "Infos zur Liegediagnostik »", "href": "/silwa-vermessung/" }],
+      "reverse": true,
+      "tone": "sand"
+    }
+  ]
+}

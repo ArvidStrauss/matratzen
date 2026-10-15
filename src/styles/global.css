@@ -1,0 +1,75 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/inter';
+
+/* Design tokens — the only colours, fonts and radii components may use. */
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+
+  /* brand-600 is the original site green #517512 */
+  --color-brand-50: #f4f8ec;
+  --color-brand-100: #e6efd3;
+  --color-brand-200: #cddfa8;
+  --color-brand-300: #aac873;
+  --color-brand-400: #86ad45;
+  --color-brand-500: #6a9226;
+  --color-brand-600: #517512;
+  --color-brand-700: #415e10;
+  --color-brand-800: #354b12;
+  --color-brand-900: #2d3f13;
+  --color-brand-950: #16230a;
+
+  /* accent-500 is the original site orange #e99600 */
+  --color-accent-100: #fdf0d5;
+  --color-accent-400: #f5b02a;
+  --color-accent-500: #e99600;
+  --color-accent-600: #c47a00;
+
+  --color-sand-50: #fbfaf7;
+  --color-sand-100: #f4f1ea;
+  --color-sand-200: #e8e2d5;
+
+  --color-ink: #1d2118;
+  --color-muted: #5b6152;
+
+  --radius-card: 1.25rem;
+  --shadow-card: 0 1px 2px rgb(29 33 24 / 0.04), 0 8px 24px -8px rgb(29 33 24 / 0.12);
+}
+
+@layer base {
+  html {
+    @apply bg-white font-sans text-ink antialiased;
+    scroll-behavior: smooth;
+  }
+  a {
+    @apply transition-colors;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-600;
+  }
+}
+
+@utility container-page {
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+}
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition;
+}
+@utility btn-primary {
+  @apply btn bg-brand-600 text-white hover:bg-brand-700;
+}
+@utility btn-accent {
+  @apply btn bg-accent-500 text-white hover:bg-accent-600;
+}
+@utility btn-ghost {
+  @apply btn border border-brand-600/30 text-brand-700 hover:border-brand-600 hover:bg-brand-50;
+}
+@utility prose-link {
+  & a {
+    @apply font-medium text-brand-700 underline decoration-brand-300 underline-offset-2 hover:decoration-brand-600;
+  }
+}
+
+.tone-dark .prose-link a {
+  color: var(--color-white);
+  text-decoration-color: rgb(255 255 255 / 0.5);
+}

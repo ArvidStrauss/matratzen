@@ -1,0 +1,35 @@
+---
+import { getEntry } from 'astro:content';
+import type { Block } from '../../content.config';
+import { telHref } from '../../lib/format';
+
+type Props = Extract<Block, { component: 'appointmentCta' }>;
+const { heading, href, text } = Astro.props;
+const branches = await Promise.all(Astro.props.branches.map(async (b) => ({ label: b.label, data: (await getEntry(b.branch))!.data })));
+---
+
+<section class="py-14 sm:py-20">
+  <div class="container-page">
+    <div class="grid gap-8 overflow-hidden rounded-[2rem] bg-brand-700 p-8 text-white sm:p-12 lg:grid-cols-[1.4fr_1fr] lg:items-center">
+      <div>
+        <h2 class="text-3xl font-bold tracking-tight">
+          <a href={href} class="hover:text-brand-100">{heading} »</a>
+        </h2>
+        <p class="mt-4 max-w-xl leading-relaxed text-brand-50">{text}</p>
+        <a href={href} class="btn-accent mt-6">{heading}</a>
+      </div>
+      <ul class="space-y-3">
+        {
+          branches.map((b) => (
+            <li>
+              <a href={telHref(b.data.phone)} class="flex items-center justify-between gap-4 rounded-2xl bg-white/10 px-5 py-4 transition hover:bg-white/20">
+                <span class="text-sm text-brand-100">{b.label}:</span>
+                <span class="text-lg font-bold">{b.data.phone}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</section>

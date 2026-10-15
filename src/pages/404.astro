@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Nicht im Prototyp">
+  <section class="container-page py-24 text-center">
+    <p class="text-xs font-semibold tracking-[0.18em] text-accent-600 uppercase">Prototyp</p>
+    <h1 class="mt-3 text-3xl font-bold text-brand-800">Diese Seite ist im Prototyp noch nicht enthalten.</h1>
+    <p class="mt-4 text-muted">Der Prototyp umfasst die Startseite, SILWA Classic und die Filiale Hamburg.</p>
+    <div class="mt-8 flex flex-wrap justify-center gap-3">
+      <a href="/" class="btn-primary">Zur Startseite</a>
+      <a id="live-link" href="https://gesunde-matratzen.de/" class="btn-ghost" target="_blank" rel="noopener">Seite auf der aktuellen Website öffnen</a>
+    </div>
+  </section>
+  <script>
+    const link = document.getElementById('live-link') as HTMLAnchorElement | null;
+    const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+    if (link) link.href = new URL(location.pathname.slice(base.length), 'https://gesunde-matratzen.de').href;
+  </script>
+</Layout>

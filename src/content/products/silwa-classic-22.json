@@ -1,0 +1,28 @@
+{
+  "name": "SILWA Classic 22 NEW KS Kaltschaummatratze",
+  "href": "/silwa-classic-matratzen/silwa-classic-22-new-kaltschaum-matratze/",
+  "image": {
+    "src": "https://gesunde-matratzen.de/wp-content/uploads/2019/02/silwa-classic-22-new-kaltschaummatratze.png",
+    "alt": "Silwa Classic 22 NEW Kaltschaummatratze Doppeltuch-Bezug"
+  },
+  "description": "7-Zonen-Kaltschaum-Matratze mit optimaler Anpassung und hoher Druckentlastung durch Sandwichaufbau und hohes Raumgewicht",
+  "priceRegular": 899,
+  "priceFrom": 799,
+  "size": "90 x 200 cm",
+  "returnPolicy": { "label": "90 Tage Rückgaberecht / Geld-Zurück-Garantie", "href": "/rueckgaberecht/" },
+  "certificates": {
+    "heading": "Geprüfte Qualität SILWA-Kerne",
+    "intro": "Zu den Zertifikaten:",
+    "image": {
+      "src": "https://gesunde-matratzen.de/wp-content/uploads/2025/03/oeko-tex-100-07.0.51667-Hohenstein-HTTI.jpg",
+      "alt": "OEKO-TEX Standard 100 label 07.0.51667 Hohenstein HTTI"
+    },
+    "links": [
+      { "label": "ÖKO-TEX Zertifikat 07.0.51667", "href": "https://gesunde-matratzen.de/wp-content/uploads/2025/03/OEKO-TEX-2024-07.0.51667-de.pdf" },
+      { "label": "LGA Zertifikat LI 60108825-0001", "href": "https://gesunde-matratzen.de/wp-content/uploads/2023/10/LI-60108825-0001-LGA-Qualität-Zertifikat.pdf" },
+      { "label": "LGA Zertifikat LH 60174206-0001", "href": "https://gesunde-matratzen.de/wp-content/uploads/2025/03/LGA-schadstoffarm_HR_valid-until-20290116.pdf" }
+    ]
+  },
+  "detailsLink": { "label": "Zur Produktbeschreibung »", "href": "/silwa-classic-matratzen/silwa-classic-22-new-kaltschaum-matratze/" },
+  "pricesLink": { "label": "Mehr Größen und Preise »", "href": "https://gesunde-matratzen.de/wp-content/uploads/2018/03/SILWA-Classic22-NEW-Preise.pdf" }
+}

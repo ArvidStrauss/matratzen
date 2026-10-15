@@ -1,0 +1,81 @@
+---
+import { getEntries } from 'astro:content';
+import type { Block } from '../../content.config';
+import Section from '../Section.astro';
+import Img from '../Img.astro';
+import Price from '../Price.astro';
+
+type Props = Extract<Block, { component: 'productVariants' }>;
+const { appointment } = Astro.props;
+const products = await getEntries(Astro.props.products);
+---
+
+<Section tone="sand">
+  <ol class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+    {
+      products.map(({ data: p }) => (
+        <li class="flex flex-col overflow-hidden rounded-card border border-sand-200 bg-white shadow-card">
+          {p.returnPolicy && (
+            <a href={p.returnPolicy.href} class="bg-accent-500 px-5 py-2 text-xs font-semibold text-white hover:bg-accent-600">
+              {p.returnPolicy.label}
+            </a>
+          )}
+          <div class="flex flex-1 flex-col p-6">
+            <h2 class="text-xl leading-snug font-bold text-brand-800">
+              {p.href ? (
+                <a href={p.href} class="hover:text-brand-600">
+                  {p.name}
+                </a>
+              ) : (
+                p.name
+              )}
+            </h2>
+            <div class="mt-4 flex aspect-[4/3] items-center justify-center rounded-xl bg-sand-50 p-4">
+              <Img src={p.image.src} alt={p.image.alt} class="max-h-full w-auto object-contain" />
+            </div>
+            {p.description && <p class="mt-4 text-sm leading-relaxed text-ink/75">{p.description}</p>}
+            <div class="mt-4">
+              <Price from={p.priceFrom} regular={p.priceRegular} size="lg" />
+              {p.size && <p class="mt-1 text-xs text-muted">Größe: {p.size}</p>}
+            </div>
+
+            {p.certificates && (
+              <div class="mt-5 flex gap-4 rounded-xl border border-sand-200 bg-sand-50 p-4">
+                {p.certificates.image && <Img src={p.certificates.image.src} alt={p.certificates.image.alt} class="h-24 w-auto shrink-0 rounded-md object-contain" />}
+                <div class="text-sm">
+                  <p class="font-semibold">{p.certificates.heading}</p>
+                  <p class="mt-1 text-muted">{p.certificates.intro}</p>
+                  <ul class="mt-1 space-y-0.5">
+                    {p.certificates.links.map((c) => (
+                      <li>
+                        <a href={c.href} target="_blank" rel="noopener" class="text-brand-700 underline decoration-brand-300 underline-offset-2 hover:decoration-brand-600">
+                          {c.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            )}
+
+            <div class="mt-auto flex flex-col gap-2 pt-6">
+              {p.detailsLink && (
+                <a href={p.detailsLink.href} class="btn-ghost">
+                  {p.detailsLink.label}
+                </a>
+              )}
+              {p.pricesLink && (
+                <a href={p.pricesLink.href} target="_blank" rel="noopener" class="btn-ghost">
+                  {p.pricesLink.label}
+                </a>
+              )}
+              <a href={appointment.href} class="btn-primary">
+                {appointment.label}
+              </a>
+            </div>
+          </div>
+        </li>
+      ))
+    }
+  </ol>
+</Section>
