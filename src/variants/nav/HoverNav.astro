@@ -1,0 +1,89 @@
+---
+// Desktop hover/focus mega menu. Structure only; each variant passes its own classes via `ui`.
+import type { NavItem } from '../../content.config';
+
+interface Props {
+  items: NavItem[];
+  ui: { trigger: string; panel: string; heading: string; link: string; note: string };
+  class?: string;
+  listClass?: string;
+}
+
+const { items, ui, class: className, listClass } = Astro.props;
+---
+
+<nav aria-label="Hauptmenü" class={className}>
+  <ul class:list={['flex items-center whitespace-nowrap', listClass]}>
+    {
+      items.map((item, index) => {
+        const isMega = item.children?.some((c) => c.children?.length);
+        const alignRight = index >= items.length - 3;
+        const chevron = item.children && (
+          <svg class="size-3.5 opacity-60" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z" />
+          </svg>
+        );
+        return (
+          <li class:list={['group', !isMega && 'relative']}>
+            {item.href ? (
+              <a href={item.href} class:list={['flex items-center gap-1', ui.trigger]}>
+                {item.label}
+                {chevron}
+              </a>
+            ) : (
+              <button type="button" class:list={['flex items-center gap-1', ui.trigger]} aria-haspopup="true">
+                {item.label}
+                {chevron}
+              </button>
+            )}
+            {item.children && (
+              <div
+                class:list={[
+                  'invisible absolute top-full z-50 opacity-0 transition group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100',
+                  isMega ? 'inset-x-0' : alignRight ? 'right-0 min-w-72' : 'left-0 min-w-72',
+                ]}
+              >
+                <div class:list={['whitespace-normal', ui.panel]}>
+                  {isMega ? (
+                    <div class="grid grid-cols-3 gap-10">
+                      {item.children.map((col) => (
+                        <div>
+                          <a href={col.href} class={ui.heading}>
+                            {col.label}
+                            {col.note && <span class={ui.note}>{col.note}</span>}
+                          </a>
+                          {col.children && (
+                            <ul class="mt-3 space-y-1.5">
+                              {col.children.map((link) => (
+                                <li>
+                                  <a href={link.href} class={ui.link}>
+                                    {link.label}
+                                    {link.note && <span class={ui.note}>{link.note}</span>}
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <ul class="space-y-2">
+                      {item.children.map((link) => (
+                        <li>
+                          <a href={link.href} class={ui.link}>
+                            {link.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </div>
+            )}
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>

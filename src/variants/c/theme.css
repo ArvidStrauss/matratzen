@@ -1,0 +1,64 @@
+/* Variant C "Klar & Kontrast": monochrome near-black/white/fog, brand green only as a small accent, bento panels. */
+@import 'tailwindcss' source(none);
+@import '@fontsource-variable/manrope';
+
+@source './';
+@source '../nav/';
+@source '../Shell.astro';
+@source '../VariantSwitcher.astro';
+@source '../../components/Md.astro';
+
+@theme {
+  --font-sans: 'Manrope Variable', ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #121412;
+  --color-muted: #5c5f5b;
+  --color-line: #e5e6e3;
+  --color-fog: #f3f3f1;
+  --color-night: #0e100e;
+
+  /* leaf = original brand green #517512, used sparingly (prices, checks) */
+  --color-leaf: #517512;
+  --color-leaf-light: #b5d38a;
+}
+
+@layer base {
+  html {
+    @apply bg-white font-sans text-ink antialiased;
+    scroll-behavior: smooth;
+  }
+  a {
+    @apply transition-colors;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ink;
+  }
+  /* German compound words ("Kaltschaummatratzen") must not overflow small screens. */
+  h1,
+  h2,
+  h3 {
+    hyphens: auto;
+    overflow-wrap: break-word;
+  }
+}
+
+@utility wrap {
+  @apply mx-auto w-full max-w-[88rem] px-5 sm:px-8;
+}
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition;
+}
+@utility btn-black {
+  @apply btn bg-ink text-white hover:bg-ink/85;
+}
+@utility btn-white {
+  @apply btn bg-white text-ink hover:bg-white/85;
+}
+@utility btn-ghost {
+  @apply btn ring-1 ring-ink/15 ring-inset hover:ring-ink;
+}
+@utility prose-link {
+  & a {
+    @apply font-semibold underline decoration-2 decoration-leaf/40 underline-offset-4 hover:decoration-leaf;
+  }
+}

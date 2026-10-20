@@ -1,0 +1,9 @@
+---
+// Design variant A for the client review. Same content as /silwa-classic-matratzen/.
+import Page from '../../variants/a/Page.astro';
+import { loadVariantData } from '../../variants/shared';
+
+const data = await loadVariantData('silwa-classic-matratzen');
+---
+
+<Page data={data} />

@@ -6,11 +6,23 @@ interface Props {
   alt: string;
   class?: string;
   loading?: 'lazy' | 'eager';
+  /** Largest above-the-fold image: load eagerly with high fetch priority (LCP). */
+  priority?: boolean;
 }
 
-const { src, alt, class: className, loading = 'lazy' } = Astro.props;
+const { src, alt, class: className, loading = 'lazy', priority = false } = Astro.props;
 // Source URLs may contain umlauts; normalise to a single encoding.
 const url = encodeURI(decodeURI(src));
 ---
 
-<Image src={url} alt={alt} inferSize class={className} loading={loading} decoding="async" format="webp" quality={80} />
+<Image
+  src={url}
+  alt={alt}
+  inferSize
+  class={className}
+  loading={priority ? 'eager' : loading}
+  fetchpriority={priority ? 'high' : undefined}
+  decoding="async"
+  format="webp"
+  quality={80}
+/>

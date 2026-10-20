@@ -1,0 +1,28 @@
+---
+// Prototype-only navigation between the design variants. Not part of the site content.
+import { variants } from './shared';
+
+interface Props {
+  current: string;
+  class?: string;
+}
+
+const { current, class: className } = Astro.props;
+const items = [{ slug: '', short: 'Original', label: 'Aktuelles Prototyp-Layout' }, ...variants];
+---
+
+<nav aria-label="Layout-Entwürfe" class:list={['fixed bottom-4 left-4 z-50 flex items-center gap-1 rounded-full bg-neutral-900/90 p-1 text-xs text-white shadow-lg backdrop-blur', className]}>
+  <span class="hidden px-2 text-neutral-400 sm:inline">Entwurf</span>
+  {
+    items.map((v) => (
+      <a
+        href={`/silwa-classic-matratzen/${v.slug ? `${v.slug}/` : ''}`}
+        title={v.label}
+        aria-current={v.slug === current ? 'page' : undefined}
+        class:list={['rounded-full px-3 py-1.5 font-medium transition', v.slug === current ? 'bg-white text-neutral-900' : 'hover:bg-white/15']}
+      >
+        {v.short}
+      </a>
+    ))
+  }
+</nav>

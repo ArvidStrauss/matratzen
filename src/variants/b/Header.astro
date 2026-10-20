@@ -1,0 +1,76 @@
+---
+import type { Branch, Settings } from '../shared';
+import Img from '../../components/Img.astro';
+import HoverNav from '../nav/HoverNav.astro';
+import AccordionNav from '../nav/AccordionNav.astro';
+import { telHref } from '../../lib/format';
+import { icons } from '../icons';
+
+interface Props {
+  settings: Settings;
+  branches: Branch[];
+}
+
+const { settings, branches } = Astro.props;
+const headerBranches = branches.filter((b) => b.id !== 'kiel');
+---
+
+<div class="bg-cream text-xs text-ink">
+  <ul class="wrap flex h-9 items-center justify-center gap-8">
+    {
+      headerBranches.map((b) => (
+        <li class="hidden sm:block">
+          <a href={telHref(b.phone)} class="flex items-center gap-1.5 hover:text-ink-strong">
+            <svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d={icons.phone} /></svg>
+            {b.name} {b.phone}
+          </a>
+        </li>
+      ))
+    }
+    <li>
+      <a href={settings.footer.email.href} class="underline underline-offset-2 hover:text-ink-strong">{settings.footer.email.label}</a>
+    </li>
+  </ul>
+</div>
+
+<header class="sticky top-0 z-40 border-b border-line bg-white">
+  <div class="wrap relative">
+    <div class="flex h-20 items-center justify-between gap-6">
+      <a href="/" class="shrink-0" aria-label={settings.siteName}>
+        <Img src={settings.logo.src} alt={settings.logo.alt} class="h-12 w-auto" loading="eager" />
+      </a>
+      <div class="flex items-center gap-3">
+        <a href={settings.appointmentCta.href} class="btn-dark hidden sm:inline-flex">{settings.appointmentCta.label}</a>
+        <details class="lg:hidden">
+          <summary class="flex size-11 cursor-pointer list-none items-center justify-center [&::-webkit-details-marker]:hidden" aria-label="Menü">
+            <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"></path></svg>
+          </summary>
+          <div class="absolute inset-x-0 top-full max-h-[80vh] overflow-y-auto border-y border-line bg-white px-5 py-3 shadow-lg">
+            <AccordionNav
+              items={settings.navigation}
+              ui={{
+                item: 'divide-y divide-line',
+                top: 'py-3.5 text-[1.05rem]',
+                col: 'font-semibold',
+                link: 'text-sm text-muted',
+                note: 'ml-2 text-xs text-steel-600',
+              }}
+            />
+          </div>
+        </details>
+      </div>
+    </div>
+    <HoverNav
+      class="hidden pb-1 lg:block"
+      listClass="justify-center xl:gap-1"
+      items={settings.navigation}
+      ui={{
+        trigger: 'px-1.5 py-3 text-[0.85rem] text-ink hover:text-steel-600 xl:px-3 xl:text-base',
+        panel: 'border-t border-line bg-white p-10 shadow-[0_18px_30px_-12px_rgb(0_0_0/0.18)]',
+        heading: 'block text-[1.05rem] font-semibold text-ink-strong hover:text-steel-600',
+        link: 'text-sm text-ink hover:text-steel-600',
+        note: 'ml-2 rounded-[3px] bg-steel-100 px-1.5 py-0.5 text-xs font-medium text-steel-700',
+      }}
+    />
+  </div>
+</header>

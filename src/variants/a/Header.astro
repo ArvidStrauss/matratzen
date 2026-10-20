@@ -1,0 +1,72 @@
+---
+import type { Branch, Settings } from '../shared';
+import Img from '../../components/Img.astro';
+import HoverNav from '../nav/HoverNav.astro';
+import AccordionNav from '../nav/AccordionNav.astro';
+import { telHref } from '../../lib/format';
+
+interface Props {
+  settings: Settings;
+  branches: Branch[];
+}
+
+const { settings, branches } = Astro.props;
+const headerBranches = branches.filter((b) => b.id !== 'kiel');
+---
+
+<div class="border-b border-line text-xs text-muted">
+  <div class="wrap flex h-9 max-w-7xl items-center justify-between gap-6">
+    <ul class="hidden gap-8 sm:flex">
+      {
+        headerBranches.map((b) => (
+          <li>
+            <a href={telHref(b.phone)} class="hover:text-ink">
+              {b.name} <span class="text-ink">{b.phone}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <a href={settings.appointmentCta.href} class="ml-auto font-medium text-sage-700 underline decoration-sage-300 underline-offset-4 hover:text-ink">
+      {settings.appointmentCta.label}
+    </a>
+  </div>
+</div>
+
+<header class="sticky top-0 z-40 border-b border-line bg-paper/95 backdrop-blur">
+  <div class="wrap relative flex h-20 max-w-7xl items-center justify-between gap-8">
+    <a href="/" class="shrink-0" aria-label={settings.siteName}>
+      <Img src={settings.logo.src} alt={settings.logo.alt} class="h-11 w-auto" loading="eager" />
+    </a>
+
+    <HoverNav
+      class="hidden xl:block"
+      items={settings.navigation}
+      ui={{
+        trigger: 'px-2.5 py-2 text-sm text-ink/75 hover:text-ink',
+        panel: 'mt-px border border-line bg-paper p-10 shadow-[0_24px_48px_-28px_rgb(36_37_31/0.35)]',
+        heading: 'block border-b border-line pb-3 font-serif text-lg text-ink hover:text-sage-700',
+        link: 'text-sm text-muted hover:text-ink',
+        note: 'ml-2 text-xs text-sage-600',
+      }}
+    />
+
+    <details class="xl:hidden">
+      <summary class="flex size-11 cursor-pointer list-none items-center justify-center rounded-full border border-line [&::-webkit-details-marker]:hidden" aria-label="Menü">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      </summary>
+      <div class="absolute inset-x-0 top-full max-h-[80vh] overflow-y-auto border-b border-line bg-paper px-6 py-4">
+        <AccordionNav
+          items={settings.navigation}
+          ui={{
+            item: 'divide-y divide-line',
+            top: 'py-4 font-serif text-lg',
+            col: 'font-medium',
+            link: 'text-sm text-muted',
+            note: 'ml-2 text-xs text-sage-600',
+          }}
+        />
+      </div>
+    </details>
+  </div>
+</header>

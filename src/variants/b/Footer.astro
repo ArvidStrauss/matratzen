@@ -1,0 +1,58 @@
+---
+import type { Settings } from '../shared';
+import Img from '../../components/Img.astro';
+
+interface Props {
+  settings: Settings;
+}
+
+const { settings } = Astro.props;
+const { footer } = settings;
+---
+
+<footer class="bg-mist">
+  <div class="wrap grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-5">
+    <div class="lg:col-span-2">
+      <Img src={settings.logo.src} alt={settings.logo.alt} class="h-12 w-auto mix-blend-multiply" />
+      <p class="mt-6 text-lg font-semibold text-ink-strong">{footer.heading}</p>
+      <p class="mt-2 max-w-sm text-sm leading-relaxed">{footer.address}</p>
+      <p class="mt-4 flex flex-wrap gap-x-5 gap-y-1 text-sm">
+        <a href={footer.phone.href} class="font-semibold text-ink-strong hover:text-steel-600">{footer.phone.label}</a>
+        <a href={footer.email.href} class="text-steel-600 underline underline-offset-2">{footer.email.label}</a>
+      </p>
+    </div>
+    {
+      footer.columns.map((col) => (
+        <div>
+          <p class="text-sm font-semibold text-ink-strong">{col.heading}</p>
+          <ul class="mt-4 space-y-2 text-sm">
+            {col.links.map((link) => (
+              <li>
+                <a href={link.href} class="hover:text-steel-600">
+                  {link.label}
+                  {link.note && <span class="block text-muted">{link.note}</span>}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+  <div class="bg-cream">
+    <div class="wrap flex flex-col gap-3 py-4 text-xs sm:flex-row sm:items-center sm:justify-between">
+      <p>{footer.copyright}</p>
+      <ul class="flex gap-5">
+        {
+          footer.legal.map((link) => (
+            <li>
+              <a href={link.href} class="hover:text-ink-strong">
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</footer>

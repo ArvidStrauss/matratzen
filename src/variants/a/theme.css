@@ -1,0 +1,66 @@
+/* Variant A "Ruhe & Natur": warm paper neutrals, one muted sage accent (desaturated brand green), serif headlines. */
+@import 'tailwindcss' source(none);
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/fraunces';
+
+@source './';
+@source '../nav/';
+@source '../Shell.astro';
+@source '../VariantSwitcher.astro';
+@source '../../components/Md.astro';
+
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Fraunces Variable', ui-serif, Georgia, serif;
+
+  --color-paper: #faf8f4;
+  --color-linen: #f3efe7;
+  --color-line: #e4ded3;
+  --color-ink: #24251f;
+  --color-muted: #66645c;
+
+  --color-sage-50: #f0f2ea;
+  --color-sage-100: #e2e7d8;
+  --color-sage-300: #b5bfa4;
+  --color-sage-600: #5b684b;
+  --color-sage-700: #485239;
+  --color-sage-900: #2b3024;
+}
+
+@layer base {
+  html {
+    @apply bg-paper font-sans text-ink antialiased;
+    scroll-behavior: smooth;
+  }
+  a {
+    @apply transition-colors;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-sage-700;
+  }
+  /* German compound words ("Kaltschaummatratzen") must not overflow small screens. */
+  h1,
+  h2,
+  h3 {
+    hyphens: auto;
+    overflow-wrap: break-word;
+  }
+}
+
+@utility wrap {
+  @apply mx-auto w-full max-w-6xl px-6 sm:px-10;
+}
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition;
+}
+@utility btn-solid {
+  @apply btn bg-sage-900 text-paper hover:bg-sage-700;
+}
+@utility btn-line {
+  @apply btn border border-ink/20 text-ink hover:border-ink;
+}
+@utility prose-link {
+  & a {
+    @apply underline decoration-sage-300 underline-offset-4 hover:decoration-sage-700;
+  }
+}

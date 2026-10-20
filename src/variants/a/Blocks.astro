@@ -1,0 +1,314 @@
+---
+// Variant A block rendering. Same blocks and content as src/components/blocks, different presentation.
+import type { VariantData } from '../shared';
+import Img from '../../components/Img.astro';
+import Md from '../../components/Md.astro';
+import { formatEuro, isExternal, telHref } from '../../lib/format';
+
+interface Props {
+  data: VariantData;
+}
+
+const { data } = Astro.props;
+const { page, featured, product, branch } = data;
+const ext = (href: string) => (isExternal(href) ? { target: '_blank', rel: 'noopener' } : {});
+const check = 'M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.58l7.3-7.3a1 1 0 0 1 1.4 0Z';
+---
+
+{
+  page.body.map((block) => {
+    switch (block.component) {
+      case 'hero':
+        return (
+          <section class="wrap grid items-center gap-14 py-16 lg:grid-cols-[1.5fr_1fr] lg:py-24">
+            <div class="min-w-0">
+              {block.eyebrow && <p class="text-xs font-medium tracking-[0.2em] text-sage-700 uppercase">{block.eyebrow}</p>}
+              <h1 class="mt-6 font-serif text-[length:clamp(1.6rem,8.2vw,2rem)] leading-[1.05] tracking-tight text-balance sm:text-5xl lg:text-[3.25rem] xl:text-6xl">
+                {block.headingLines.map((line) => (
+                  <span class="block">{line}</span>
+                ))}
+              </h1>
+              {block.subheading && <Md text={block.subheading} class="mt-6 max-w-xl text-lg leading-relaxed text-muted" />}
+              {block.ctas.length > 0 && (
+                <div class="mt-10 flex flex-wrap gap-4">
+                  {block.ctas.map((cta) => (
+                    <a href={cta.href} class="btn-line">
+                      {cta.label}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+            {featured && (
+              <a href={featured.href} class="relative mx-auto block w-full max-w-md">
+                <div class="flex aspect-[4/5] items-end justify-center overflow-hidden rounded-t-full bg-sage-100 px-8 pb-14">
+                  <Img src={featured.image.src} alt={featured.image.alt} class="w-full object-contain mix-blend-multiply" priority />
+                </div>
+              </a>
+            )}
+          </section>
+        );
+
+      case 'productVariants':
+        return (
+          <section class="border-y border-line bg-white">
+            <ol class="wrap divide-y divide-line">
+              {block.products.map(product).map((p) => (
+                <li class="grid gap-8 py-14 md:grid-cols-[15rem_1fr] lg:grid-cols-[17rem_1fr_15rem] lg:gap-12">
+                  <a href={p.href} class="block self-start rounded-3xl bg-linen p-6">
+                    <Img src={p.image.src} alt={p.image.alt} class="mx-auto aspect-[4/3] w-full object-contain mix-blend-multiply" />
+                  </a>
+                  <div>
+                    <h2 class="font-serif text-2xl leading-snug sm:text-3xl">{p.href ? <a href={p.href} class="hover:text-sage-700">{p.name}</a> : p.name}</h2>
+                    {p.description && <p class="mt-4 max-w-xl leading-relaxed text-muted">{p.description}</p>}
+                    {p.size && <p class="mt-3 text-sm text-muted">Größe: {p.size}</p>}
+                    {p.returnPolicy && (
+                      <a href={p.returnPolicy.href} class="mt-5 inline-flex rounded-full bg-sage-50 px-3.5 py-1.5 text-xs font-medium text-sage-700 hover:bg-sage-100">
+                        {p.returnPolicy.label}
+                      </a>
+                    )}
+                    {p.certificates && (
+                      <details class="group/cert mt-6 max-w-xl border-t border-line pt-4">
+                        <summary class="flex cursor-pointer list-none items-center justify-between text-sm font-medium [&::-webkit-details-marker]:hidden">
+                          {p.certificates.heading}
+                          <span class="text-lg leading-none text-sage-600 transition group-open/cert:rotate-45">+</span>
+                        </summary>
+                        <div class="mt-4 flex gap-5">
+                          {p.certificates.image && <Img src={p.certificates.image.src} alt={p.certificates.image.alt} class="h-20 w-auto shrink-0 rounded-md object-contain" />}
+                          <div class="text-sm">
+                            <p class="text-muted">{p.certificates.intro}</p>
+                            <ul class="mt-1.5 space-y-1">
+                              {p.certificates.links.map((c) => (
+                                <li>
+                                  <a href={c.href} {...ext(c.href)} class="underline decoration-sage-300 underline-offset-4 hover:decoration-sage-700">
+                                    {c.label}
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </details>
+                    )}
+                  </div>
+                  <div class="flex flex-col gap-3 md:col-start-2 lg:col-start-auto lg:items-end lg:text-right">
+                    <div>
+                      {p.priceRegular !== undefined && <s class="text-sm text-muted">{formatEuro(p.priceRegular)}</s>}
+                      <p class="flex items-baseline gap-2 lg:justify-end">
+                        <span class="text-sm text-muted">ab</span>
+                        <span class="font-serif text-4xl">{formatEuro(p.priceFrom)}</span>
+                      </p>
+                    </div>
+                    <a href={block.appointment.href} class="btn-solid mt-2 w-full lg:w-auto">
+                      {block.appointment.label}
+                    </a>
+                    {p.detailsLink && (
+                      <a href={p.detailsLink.href} class="text-sm underline decoration-line underline-offset-4 hover:decoration-ink">
+                        {p.detailsLink.label}
+                      </a>
+                    )}
+                    {p.pricesLink && (
+                      <a href={p.pricesLink.href} {...ext(p.pricesLink.href)} class="text-sm underline decoration-line underline-offset-4 hover:decoration-ink">
+                        {p.pricesLink.label}
+                      </a>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
+        );
+
+      case 'mediaText': {
+        const hasText = !!(block.heading || block.body.length || block.bullets.length);
+        const Heading = block.headingLevel;
+        const ImageWrap = block.imageHref ? 'a' : 'div';
+        if (block.image && !hasText) {
+          return (
+            <section class="wrap py-16">
+              <a href={block.imageHref} class="mx-auto block max-w-4xl overflow-hidden rounded-3xl">
+                <Img src={block.image.src} alt={block.image.alt} class="h-auto w-full" />
+              </a>
+            </section>
+          );
+        }
+        if (block.tone === 'accent') {
+          return (
+            <section class="wrap py-20">
+              <Heading class="mx-auto max-w-4xl border-y border-line py-12 text-center font-serif text-2xl leading-snug text-balance sm:text-3xl">{block.heading}</Heading>
+            </section>
+          );
+        }
+        if (block.tone === 'brand') {
+          return (
+            <section class="bg-sage-900 text-paper">
+              <div class="wrap max-w-3xl py-20 text-center">
+                <Heading class="font-serif text-4xl tracking-tight sm:text-5xl">{block.heading}</Heading>
+                <div class="mt-6 space-y-3 text-lg leading-relaxed text-paper/80 [&_a]:text-paper">
+                  {block.body.map((t) => (
+                    <Md text={t} />
+                  ))}
+                </div>
+              </div>
+            </section>
+          );
+        }
+        return (
+          <section class:list={[block.tone === 'sand' ? 'bg-linen' : '']}>
+            <div class:list={['wrap grid items-center gap-12 py-20 lg:gap-20', block.image && 'lg:grid-cols-2']}>
+              <div class:list={[block.image && block.reverse && 'lg:order-2', !block.image && 'max-w-3xl']}>
+                {block.eyebrow && <p class="mb-4 text-xs font-medium tracking-[0.2em] text-sage-700 uppercase">{block.eyebrow}</p>}
+                {block.heading && (
+                  <Heading class="font-serif text-3xl leading-tight tracking-tight text-balance sm:text-4xl">
+                    {block.headingHref ? <a href={block.headingHref}>{block.heading}</a> : block.heading}
+                  </Heading>
+                )}
+                <div class="mt-6 space-y-4 leading-relaxed text-muted [&_strong]:font-medium [&_strong]:text-ink">
+                  {block.body.map((t) => (
+                    <Md text={t} />
+                  ))}
+                </div>
+                {block.bullets.length > 0 && (
+                  <ul class="mt-6 divide-y divide-line border-y border-line">
+                    {block.bullets.map((b) => (
+                      <li class="flex gap-4 py-3">
+                        <span class="mt-2.5 h-px w-4 shrink-0 bg-sage-600" />
+                        <Md text={b} as="span" />
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {block.ctas.length > 0 && (
+                  <div class="mt-8 flex flex-col items-start gap-3">
+                    {block.ctas.map((cta) =>
+                      isExternal(cta.href) ? (
+                        <a href={cta.href} {...ext(cta.href)} class="text-sm underline decoration-sage-300 underline-offset-4 hover:decoration-sage-700">
+                          {cta.label}
+                        </a>
+                      ) : (
+                        <a href={cta.href} class="btn-line">
+                          {cta.label}
+                        </a>
+                      ),
+                    )}
+                  </div>
+                )}
+              </div>
+              {block.image && (
+                <ImageWrap href={block.imageHref} class:list={['block overflow-hidden rounded-3xl', block.reverse && 'lg:order-1', block.imageFit === 'contain' ? 'bg-white p-10' : '']}>
+                  <Img
+                    src={block.image.src}
+                    alt={block.image.alt}
+                    class:list={[block.imageFit === 'cover' ? 'aspect-[4/3] h-auto w-full object-cover' : 'mx-auto max-h-80 w-auto object-contain']}
+                  />
+                </ImageWrap>
+              )}
+            </div>
+          </section>
+        );
+      }
+
+      case 'testimonials':
+        return (
+          <section class="wrap py-24">
+            <h2 class="mx-auto max-w-3xl text-center font-serif text-[length:clamp(1.6rem,8.2vw,1.875rem)] tracking-tight text-balance sm:text-4xl">{block.heading}</h2>
+            <ul class="mt-16 grid gap-x-16 gap-y-14 md:grid-cols-2">
+              {block.items.map((item) => (
+                <li class="border-t border-line pt-8">
+                  <span class="font-serif text-5xl leading-none text-sage-300" aria-hidden="true">
+                    “
+                  </span>
+                  {item.product && <p class="text-xs font-medium tracking-[0.2em] text-sage-700 uppercase">{item.product}</p>}
+                  <blockquote class="mt-4 space-y-3 font-serif text-lg leading-relaxed">
+                    {item.text.map((t) => (
+                      <p>{t}</p>
+                    ))}
+                  </blockquote>
+                  <p class="mt-5 text-sm text-muted">{item.author}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        );
+
+      case 'cardGrid': {
+        const numbered = block.cards.every((c) => !c.image && !c.bullets.length);
+        return (
+          <section class:list={[block.tone === 'sand' && 'bg-linen']}>
+            <div class="wrap py-20">
+              {block.heading && <h2 class="mb-12 font-serif text-3xl tracking-tight sm:text-4xl">{block.heading}</h2>}
+              <ul class:list={['grid', numbered ? 'gap-x-12 gap-y-12 md:grid-cols-2 lg:grid-cols-3' : 'gap-y-12 lg:grid-cols-3 lg:divide-x lg:divide-line']}>
+                {block.cards.map((card, i) => (
+                  <li class:list={[numbered ? 'border-t border-line pt-6' : 'lg:px-10 lg:first:pl-0 lg:last:pr-0']}>
+                    {numbered && <p class="font-serif text-sm text-sage-600">{String(i + 1).padStart(2, '0')}</p>}
+                    {card.title && <h3 class="mt-2 font-serif text-2xl leading-snug">{card.title}</h3>}
+                    {card.text.length > 0 && (
+                      <div class="mt-3 space-y-1 leading-relaxed text-muted">
+                        {card.text.map((t) => (
+                          <Md text={t} />
+                        ))}
+                      </div>
+                    )}
+                    {card.bullets.length > 0 && (
+                      <ul class="mt-5 space-y-3 text-sm leading-relaxed">
+                        {card.bullets.map((b) => (
+                          <li class="flex gap-3">
+                            <svg class="mt-0.5 size-4 shrink-0 text-sage-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <path fill-rule="evenodd" d={check} clip-rule="evenodd" />
+                            </svg>
+                            <Md text={b} as="span" class="text-ink/85" />
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                ))}
+              </ul>
+              {block.ctas.length > 0 && (
+                <div class="mt-14 flex justify-center">
+                  {block.ctas.map((cta) => (
+                    <a href={cta.href} class="btn-line">
+                      {cta.label}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+          </section>
+        );
+      }
+
+      case 'appointmentCta':
+        return (
+          <section class="wrap py-20">
+            <div class="grid gap-12 rounded-[2.5rem] bg-sage-50 p-10 sm:p-16 lg:grid-cols-[1.3fr_1fr] lg:items-center">
+              <div>
+                <h2 class="font-serif text-4xl tracking-tight sm:text-5xl">
+                  <a href={block.href} class="hover:text-sage-700">
+                    {block.heading}
+                  </a>
+                </h2>
+                <p class="mt-5 max-w-xl leading-relaxed text-muted">{block.text}</p>
+                <a href={block.href} class="btn-solid mt-8">
+                  {block.heading}
+                </a>
+              </div>
+              <ul class="divide-y divide-sage-100">
+                {block.branches.map((b) => (
+                  <li>
+                    <a href={telHref(branch(b.branch).phone)} class="group flex flex-col py-5 first:pt-0 last:pb-0">
+                      <span class="text-sm text-muted">{b.label}:</span>
+                      <span class="font-serif text-3xl group-hover:text-sage-700">{branch(b.branch).phone}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        );
+
+      default:
+        return null;
+    }
+  })
+}

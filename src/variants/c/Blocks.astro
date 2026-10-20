@@ -1,0 +1,341 @@
+---
+// Variant C block rendering (monochrome, bento panels). Same blocks and content as src/components/blocks.
+import type { VariantData } from '../shared';
+import Img from '../../components/Img.astro';
+import Md from '../../components/Md.astro';
+import { formatEuro, isExternal, telHref } from '../../lib/format';
+import { cardIcons, icons } from '../icons';
+
+interface Props {
+  data: VariantData;
+}
+
+const { data } = Astro.props;
+const { page, featured, product, branch } = data;
+const ext = (href: string) => (isExternal(href) ? { target: '_blank', rel: 'noopener' } : {});
+---
+
+{
+  page.body.map((block) => {
+    switch (block.component) {
+      case 'hero':
+        return (
+          <section class="bg-night text-white">
+            <div class="wrap grid items-center gap-12 py-16 lg:py-24 xl:grid-cols-[1.5fr_1fr]">
+              <div class="min-w-0">
+                {block.eyebrow && <p class="text-sm font-semibold text-leaf-light">{block.eyebrow}</p>}
+                <h1 class="mt-5 text-[length:clamp(1.6rem,8.2vw,2rem)] leading-[0.98] font-bold tracking-tighter text-balance sm:text-5xl lg:text-7xl xl:text-[4.25rem]">
+                  {block.headingLines.map((line) => (
+                    <span class="block">{line}</span>
+                  ))}
+                </h1>
+                {block.subheading && <Md text={block.subheading} class="mt-6 max-w-xl text-lg text-white/70" />}
+                {block.ctas.length > 0 && (
+                  <div class="mt-10 flex flex-wrap gap-3">
+                    {block.ctas.map((cta) => (
+                      <a href={cta.href} class="btn-white">
+                        {cta.label}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+              {featured && (
+                <a href={featured.href} class="block rounded-[2rem] bg-white p-8 shadow-[0_0_120px_-20px_rgb(181_211_138/0.45)] sm:p-12">
+                  <Img src={featured.image.src} alt={featured.image.alt} class="mx-auto w-full max-w-md object-contain" priority />
+                </a>
+              )}
+            </div>
+          </section>
+        );
+
+      case 'productVariants':
+        return (
+          <section class="py-14 sm:py-20">
+            <ol class="wrap -mb-4 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 md:grid md:grid-cols-2 md:overflow-visible lg:grid-cols-3 xl:grid-cols-5">
+              {block.products.map(product).map((p) => (
+                <li class="flex w-[82%] shrink-0 snap-start flex-col rounded-[1.75rem] bg-fog p-5 md:w-auto">
+                  <a href={p.href} class="block rounded-2xl bg-white p-4">
+                    <Img src={p.image.src} alt={p.image.alt} class="mx-auto aspect-[4/3] w-full object-contain" />
+                  </a>
+                  <h2 class="mt-5 text-lg leading-snug font-bold tracking-tight">{p.href ? <a href={p.href}>{p.name}</a> : p.name}</h2>
+                  {p.description && <p class="mt-2 text-sm leading-relaxed text-muted">{p.description}</p>}
+                  {p.size && <p class="mt-2 text-xs text-muted">Größe: {p.size}</p>}
+                  <div class="mt-auto pt-5">
+                    {p.priceRegular !== undefined && <s class="text-sm text-muted">{formatEuro(p.priceRegular)}</s>}
+                    <p class="flex items-baseline gap-1.5">
+                      <span class="text-sm text-muted">ab</span>
+                      <span class="text-3xl font-bold tracking-tight text-leaf">{formatEuro(p.priceFrom)}</span>
+                    </p>
+                    {p.returnPolicy && (
+                      <a href={p.returnPolicy.href} class="mt-3 flex items-start gap-1.5 text-xs font-medium">
+                        <svg class="mt-px size-3.5 shrink-0 text-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">
+                          <path d={icons.check} />
+                        </svg>
+                        {p.returnPolicy.label}
+                      </a>
+                    )}
+                    <div class="mt-5 grid gap-2">
+                      <a href={block.appointment.href} class="btn-black">
+                        {block.appointment.label}
+                      </a>
+                      {p.detailsLink && (
+                        <a href={p.detailsLink.href} class="btn-ghost bg-white">
+                          {p.detailsLink.label}
+                        </a>
+                      )}
+                      {p.pricesLink && (
+                        <a href={p.pricesLink.href} {...ext(p.pricesLink.href)} class="pt-1 text-center text-xs font-semibold underline underline-offset-4">
+                          {p.pricesLink.label}
+                        </a>
+                      )}
+                    </div>
+                    {p.certificates && (
+                      <details class="group/cert mt-4 border-t border-line pt-3 text-xs">
+                        <summary class="flex cursor-pointer list-none items-center justify-between font-semibold [&::-webkit-details-marker]:hidden">
+                          {p.certificates.heading}
+                          <span class="text-base leading-none transition group-open/cert:rotate-45">+</span>
+                        </summary>
+                        {p.certificates.image && <Img src={p.certificates.image.src} alt={p.certificates.image.alt} class="mt-3 h-20 w-auto rounded-lg object-contain" />}
+                        <p class="mt-3 text-muted">{p.certificates.intro}</p>
+                        <ul class="mt-1 space-y-1">
+                          {p.certificates.links.map((c) => (
+                            <li>
+                              <a href={c.href} {...ext(c.href)} class="underline underline-offset-2">
+                                {c.label}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </details>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
+        );
+
+      case 'mediaText': {
+        const hasText = !!(block.heading || block.body.length || block.bullets.length);
+        const Heading = block.headingLevel;
+        const ImageWrap = block.imageHref ? 'a' : 'div';
+        if (block.image && !hasText) {
+          return (
+            <section class="wrap py-6">
+              <a href={block.imageHref} class="block overflow-hidden rounded-[2rem] bg-fog p-4 sm:p-8">
+                <Img src={block.image.src} alt={block.image.alt} class="mx-auto h-auto w-full max-w-4xl" />
+              </a>
+            </section>
+          );
+        }
+        if (block.tone === 'accent') {
+          return (
+            <section class="wrap py-16 sm:py-24">
+              <div class="flex max-w-5xl flex-col gap-6 sm:flex-row sm:items-start">
+                <span class="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-ink text-white">
+                  <svg class="size-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <path d={icons.truck} />
+                  </svg>
+                </span>
+                <Heading class="text-3xl leading-tight font-bold tracking-tight text-balance sm:text-4xl">{block.heading}</Heading>
+              </div>
+            </section>
+          );
+        }
+        if (block.tone === 'brand') {
+          return (
+            <section class="wrap py-6">
+              <div class="rounded-[2rem] bg-night px-8 py-16 text-center text-white sm:px-16 sm:py-20">
+                <Heading class="text-4xl font-bold tracking-tighter sm:text-6xl">{block.heading}</Heading>
+                <div class="mx-auto mt-6 max-w-2xl space-y-2 text-lg text-white/70 [&_a]:text-white [&_a]:decoration-leaf-light">
+                  {block.body.map((t) => (
+                    <Md text={t} />
+                  ))}
+                </div>
+              </div>
+            </section>
+          );
+        }
+        return (
+          <section class="wrap py-6">
+            <div class:list={['grid items-center gap-10 rounded-[2rem] p-8 sm:p-14 lg:gap-16', block.tone === 'sand' ? 'bg-fog' : 'ring-1 ring-line', block.image && 'lg:grid-cols-2']}>
+              <div class:list={[block.image && block.reverse && 'lg:order-2', !block.image && 'max-w-3xl']}>
+                {block.eyebrow && <p class="mb-3 text-sm font-semibold text-leaf">{block.eyebrow}</p>}
+                {block.heading && (
+                  <Heading class="text-3xl leading-tight font-bold tracking-tight text-balance sm:text-4xl">
+                    {block.headingHref ? <a href={block.headingHref}>{block.heading}</a> : block.heading}
+                  </Heading>
+                )}
+                <div class="mt-5 space-y-3 leading-relaxed text-muted [&_strong]:text-ink">
+                  {block.body.map((t) => (
+                    <Md text={t} />
+                  ))}
+                </div>
+                {block.bullets.length > 0 && (
+                  <ul class="mt-5 space-y-3">
+                    {block.bullets.map((b) => (
+                      <li class="flex gap-3">
+                        <span class="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-ink text-white">
+                          <svg class="size-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">
+                            <path d={icons.check} />
+                          </svg>
+                        </span>
+                        <Md text={b} as="span" class="font-medium" />
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {block.ctas.length > 0 && (
+                  <div class="mt-8 flex flex-wrap gap-2">
+                    {block.ctas.map((cta) =>
+                      isExternal(cta.href) ? (
+                        <a href={cta.href} {...ext(cta.href)} class="btn-ghost text-xs">
+                          {cta.label} ↗
+                        </a>
+                      ) : (
+                        <a href={cta.href} class="btn-black">
+                          {cta.label}
+                        </a>
+                      ),
+                    )}
+                  </div>
+                )}
+              </div>
+              {block.image && (
+                <ImageWrap href={block.imageHref} class:list={['block overflow-hidden rounded-3xl', block.reverse && 'lg:order-1', block.imageFit === 'contain' && 'bg-white p-8']}>
+                  <Img
+                    src={block.image.src}
+                    alt={block.image.alt}
+                    class:list={[block.imageFit === 'cover' ? 'aspect-[4/3] h-auto w-full object-cover' : 'mx-auto max-h-80 w-auto object-contain']}
+                  />
+                </ImageWrap>
+              )}
+            </div>
+          </section>
+        );
+      }
+
+      case 'testimonials':
+        return (
+          <section class="mt-14 bg-night py-20 text-white sm:py-28">
+            <div class="wrap">
+              <h2 class="max-w-3xl text-[1.9rem] leading-tight font-bold tracking-tighter text-balance sm:text-5xl">{block.heading}</h2>
+              <ul class="mt-12 grid gap-4 md:grid-cols-2">
+                {block.items.map((item) => (
+                  <li class="flex flex-col rounded-[1.75rem] bg-white/5 p-8 ring-1 ring-white/10">
+                    {item.product && <p class="text-sm font-semibold text-leaf-light">{item.product}</p>}
+                    <blockquote class="mt-4 space-y-3 text-lg leading-relaxed text-white/85">
+                      {item.text.map((t) => (
+                        <p>{t}</p>
+                      ))}
+                    </blockquote>
+                    <p class="mt-auto pt-6 text-sm text-white/50">{item.author}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        );
+
+      case 'cardGrid': {
+        const iconLed = block.cards.every((c) => !c.image && !c.bullets.length);
+        if (iconLed) {
+          return (
+            <section class="wrap py-14 sm:py-20">
+              {block.heading && <h2 class="text-4xl font-bold tracking-tighter sm:text-5xl">{block.heading}</h2>}
+              <ul class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {block.cards.map((card, i) => (
+                  <li class="rounded-[1.75rem] bg-fog p-7">
+                    <span class="flex size-12 items-center justify-center rounded-2xl bg-ink text-white">
+                      <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                        <path d={cardIcons[i % cardIcons.length]} />
+                      </svg>
+                    </span>
+                    {card.title && <h3 class="mt-6 text-xl font-bold tracking-tight">{card.title}</h3>}
+                    <div class="mt-2 space-y-1 text-sm leading-relaxed text-muted">
+                      {card.text.map((t) => (
+                        <Md text={t} />
+                      ))}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          );
+        }
+        const longest = Math.max(...block.cards.map((c) => c.bullets.length));
+        return (
+          <section class="wrap py-14 sm:py-20">
+            <ul class="grid gap-4 lg:grid-flow-dense lg:grid-cols-2">
+              {block.cards.map((card) => {
+                const feature = card.bullets.length === longest;
+                return (
+                  <li class:list={['rounded-[1.75rem] p-8 sm:p-10', feature ? 'bg-night text-white lg:col-start-2 lg:row-span-2' : 'bg-fog']}>
+                    {card.title && <h3 class="text-2xl font-bold tracking-tight">{card.title}</h3>}
+                    <ul class="mt-6 space-y-3 text-sm leading-relaxed">
+                      {card.bullets.map((b) => (
+                        <li class="flex gap-3">
+                          <svg class:list={['mt-0.5 size-4 shrink-0', feature ? 'text-leaf-light' : 'text-leaf']} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">
+                            <path d={icons.check} />
+                          </svg>
+                          <Md text={b} as="span" class={feature ? 'text-white/85 [&_a]:text-white' : undefined} />
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                );
+              })}
+            </ul>
+            {block.ctas.length > 0 && (
+              <div class="mt-8 flex justify-center">
+                {block.ctas.map((cta) => (
+                  <a href={cta.href} class="btn-black">
+                    {cta.label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </section>
+        );
+      }
+
+      case 'appointmentCta':
+        return (
+          <section class="wrap py-6">
+            <div class="grid gap-12 rounded-[2rem] bg-night p-8 text-white sm:p-14 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+              <div>
+                <h2 class="text-4xl font-bold tracking-tighter sm:text-5xl">
+                  <a href={block.href}>{block.heading}</a>
+                </h2>
+                <p class="mt-5 max-w-xl leading-relaxed text-white/70">{block.text}</p>
+                <a href={block.href} class="btn-white mt-8">
+                  {block.heading}
+                </a>
+              </div>
+              <ul class="divide-y divide-white/15">
+                {block.branches.map((b) => (
+                  <li>
+                    <a href={telHref(branch(b.branch).phone)} class="group flex items-center justify-between gap-4 py-5">
+                      <span>
+                        <span class="block text-sm text-white/60">{b.label}:</span>
+                        <span class="text-2xl font-bold tracking-tight sm:text-3xl">{branch(b.branch).phone}</span>
+                      </span>
+                      <span class="flex size-11 shrink-0 items-center justify-center rounded-full bg-white/10 transition group-hover:bg-white group-hover:text-ink">
+                        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+                          <path d={icons.phone} />
+                        </svg>
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        );
+
+      default:
+        return null;
+    }
+  })
+}

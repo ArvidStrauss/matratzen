@@ -1,0 +1,71 @@
+/* Variant B "Fachhandel": design language of the competitor ravensberger-matratzen.de
+   (Mona Sans, light headlines, steel blue, beige service bar, pale blue-grey panels, graphite buttons). */
+@import 'tailwindcss' source(none);
+@import '@fontsource-variable/mona-sans';
+
+@source './';
+@source '../nav/';
+@source '../Shell.astro';
+@source '../VariantSwitcher.astro';
+@source '../../components/Md.astro';
+
+@theme {
+  --font-sans: 'Mona Sans Variable', ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #464646;
+  --color-ink-strong: #2f3336;
+  --color-muted: #6a7075;
+  --color-line: #e2e5e8;
+
+  /* steel-400 = competitor accent #758ca3 (decor only); steel-600 passes AA on white and on steel-100 */
+  --color-steel-100: #e8eff3;
+  --color-steel-400: #758ca3;
+  --color-steel-600: #506a84;
+  --color-steel-700: #415870;
+  --color-mist: #f2f6f8;
+
+  --color-cream: #ece2d4;
+  --color-cream-50: #f8f5f1;
+  --color-graphite: #464646;
+}
+
+@layer base {
+  html {
+    @apply bg-white font-sans text-ink antialiased;
+    scroll-behavior: smooth;
+  }
+  a {
+    @apply transition-colors;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-steel-600;
+  }
+  /* German compound words ("Kaltschaummatratzen") must not overflow small screens. */
+  h1,
+  h2,
+  h3 {
+    hyphens: auto;
+    overflow-wrap: break-word;
+  }
+}
+
+@utility wrap {
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+}
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-[3px] px-5 py-3 text-sm font-semibold transition;
+}
+@utility btn-dark {
+  @apply btn bg-graphite text-white hover:bg-ink-strong;
+}
+@utility btn-steel {
+  @apply btn bg-steel-600 text-white hover:bg-steel-700;
+}
+@utility btn-outline {
+  @apply btn border border-ink/25 text-ink hover:border-ink;
+}
+@utility prose-link {
+  & a {
+    @apply text-steel-600 underline underline-offset-2 hover:text-steel-700;
+  }
+}
