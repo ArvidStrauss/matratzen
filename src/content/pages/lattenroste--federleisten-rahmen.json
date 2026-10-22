@@ -1,0 +1,219 @@
+{
+  "path": "/lattenroste/federleisten-rahmen/",
+  "title": "Lattenrost Riesenauswahl, große Ausstellungen in Hamburg und Lübeck",
+  "source": {
+    "id": 2911,
+    "link": "https://gesunde-matratzen.de/lattenroste/federleisten-rahmen/",
+    "modified": "2026-08-27T17:04:43"
+  },
+  "seo": {
+    "title": "Lattenrost Riesenauswahl, große Ausstellungen in Hamburg und Lübeck",
+    "description": "Federleisten-Rahmen ab 165 € | über 15 versch. Lattenroste in den Ausstellungen | Federleisten, Modul-Rost, Tellerlattenroste | alle Preislagen",
+    "canonical": "https://gesunde-matratzen.de/lattenroste/federleisten-rahmen/",
+    "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+    "openGraph": {
+      "locale": "de_DE",
+      "type": "article",
+      "title": "Lattenrost Riesenauswahl, große Ausstellungen in Hamburg und Lübeck",
+      "description": "Federleisten-Rahmen ab 165 € | über 15 versch. Lattenroste in den Ausstellungen | Federleisten, Modul-Rost, Tellerlattenroste | alle Preislagen",
+      "url": "https://gesunde-matratzen.de/lattenroste/federleisten-rahmen/",
+      "site_name": "Gesunde Matratzen"
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://gesunde-matratzen.de/#website",
+          "url": "https://gesunde-matratzen.de/",
+          "name": "Gesunde Matratzen",
+          "description": "Riesenauswahl mit 2 Filialen im Norden",
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": "https://gesunde-matratzen.de/?s={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          ],
+          "inLanguage": "de-DE"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://gesunde-matratzen.de/lattenroste/federleisten-rahmen/#webpage",
+          "url": "https://gesunde-matratzen.de/lattenroste/federleisten-rahmen/",
+          "name": "Lattenrost Riesenauswahl, große Ausstellungen in Hamburg und Lübeck",
+          "isPartOf": {
+            "@id": "https://gesunde-matratzen.de/#website"
+          },
+          "datePublished": "2017-05-15T08:23:18+00:00",
+          "dateModified": "2026-08-27T17:04:43+00:00",
+          "description": "Federleisten-Rahmen ab 165 € | über 15 versch. Lattenroste in den Ausstellungen | Federleisten, Modul-Rost, Tellerlattenroste | alle Preislagen",
+          "inLanguage": "de-DE",
+          "potentialAction": [
+            {
+              "@type": "ReadAction",
+              "target": [
+                "https://gesunde-matratzen.de/lattenroste/federleisten-rahmen/"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "body": [
+    {
+      "component": "content",
+      "items": [
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "Federleisten-Rahmen"
+        }
+      ]
+    },
+    {
+      "component": "cardGrid",
+      "columns": 3,
+      "imageFit": "contain",
+      "cards": [
+        {
+          "eyebrow": "Rabatt",
+          "title": "Federholzrahmen EASY NV",
+          "titleTag": "h2",
+          "href": "/federholzrahmen-easy-nv/",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/07/rahmen-silwa-easy.png",
+            "alt": "Silwa Easy Federholzrahmen NV"
+          },
+          "text": [
+            "Günstiger Einstiegsrahmen – Lagerung der Leisten elastisch und geräuschlos in Duokappen. 28 mehrfach verleimte Federholzleisten für optimalen Liegekomfort.",
+            "Größe: ab 80 x 200 cm"
+          ],
+          "price": 165,
+          "pricePrefix": "ab",
+          "cta": {
+            "label": "Beratungstermin",
+            "href": "/beratungstermin/"
+          }
+        },
+        {
+          "eyebrow": "Rabatt",
+          "title": "Lattenrahmen SILWA Pro 28 NV",
+          "titleTag": "h2",
+          "href": "/lattenroste/federleisten-rahmen/lattenrahmen-silwa-pro-nv/",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/04/silwa-pro-federleistenrahmen.png",
+            "alt": "Silwa Federleistenrahmen Pro"
+          },
+          "text": [
+            "28 Federholzleisten bieten Schlafkomfort für höchste Ansprüche. Individuelle Härteverstellung im Lordosen-Bereich mittels einfacher Schieberegler.",
+            "Größe: ab 90 x 200 cm"
+          ],
+          "price": 239,
+          "priceRegular": 289,
+          "pricePrefix": "ab",
+          "cta": {
+            "label": "Beratungstermin",
+            "href": "/beratungstermin/"
+          }
+        },
+        {
+          "eyebrow": "Rabatt",
+          "title": "Lattenrahmen SILWA Pro 28 KF",
+          "titleTag": "h2",
+          "href": "/lattenroste/federleisten-rahmen/lattenrahmen-silwa-pro-kf/",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/05/silwa-pro_kf_400.png",
+            "alt": "Lattenrost Sllwa pro KF"
+          },
+          "text": [
+            "28 Federholzleisten – Schlafkomfort für höchste Ansprüche. Kopf- und Fussbereich sind individuell verstellbar. Im Lordosebereich ist der Härtegrad anpassbar.",
+            "Größe: ab 90 x 200 cm"
+          ],
+          "price": 289,
+          "priceRegular": 339,
+          "pricePrefix": "ab",
+          "cta": {
+            "label": "Beratungstermin",
+            "href": "/beratungstermin/"
+          }
+        }
+      ]
+    },
+    {
+      "component": "cardGrid",
+      "columns": 3,
+      "imageFit": "contain",
+      "cards": [
+        {
+          "eyebrow": "Rabatt",
+          "title": "Lattenrahmen SILWA Pro 44 NV",
+          "titleTag": "h2",
+          "href": "/lattenroste/federleisten-rahmen/lattenrahmen-silwa-pro-44-nv/",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2025/05/silwa-pro-44-federleistenrahmen.png",
+            "alt": "Silwa Pro 44 Federleistenrahmen"
+          },
+          "text": [
+            "44 Federholzleisten bieten Schlafkomfort für höchste Ansprüche. Individuelle Härteverstellung im Lordosen-Bereich mittels einfacher Schieberegler.",
+            "Größe: ab 90 x 200 cm"
+          ],
+          "price": 279,
+          "priceRegular": 329,
+          "pricePrefix": "ab",
+          "cta": {
+            "label": "Beratungstermin",
+            "href": "/beratungstermin/"
+          }
+        },
+        {
+          "eyebrow": "Rabatt",
+          "title": "Lattenrahmen SILWA Pro 44 KF",
+          "titleTag": "h2",
+          "href": "/lattenroste/federleisten-rahmen/lattenrahmen-silwa-pro-44-kf/",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2025/05/silwa-pro-44-kf_400.png",
+            "alt": "Silwa Pro 44 Federleistenrahmen KF"
+          },
+          "text": [
+            "44 Federholzleisten – Schlafkomfort für höchste Ansprüche. Kopf- und Fussbereich sind individuell verstellbar. Im Lordosebereich ist der Härtegrad anpassbar.",
+            "Größe: ab 90 x 200 cm"
+          ],
+          "price": 359,
+          "priceRegular": 409,
+          "pricePrefix": "ab",
+          "cta": {
+            "label": "Beratungstermin",
+            "href": "/beratungstermin/"
+          }
+        },
+        {
+          "eyebrow": "Rabatt",
+          "title": "Systemrahmen SILWA Alu NV",
+          "titleTag": "h2",
+          "href": "/lattenroste/federleisten-rahmen/systemrahmen-silwa-alu-nv/",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/06/silwa-alu-nv.png",
+            "alt": "Systemrahmen Silwa Alu NV"
+          },
+          "text": [
+            "Die Silwa-Alu-Unterfederung bietet einen besonders individuellen Liegekomfort, welcher dank des Messsystems sehr exakt ermittelt und eingestellt wird.",
+            "Größe: ab 90 x 200 cm"
+          ],
+          "price": 925,
+          "priceRegular": 1020,
+          "pricePrefix": "ab",
+          "cta": {
+            "label": "Beratungstermin",
+            "href": "/beratungstermin/"
+          }
+        }
+      ]
+    },
+    {
+      "component": "snippet",
+      "snippet": "beratungstermin-vereinbaren"
+    }
+  ]
+}

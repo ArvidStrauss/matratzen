@@ -1,0 +1,56 @@
+---
+import type { Block } from '../../content.config';
+import Section from '../Section.astro';
+import BlockRenderer from '../BlockRenderer.astro';
+
+type Props = Extract<Block, { component: 'tabs' }>;
+const { tabs } = Astro.props;
+---
+
+<Section class="!py-8 sm:!py-10">
+  <!-- Without JavaScript all panels stay visible, one below the other. -->
+  <div data-tabs>
+    <div data-tab-list role="tablist" hidden class="mb-6 flex flex-wrap gap-2 border-b border-sand-200"></div>
+    {
+      tabs.map((tab) => (
+        <section data-tab-panel data-title={tab.title} class="mb-10 last:mb-0">
+          <h4 data-tab-title class="mb-4 text-lg font-bold text-brand-800">
+            {tab.title}
+          </h4>
+          <BlockRenderer blocks={tab.body} />
+        </section>
+      ))
+    }
+  </div>
+</Section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-tabs]').forEach((root) => {
+    const panels = [...root.querySelectorAll<HTMLElement>(':scope > [data-tab-panel]')];
+    const list = root.querySelector<HTMLElement>(':scope > [data-tab-list]');
+    if (!list || panels.length < 2) return;
+    const buttons = panels.map((panel, i) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.setAttribute('role', 'tab');
+      button.textContent = panel.dataset.title ?? '';
+      button.className = '-mb-px border-b-2 px-4 py-2 text-sm font-semibold';
+      button.addEventListener('click', () => select(i));
+      list.append(button);
+      panel.querySelector('[data-tab-title]')?.classList.add('hidden');
+      return button;
+    });
+    function select(active: number) {
+      panels.forEach((panel, i) => (panel.hidden = i !== active));
+      buttons.forEach((button, i) => {
+        button.setAttribute('aria-selected', String(i === active));
+        button.classList.toggle('border-brand-600', i === active);
+        button.classList.toggle('text-brand-700', i === active);
+        button.classList.toggle('border-transparent', i !== active);
+        button.classList.toggle('text-ink/60', i !== active);
+      });
+    }
+    list.hidden = false;
+    select(0);
+  });
+</script>

@@ -1,0 +1,129 @@
+{
+  "path": "/lattenroste/xxl-lattenroste/",
+  "title": "XXL-Lattenroste Hamburg, Lübeck, Kiel",
+  "source": {
+    "id": 3028,
+    "link": "https://gesunde-matratzen.de/lattenroste/xxl-lattenroste/",
+    "modified": "2026-08-27T17:08:42"
+  },
+  "seo": {
+    "title": "XXL-Lattenroste Hamburg, Lübeck, Kiel",
+    "description": "XXL-Lattenrost für Schwergewichtige mit PC-Vermessung | Gratis-Lieferung | Lattenrost schon ab 99 € | zertifizierte Schlafberater",
+    "canonical": "https://gesunde-matratzen.de/lattenroste/xxl-lattenroste/",
+    "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+    "openGraph": {
+      "locale": "de_DE",
+      "type": "article",
+      "title": "XXL-Lattenroste Hamburg, Lübeck, Kiel",
+      "description": "XXL-Lattenrost für Schwergewichtige mit PC-Vermessung | Gratis-Lieferung | Lattenrost schon ab 99 € | zertifizierte Schlafberater",
+      "url": "https://gesunde-matratzen.de/lattenroste/xxl-lattenroste/",
+      "site_name": "Gesunde Matratzen"
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://gesunde-matratzen.de/#website",
+          "url": "https://gesunde-matratzen.de/",
+          "name": "Gesunde Matratzen",
+          "description": "Riesenauswahl mit 2 Filialen im Norden",
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": "https://gesunde-matratzen.de/?s={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          ],
+          "inLanguage": "de-DE"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://gesunde-matratzen.de/lattenroste/xxl-lattenroste/#webpage",
+          "url": "https://gesunde-matratzen.de/lattenroste/xxl-lattenroste/",
+          "name": "XXL-Lattenroste Hamburg, Lübeck, Kiel",
+          "isPartOf": {
+            "@id": "https://gesunde-matratzen.de/#website"
+          },
+          "datePublished": "2017-05-16T09:50:08+00:00",
+          "dateModified": "2026-08-27T17:08:42+00:00",
+          "description": "XXL-Lattenrost für Schwergewichtige mit PC-Vermessung | Gratis-Lieferung | Lattenrost schon ab 99 € | zertifizierte Schlafberater",
+          "inLanguage": "de-DE",
+          "potentialAction": [
+            {
+              "@type": "ReadAction",
+              "target": [
+                "https://gesunde-matratzen.de/lattenroste/xxl-lattenroste/"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "body": [
+    {
+      "component": "content",
+      "items": [
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "XXL-Lattenroste"
+        }
+      ]
+    },
+    {
+      "component": "cardGrid",
+      "columns": 3,
+      "imageFit": "contain",
+      "cards": [
+        {
+          "eyebrow": "Rabatt",
+          "title": "SILWA Systemrahmen Alu NV",
+          "titleTag": "h2",
+          "href": "/lattenroste/federleisten-rahmen/systemrahmen-silwa-alu-nv/",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/04/produkt-silwa-lattenrahmen-alu-nv.png",
+            "alt": "Silwa Systemrahmen Alu nicht verstellbar"
+          },
+          "text": [
+            "Die SILWA Alu Unterfederung bietet einen besonders individuellen Liegekomfort.",
+            "Größe: ab 90 x 200 cm"
+          ],
+          "price": 925,
+          "priceRegular": 1020,
+          "pricePrefix": "ab",
+          "cta": {
+            "label": "Beratungstermin",
+            "href": "/beratungstermin/"
+          }
+        },
+        {
+          "eyebrow": "Rabatt",
+          "title": "SILWA Lattenrahmen XXL Base KF",
+          "titleTag": "h2",
+          "href": "/silwa-xxl/silwa-lattenrahmen-xxl-base-kf/",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2018/09/silwa-xxl-base-kf-lattenrahmen-e1656678090631.png",
+            "alt": "Silwa Lattenrahmen XXL Classic KF"
+          },
+          "text": [
+            "XXL Federleistenrahmen aus massiv verstärktem Schichtholz, Tragkraft bis 180 kg.",
+            "Größe: ab 90 x 200 cm"
+          ],
+          "price": 359,
+          "priceRegular": 489,
+          "pricePrefix": "ab",
+          "cta": {
+            "label": "Beratungstermin",
+            "href": "/beratungstermin/"
+          }
+        }
+      ]
+    },
+    {
+      "component": "snippet",
+      "snippet": "beratungstermin-vereinbaren"
+    }
+  ]
+}

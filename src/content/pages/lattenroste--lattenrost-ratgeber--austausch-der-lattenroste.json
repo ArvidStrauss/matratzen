@@ -1,0 +1,110 @@
+{
+  "path": "/lattenroste/lattenrost-ratgeber/austausch-der-lattenroste/",
+  "title": "Lattenrost tauschen | Gesunde Matratzen",
+  "source": {
+    "id": 2189,
+    "link": "https://gesunde-matratzen.de/lattenroste/lattenrost-ratgeber/austausch-der-lattenroste/",
+    "modified": "2024-03-01T14:40:54"
+  },
+  "seo": {
+    "title": "Lattenrost tauschen | Gesunde Matratzen",
+    "description": "Lattenrost tauschen bei Gesunde-Matratzen.de - Ihr kompetenter Partner beim Tausch von Ihrem Lattenrost zum optimalen Schlaferlebnis.",
+    "canonical": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/austausch-der-lattenroste/",
+    "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+    "openGraph": {
+      "locale": "de_DE",
+      "type": "article",
+      "title": "Lattenrost tauschen | Gesunde Matratzen",
+      "description": "Lattenrost tauschen bei Gesunde-Matratzen.de - Ihr kompetenter Partner beim Tausch von Ihrem Lattenrost zum optimalen Schlaferlebnis.",
+      "url": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/austausch-der-lattenroste/",
+      "site_name": "Gesunde Matratzen"
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://gesunde-matratzen.de/#website",
+          "url": "https://gesunde-matratzen.de/",
+          "name": "Gesunde Matratzen",
+          "description": "Riesenauswahl mit 2 Filialen im Norden",
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": "https://gesunde-matratzen.de/?s={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          ],
+          "inLanguage": "de-DE"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/austausch-der-lattenroste/#webpage",
+          "url": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/austausch-der-lattenroste/",
+          "name": "Lattenrost tauschen | Gesunde Matratzen",
+          "isPartOf": {
+            "@id": "https://gesunde-matratzen.de/#website"
+          },
+          "datePublished": "2017-05-10T07:19:40+00:00",
+          "dateModified": "2024-03-01T14:40:54+00:00",
+          "description": "Lattenrost tauschen bei Gesunde-Matratzen.de - Ihr kompetenter Partner beim Tausch von Ihrem Lattenrost zum optimalen Schlaferlebnis.",
+          "inLanguage": "de-DE",
+          "potentialAction": [
+            {
+              "@type": "ReadAction",
+              "target": [
+                "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/austausch-der-lattenroste/"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "body": [
+    {
+      "component": "content",
+      "items": [
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "Austausch der Lattenroste"
+        },
+        {
+          "type": "paragraph",
+          "text": "Wir empfehlen einen Austausch auch häufig, vor allem wenn der Lattenrost schon in die Jahre gekommen ist, oder auch für den Körper eine individuelle ergonomische Anpassung nötig ist. Da jede Unterfederung anders reagiert, ist es selbst für den Fachberater schwer zu analysieren, wie sich die neue Matratze auf der alten Unterfederung anfühlt und anpasst."
+        },
+        {
+          "type": "paragraph",
+          "text": "Natürlich gibt es auch kleine Tipps, wie Sie im Vorwege schon erkennen können, ob die derzeitige Unterfederung zum Austausch bereit ist."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Die wichtigsten Leisten (vor allem im Beckenbereich) haben die Spannung verloren oder sind sogar gebrochen. Das ist eine normale Abnutzung, da es sich um ein Naturprodukt handelt. Bildlich können sie eine gebogene Leiste mit einem Flitzebogen vergleichen, nur mit dem Unterschied, dass Sie einen Flitzebogen nachspannen können. Manchmal sieht das normale Auge nicht, wenn einige Leisten keine Spannung mehr haben. Erleichtern Sie sich die Kontrolle mit einem Besenstiel oder einer langen Latte und legen Sie diese auf den Lattenrost. Jetzt sollten alle Leisten den Stiel oder die Latte berühren.",
+            "Die Kappen aus Kunststoff oder Kautschuk sind mit der Zeit ausgehärtet und brechen teilweise schon.",
+            "Die Verstellmöglichkeiten im Kopf- und Fußbereich sind defekt und lassen sich nicht mehr reparieren.",
+            "Der Lattenrost knarrt und quietscht und dies lässt sich nicht mehr beheben."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Allgemein sagt man einem qualitativ hochwertigen Lattenrost eine Haltbarkeit von ca. 15-25 Jahre nach. Selbst bei guter Pflege und nicht starker Belastung sollte man nach so langer Zeit eine Unterfederung austauschen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kommen Sie in unsere Showrooms in [Lübeck](/matratzen-luebeck/) oder [Hamburg](/filialen/filiale-hamburg/) und lassen sich bei der Auswahl unterstützen."
+        },
+        {
+          "type": "paragraph",
+          "text": "**[zurück zum Lattenrost-Ratgeber](/lattenroste/lattenrost-ratgeber/)**"
+        }
+      ]
+    },
+    {
+      "component": "snippet",
+      "snippet": "beratungstermin-vereinbaren"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "unsere-filialen-im-norden",
+  "sources": [
+    3546,
+    3553,
+    3557,
+    3571,
+    3648,
+    3680,
+    3697,
+    3710,
+    41169,
+    41172,
+    41176
+  ],
+  "body": [
+    {
+      "component": "content",
+      "items": [
+        {
+          "type": "button",
+          "link": {
+            "label": "Unsere Filialen im Norden",
+            "href": "/filialen/"
+          },
+          "style": "secondary"
+        },
+        {
+          "type": "button",
+          "link": {
+            "label": "Beratungstermin vereinbaren",
+            "href": "/beratungstermin/"
+          }
+        }
+      ]
+    }
+  ]
+}

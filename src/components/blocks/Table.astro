@@ -1,0 +1,51 @@
+---
+import type { Block } from '../../content.config';
+import Section from '../Section.astro';
+import SectionHeading from '../SectionHeading.astro';
+import Img from '../Img.astro';
+import Md from '../Md.astro';
+
+type Props = Extract<Block, { component: 'table' }>;
+const { heading, head, rows } = Astro.props;
+---
+
+<Section class="!py-8 sm:!py-10">
+  <SectionHeading heading={heading} class="!mb-4" />
+  <div class="overflow-x-auto">
+    <table class="w-full min-w-[40rem] border-collapse text-left text-sm">
+      {
+        head.length > 0 && (
+          <thead>
+            <tr>
+              {head.map((cell) => (
+                <th class="border border-sand-200 bg-sand-100 p-3 align-bottom font-semibold">
+                  {cell.text.map((t) => (
+                    <Md text={t} as="span" class="block" />
+                  ))}
+                </th>
+              ))}
+            </tr>
+          </thead>
+        )
+      }
+      <tbody>
+        {
+          rows.map((row) => (
+            <tr>
+              {row.map((cell, i) => (
+                <td class:list={['border border-sand-200 p-3 align-top leading-relaxed', i === 0 && 'font-semibold']}>
+                  {cell.images.map((img) => (
+                    <Img src={img.src} alt={img.alt} class="mb-2 h-auto max-h-48 w-auto" />
+                  ))}
+                  {cell.text.map((t) => (
+                    <Md text={t} as="span" class="block" />
+                  ))}
+                </td>
+              ))}
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+</Section>

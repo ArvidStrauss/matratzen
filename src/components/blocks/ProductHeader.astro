@@ -1,0 +1,41 @@
+---
+import type { Block } from '../../content.config';
+import Section from '../Section.astro';
+import SectionHeading from '../SectionHeading.astro';
+import Img from '../Img.astro';
+import Md from '../Md.astro';
+import Price from '../Price.astro';
+import Snippet from './Snippet.astro';
+
+type Props = Extract<Block, { component: 'productHeader' }>;
+const { heading, headingLevel, headingHref, image, seals, price, body, reverse, snippet } = Astro.props;
+---
+
+<Section class="!py-8 sm:!py-12">
+  <SectionHeading heading={heading} level={headingLevel} href={headingHref} class="!mb-6" />
+  <div class="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
+    {
+      image && (
+        <div class:list={[reverse && 'lg:order-2']}>
+          <div class="rounded-card bg-sand-50 p-6 shadow-card">
+            <Img src={image.src} alt={image.alt} class="mx-auto max-h-96 w-auto object-contain" priority={headingLevel === 'h1'} />
+          </div>
+          {seals.length > 0 && (
+            <div class="mt-4 flex flex-wrap items-center gap-4">
+              {seals.map((seal) => (
+                <Img src={seal.src} alt={seal.alt} class="h-20 w-auto object-contain" />
+              ))}
+            </div>
+          )}
+        </div>
+      )
+    }
+    <div class="space-y-4">
+      {price && <Price from={price.from} regular={price.regular} prefix={price.prefix} size="lg" />}
+      <div class="space-y-3 leading-relaxed text-ink/80">
+        {body.map((t) => <Md text={t} />)}
+      </div>
+      {snippet && <Snippet component="snippet" snippet={snippet} inline />}
+    </div>
+  </div>
+</Section>

@@ -1,0 +1,156 @@
+{
+  "path": "/lattenroste/teller-lattenrahmen/tellerlattenrahmen-evolution-2-kf/",
+  "title": "Tellerlattenrahmen Evolution 2 KF | Gesunde Matratzen",
+  "source": {
+    "id": 3697,
+    "link": "https://gesunde-matratzen.de/lattenroste/teller-lattenrahmen/tellerlattenrahmen-evolution-2-kf/",
+    "modified": "2019-04-05T07:53:14"
+  },
+  "seo": {
+    "title": "Tellerlattenrahmen Evolution 2 KF | Gesunde Matratzen",
+    "description": "Der Evolution Tellerlattenrahmen verbindet Funktionalität, punktuellen Druckausgleich und Design in einer Mehrzonenliegefläche.",
+    "canonical": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/teller-lattenrahmen/tellerlattenrahmen-evolution-2-kf/",
+    "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+    "openGraph": {
+      "locale": "de_DE",
+      "type": "article",
+      "title": "Tellerlattenrahmen Evolution 2 KF | Gesunde Matratzen",
+      "description": "Der Evolution Tellerlattenrahmen verbindet Funktionalität, punktuellen Druckausgleich und Design in einer Mehrzonenliegefläche.",
+      "url": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/teller-lattenrahmen/tellerlattenrahmen-evolution-2-kf/",
+      "site_name": "Gesunde Matratzen"
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://gesunde-matratzen.de/#website",
+          "url": "https://gesunde-matratzen.de/",
+          "name": "Gesunde Matratzen",
+          "description": "Riesenauswahl mit 2 Filialen im Norden",
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": "https://gesunde-matratzen.de/?s={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          ],
+          "inLanguage": "de-DE"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/teller-lattenrahmen/tellerlattenrahmen-evolution-2-kf/#webpage",
+          "url": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/teller-lattenrahmen/tellerlattenrahmen-evolution-2-kf/",
+          "name": "Tellerlattenrahmen Evolution 2 KF | Gesunde Matratzen",
+          "isPartOf": {
+            "@id": "https://gesunde-matratzen.de/#website"
+          },
+          "datePublished": "2017-06-01T19:26:16+00:00",
+          "dateModified": "2019-04-05T07:53:14+00:00",
+          "description": "Der Evolution Tellerlattenrahmen verbindet Funktionalität, punktuellen Druckausgleich und Design in einer Mehrzonenliegefläche.",
+          "inLanguage": "de-DE",
+          "potentialAction": [
+            {
+              "@type": "ReadAction",
+              "target": [
+                "https://gesunde-matratzen.de/produkte__trashed/lattenroste/teller-lattenrahmen/tellerlattenrahmen-evolution-2-kf/"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "body": [
+    {
+      "component": "productHeader",
+      "heading": "Tellerlattenrahmen Evolution 2 KF",
+      "headingLevel": "h1",
+      "image": {
+        "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/06/evolution2_kf.jpg",
+        "alt": "Tellerrahmen Evolution 2 KF"
+      },
+      "price": {
+        "from": 391,
+        "regular": 412,
+        "prefix": "ab"
+      },
+      "body": [
+        "Größe ab 80 x 200 cm",
+        "Manuelle Kopf- und Fußverstellung",
+        "Der Evolution Tellerlattenrahmen verbindet Funktionalität, punktuellen Druckausgleich und Design in einer hochauflösenden Mehrzonenliegefläche mit 70 hochflexiblen Modulen.",
+        "**Lieferzeit:** ca. 10-15 Werktage."
+      ],
+      "snippet": "unsere-filialen-im-norden"
+    },
+    {
+      "component": "tabs",
+      "tabs": [
+        {
+          "title": "Produktbeschreibung",
+          "body": [
+            {
+              "component": "mediaText",
+              "heading": "Evolution 2 KF",
+              "body": [
+                "Der Evolution Rahmen verfügt über 70 einzeln gelagerte, flexible Modulelemente. Der Körper wird, dank des so entstehenden harmonischen Druckausgleiches, punktuell und damit körperindividuell unterstützt. Die Federelemente reagieren sanft auf den individuellen Bewegungsablauf und passen sich flexibel der Körperkontur und dem Auflagegewicht an.",
+                "Durch die geringe Aufbauhöhe von nur 7,5 cm, kann dieser Rahmen in nahezu jedes Bettgestell eingebaut werden. Der dennoch extrem hohe Federweg sorgt für einen traumhaft schönen Liegekomfort. Die über die gesamte Breite des Rahmens aufgebauten Teller verhindern effektiv die Bildung einer Besucherritze.",
+                "Eine Abschlussleiste am Kopf- und am Fußende verhindert ein Abklappen der Matratze.",
+                "Die manuelle Verstellbarkeit des Kopf- und Fußteiles sorgt für zusätzlichen Komfort."
+              ],
+              "image": {
+                "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/06/evolution2-kf.png",
+                "alt": "Tellerrahmen Evolution 2 KF"
+              },
+              "imageFit": "contain"
+            }
+          ]
+        },
+        {
+          "title": "Garantie",
+          "body": [
+            {
+              "component": "content",
+              "items": [
+                {
+                  "type": "paragraph",
+                  "text": "Bei diesem Produkt aus unserem Shop bestehen die gesetzlichen Gewährleistungsrechte."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bitte beachten Sie die entsprechenden Pflegehinweise. Diese befinden sich an Ihrem Produkt."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "component": "content",
+      "items": [
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Weitere Produkte, die Sie interessieren könnten"
+        }
+      ]
+    },
+    {
+      "component": "snippet",
+      "snippet": "silwa-4-feelings-21-vs-einheitsmatratze"
+    },
+    {
+      "component": "snippet",
+      "snippet": "beratungstermin-vereinbaren"
+    },
+    {
+      "component": "snippet",
+      "snippet": "matratzen-systeme"
+    },
+    {
+      "component": "snippet",
+      "snippet": "unsere-top-produkte"
+    }
+  ]
+}

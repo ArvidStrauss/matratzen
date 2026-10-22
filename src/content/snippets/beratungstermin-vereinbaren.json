@@ -1,0 +1,50 @@
+{
+  "name": "beratungstermin-vereinbaren",
+  "sources": [
+    2063,
+    2113,
+    2124,
+    2189,
+    2195,
+    2199,
+    2911,
+    2998,
+    3028,
+    3044,
+    3546,
+    3553,
+    3557,
+    3571,
+    3648,
+    3680,
+    3697,
+    3710,
+    41169,
+    41172,
+    41176
+  ],
+  "body": [
+    {
+      "component": "content",
+      "items": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "[Beratungstermin vereinbaren »](/beratungstermin/)"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Sie können uns gerne jederzeit zu unseren Öffnungszeiten in den Filialen aufsuchen.** Gern können Sie auch einen Beratungstermin vereinbaren oder uns anrufen. Liegen Sie Vieles Probe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Filiale Lübeck: [0451 / 7 70 07](tel:+4945177007)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Filiale Hamburg: [040 / 52 90 1000](tel:+494052901000)"
+        }
+      ]
+    }
+  ]
+}

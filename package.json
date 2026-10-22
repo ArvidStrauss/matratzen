@@ -10,8 +10,10 @@
     "check": "astro check",
     "capture": "node scripts/capture.mjs",
     "extract": "node scripts/extract.mjs",
+    "import": "node scripts/import.mjs",
     "verify:content": "node scripts/verify-content.mjs",
-    "verify": "npm run verify:content && npm run check && npm run build"
+    "verify:output": "node scripts/verify-output.mjs",
+    "verify": "npm run verify:content && npm run check && npm run build && npm run verify:output"
   },
   "dependencies": {
     "@fontsource-variable/fraunces": "5.3.0",

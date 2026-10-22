@@ -1,0 +1,80 @@
+{
+  "name": "silwa-4-feelings-21-vs-einheitsmatratze",
+  "sources": [
+    3546,
+    3553,
+    3557,
+    3571,
+    3648,
+    3680,
+    3697,
+    3710,
+    41169,
+    41172,
+    41176
+  ],
+  "body": [
+    {
+      "component": "cardGrid",
+      "columns": 3,
+      "imageFit": "contain",
+      "cards": [
+        {
+          "eyebrow": "Rabatt",
+          "title": "Silwa 4 feelings 21 VS Einheitsmatratze",
+          "titleTag": "h2",
+          "href": "/produkte/silwa-schlafsystem/silwa-4-feelings-matratzen/silwa-4-feelings-einheitsmatratze/",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/04/produkt-testsieger-silwa-4-feelings-einheitsmatratze-e1544100780874.png",
+            "alt": "Silwa 4 feelings Einheitsmatratze"
+          },
+          "price": 999,
+          "priceRegular": 1139,
+          "pricePrefix": "ab",
+          "note": "Größe: 90 x 200 cm",
+          "cta": {
+            "label": "Beratungstermin",
+            "href": "/beratungstermin/"
+          }
+        },
+        {
+          "eyebrow": "Rabatt",
+          "title": "Irisette Sinus Kaltschaum-Matratze mit 7 Zonen",
+          "titleTag": "h2",
+          "subtitle": "[(vormals Irisette Lotus Kaltschaum-Matratze)](/testsieger-matratzen/badenia-irisette-lotus-kaltschaum-matratze-mit-7-zonen/)",
+          "href": "/testsieger-matratzen/badenia-irisette-lotus-kaltschaum-matratze-mit-7-zonen/",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2022/02/irisette-lotus-h2-kaltschaummatratze.png",
+            "alt": "Irisette Lotus H2 Kaltschaummatratze"
+          },
+          "price": 389,
+          "priceRegular": 469,
+          "pricePrefix": "ab",
+          "note": "Größe: ab 90 x 200 cm",
+          "cta": {
+            "label": "Beratungstermin",
+            "href": "/beratungstermin/"
+          }
+        },
+        {
+          "eyebrow": "Rabatt",
+          "title": "Silwa Classic 18 KS Kaltschaum-Matratze",
+          "titleTag": "h2",
+          "href": "/silwa-classic-matratzen/silwa-classic-18-duo-kaltschaum-matratze/",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2019/02/silwa-matratzen-250h-silwa-classic-18-kaltschaummatratze-doppeltuch.png",
+            "alt": "Silwa Classic 18 Kaltschaummatratze Doppeltuch-Bezug"
+          },
+          "price": 299,
+          "priceRegular": 509,
+          "pricePrefix": "ab",
+          "note": "Größe: 90 x 200 cm",
+          "cta": {
+            "label": "Beratungstermin",
+            "href": "/beratungstermin/"
+          }
+        }
+      ]
+    }
+  ]
+}

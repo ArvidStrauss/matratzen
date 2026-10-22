@@ -1,0 +1,319 @@
+{
+  "path": "/lattenroste/motorlattenroste/",
+  "title": "Motorlattenrost-Riesenauswahl in Hamburg und Lübeck",
+  "source": {
+    "id": 3044,
+    "link": "https://gesunde-matratzen.de/lattenroste/motorlattenroste/",
+    "modified": "2026-09-08T13:20:32"
+  },
+  "seo": {
+    "title": "Motorlattenrost-Riesenauswahl in Hamburg und Lübeck",
+    "description": "Über 6 verschiedene Motor-Rahmen in Hamburg und Lübeck | 2- bis 4-motorig | 4 Marken | Lattenrost ab 165 € | Lattenroste mit Rückgaberecht",
+    "canonical": "https://gesunde-matratzen.de/lattenroste/motorlattenroste/",
+    "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+    "openGraph": {
+      "locale": "de_DE",
+      "type": "article",
+      "title": "Motorlattenrost-Riesenauswahl in Hamburg und Lübeck",
+      "description": "Über 6 verschiedene Motor-Rahmen in Hamburg und Lübeck | 2- bis 4-motorig | 4 Marken | Lattenrost ab 165 € | Lattenroste mit Rückgaberecht",
+      "url": "https://gesunde-matratzen.de/lattenroste/motorlattenroste/",
+      "site_name": "Gesunde Matratzen"
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://gesunde-matratzen.de/#website",
+          "url": "https://gesunde-matratzen.de/",
+          "name": "Gesunde Matratzen",
+          "description": "Riesenauswahl mit 2 Filialen im Norden",
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": "https://gesunde-matratzen.de/?s={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          ],
+          "inLanguage": "de-DE"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://gesunde-matratzen.de/lattenroste/motorlattenroste/#webpage",
+          "url": "https://gesunde-matratzen.de/lattenroste/motorlattenroste/",
+          "name": "Motorlattenrost-Riesenauswahl in Hamburg und Lübeck",
+          "isPartOf": {
+            "@id": "https://gesunde-matratzen.de/#website"
+          },
+          "datePublished": "2017-05-16T10:05:39+00:00",
+          "dateModified": "2026-09-08T13:20:32+00:00",
+          "description": "Über 6 verschiedene Motor-Rahmen in Hamburg und Lübeck | 2- bis 4-motorig | 4 Marken | Lattenrost ab 165 € | Lattenroste mit Rückgaberecht",
+          "inLanguage": "de-DE",
+          "potentialAction": [
+            {
+              "@type": "ReadAction",
+              "target": [
+                "https://gesunde-matratzen.de/lattenroste/motorlattenroste/"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "body": [
+    {
+      "component": "content",
+      "items": [
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "Motorlattenroste – schon ab 829,00 €"
+        }
+      ]
+    },
+    {
+      "component": "productHeader",
+      "heading": "Lattenrahmen SILWA Pro 28 (motorgetrieben) »",
+      "headingHref": "/silwa-pro-federleistenrahmen/",
+      "image": {
+        "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/05/silwa-pro-mot_400-300x147.png",
+        "alt": "Lattenrahmen Silwa Pro motorgetrieben"
+      },
+      "price": {
+        "from": 829,
+        "regular": 929,
+        "prefix": "ab"
+      },
+      "body": [
+        "Der SILWA Pro motorgetrieben bietet auf seinen 28 Federholzleisten Schlafkomfort für höchste Ansprüche. **Im wichtigen Lordosebereich ist der Härtegrad anpassbar.** Mit textilem Mittelgurt und weicher Schulterzone."
+      ],
+      "reverse": true
+    },
+    {
+      "component": "content",
+      "items": [
+        {
+          "type": "paragraph",
+          "text": "In unseren Filialen [Hamburg](/filialen/filiale-hamburg/) und [Lübeck](/matratzen-luebeck/) präsentieren wir Ihnen eine große Auswahl an motorischen Lattenrosten.",
+          "lead": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Durch den Einsatz eines motorisierten Lattenrostes kann man auf einfache Art den Komfort und die Funktionalität des Bettes deutlich steigern."
+        },
+        {
+          "type": "paragraph",
+          "text": "Motorische Lattenroste verfügen über zwei, drei oder vier Motoren zur stufenlosen Verstellung von Kopf-, Rücken-, Knie,- und oder Fußteilen. Wir bieten Ihnen eine Riesenauswahl der verschiedensten Motor-Lattenroste an:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "günstige Motor-Lattenroste schon **ab 829,00 €**",
+            "moderne Motor-Teller-Lattenroste mit sehr hohen Federwegen",
+            "Flach-Motor-Lattenrost – in jedes Bettgestell einlegbar",
+            "lange Lebensdauer",
+            "Motor-Lattenroste mit 2, 3 oder 4 Motoren",
+            "Fiberglas-Lattenroste mit extremer Höhenverstellung, Zonierungs-Einstellung und motorischer Verstellung"
+          ]
+        }
+      ]
+    },
+    {
+      "component": "accordion",
+      "heading": "Lattenrost Ratgeber & Kauftipps",
+      "items": [
+        {
+          "title": "Ein Lattenrost mit oder ohne Motor?",
+          "body": [
+            "Durch den Einsatz eines motorisierten Lattenrostes kann man auf einfache Art den Komfort und die Funktionalität des Bettes deutlich steigern.",
+            "Wichtige Ausstattungsmerkmale eines motorischen Lattenrostes sind Netzfreischaltung und Notabsenkung.",
+            "Die Entscheidung für eine motorisierte Unterfederung ist nicht nur älteren Menschen oder Personen mit körperlichen Einschränkungen zu empfehlen, sondern grundsätzlich jedem, der sich maximalen Komfort wünscht."
+          ],
+          "open": true
+        },
+        {
+          "title": "Woran erkenne ich eine gute Qualität beim Lattenrost?",
+          "body": [
+            "Ein qualitativ hochwertiger Lattenrost sollte mindestens über verstellbare Leisten im Taillen- und Hüftbereich verfügen. Idealerweise ist die Schulterzone weicher gefedert. So kann der Lattenrost in Kombination mit der Matratze in jeder Schlafposition ergonomisch reagieren.",
+            "Außerdem ist es sinnvoll, vor allem in einem Doppelbett, einen Lattenrost zu kaufen, der über den Holm übergreifende Leistenfederung verfügt. Dies gewährleistet auch eine Anpassung durch den Lattenrost an den Seiten des Rahmens.",
+            "In der Regel sind die Abstände der einzelnen Leisten zwischen 2 und 4 Zentimetern. Mindestens sollten 24 Leisten bei einem Lattenrost der Größe 90×200 cm angebracht sein.",
+            "Allgemein kann man sagen, je mehr Leisten und je kleiner der Abstand der Leisten ist, desto besser ist der Liegekomfort.",
+            "Spezielle XXL-Lattenroste für ein höheres Körpergewicht sollten eine deutlich höhere Leistenanzahl bieten."
+          ]
+        },
+        {
+          "title": "Welche Größe ist sinnvoll?",
+          "body": [
+            "Wir empfehlen ab einer Breite von 160 cm immer zwei einzelne Lattenrahmen zu nehmen. Da sich die Lattenroste individuell einstellen lassen und reagieren können. Gerade bei zwei Schläfern in einem Bett, da jeder Körper unterschiedliche Liegebedürfnisse besitzt.",
+            "Würden Sie einen großen Lattenrost für zwei Personen nehmen, müsste dieser das doppelte Gewicht tragen für welches er eigentlich ausgelegt ist. Dementsprechend wird sich die Haltbarkeit drastisch reduzieren. Außerdem sind bei breiten Lattenrosten die Unterschiede der gebogenen Leisten stärker zu spüren, als bei schmalen Lattenrosten. Das heißt, es kann passieren, dass man eher zur Seite rollt.",
+            "Falls Sie trotzdem zu zweit auf einer Breite von 140 cm schlafen wollen, empfehlen wir Ihnen einen Tellerrahmen, da dieser sich individuell auf zwei Personen einstellen kann und Sie in jeder Position immer dieselbe Unterstützung und Federung spüren."
+          ]
+        }
+      ]
+    },
+    {
+      "component": "content",
+      "items": [
+        {
+          "type": "paragraph",
+          "text": "[Großer Lattenrost Ratgeber »](/lattenroste/lattenrost-ratgeber/)"
+        }
+      ]
+    },
+    {
+      "component": "cardGrid",
+      "columns": 3,
+      "imageFit": "contain",
+      "cards": [
+        {
+          "eyebrow": "Rabatt",
+          "title": "SILWA Pro 28 (mot.)",
+          "titleTag": "h2",
+          "href": "/lattenroste/motorlattenroste/lattenrahmen-silwa-pro-motorgetrieben/",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/04/produkt-silwa-lattenrahmen-pro-28-mot.png",
+            "alt": "Silwa Federleistenrahmen Pro motorig"
+          },
+          "text": [
+            "Der SILWA Pro motorgetrieben bietet auf seinen 28 Federholzleisten Schlafkomfort für höchste Ansprüche. Im wichtigen Lordosebereich ist der Härtegrad anpassbar.",
+            "Größe: ab 90 x 200 cm"
+          ],
+          "price": 829,
+          "priceRegular": 929,
+          "pricePrefix": "ab",
+          "cta": {
+            "label": "Beratungstermin",
+            "href": "/beratungstermin/"
+          }
+        },
+        {
+          "eyebrow": "Rabatt",
+          "title": "SILWA Pro 44 mot.",
+          "titleTag": "h2",
+          "href": "/lattenroste/motorlattenroste/lattenrahmen-silwa-pro-44-motorgetrieben/",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2025/05/produkt-silwa-lattenrahmen-pro-44-mot.png",
+            "alt": "Silwa Pro 44 Federleistenrahmen motor"
+          },
+          "text": [
+            "Der SILWA Pro motorgetrieben bietet auf seinen 44 Federholzleisten Schlafkomfort für höchste Ansprüche. Im wichtigen Lordosebereich ist der Härtegrad anpassbar.",
+            "Größe: ab 90 x 200 cm"
+          ],
+          "price": 935,
+          "priceRegular": 1035,
+          "pricePrefix": "ab",
+          "cta": {
+            "label": "Beratungstermin",
+            "href": "/beratungstermin/"
+          }
+        },
+        {
+          "eyebrow": "Rabatt",
+          "title": "SILWA Comfort Rahmen",
+          "titleTag": "h2",
+          "href": "/lattenroste/motorlattenroste/lattenrahmen-silwa-comfort-mit-2-motoren/",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/05/produkt-silwa-lattenrahmen-comfort-2-motorig-300x208.png",
+            "alt": "Silwa Comfort Tellerlattenrahmen mit Motoren"
+          },
+          "text": [
+            "SILWA Comfort Rahmen – komfortabler Schlaf für Körper und Geist.",
+            "Motorrahmen (2-motorig m. Netzfreischaltung) mit Kabelhandschalter.",
+            "Größe: ab 90 x 200 cm"
+          ],
+          "price": 1259,
+          "priceRegular": 1385,
+          "pricePrefix": "ab",
+          "cta": {
+            "label": "Beratungstermin",
+            "href": "/beratungstermin/"
+          }
+        }
+      ]
+    },
+    {
+      "component": "cardGrid",
+      "columns": 3,
+      "imageFit": "contain",
+      "cards": [
+        {
+          "eyebrow": "Rabatt",
+          "title": "Tempur Systemrahmen Flex 2000",
+          "titleTag": "h3",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2021/06/produkt-tempur-systemrahmen-p-flex-2000-m.png",
+            "alt": "Tempur Systemrahmen Flex 2000"
+          },
+          "text": [
+            "2-mot. Antrieb mit Funkfernbed. und Bluetooth,",
+            "11.5 cm Aufbauhöhe,",
+            "3 Reihen individuell fixierbare Schulterabsenkung,",
+            "3 Reihen individuell einstellbarer Lordose- und Beckenbereich,",
+            "Netzfreischaltung",
+            "Größe: ab 80 x 200 cm"
+          ],
+          "price": 1318,
+          "priceRegular": 1648,
+          "pricePrefix": "ab",
+          "cta": {
+            "label": "Beratungstermin",
+            "href": "/beratungstermin/"
+          }
+        },
+        {
+          "eyebrow": "Rabatt",
+          "title": "Tempur Systemrahmen Flex 3000",
+          "titleTag": "h3",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2021/06/produkt-tempur-systemrahmen-p-flex-3000-m.png",
+            "alt": "Tempur Systemrahmen Flex 3000"
+          },
+          "text": [
+            "2-mot. verstellbarer Rahmen mit Flachmotor und Funkfernbed.,",
+            "11.5 cm Aufbauhöhe,",
+            "2 Reihen individuell fixierbare Schulterabsenkung,",
+            "4 Reihen individuell einstellbarer Lordose- und Beckenbereich,",
+            "Netzfreischaltung",
+            "Größe: ab 80 x 200 cm"
+          ],
+          "price": 1558,
+          "priceRegular": 1948,
+          "pricePrefix": "ab",
+          "cta": {
+            "label": "Beratungstermin",
+            "href": "/beratungstermin/"
+          }
+        },
+        {
+          "eyebrow": "Rabatt",
+          "title": "Tempur Systemrahmen Flex 4000",
+          "titleTag": "h3",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2021/06/produkt-tempur-systemrahmen-p-flex-4000-m.png",
+            "alt": "Tempur Systemrahmen Flex 4000"
+          },
+          "text": [
+            "4-mot. verstellbarer Rahmen mit Funkfernbed. und Bluetooth,",
+            "11,5 cm Aufbauhöhe,",
+            "3 Reihen individuell fixierbare Schulterabsenkung,",
+            "3 Reihen individuell einstellbarer Lordose- und Beckenbereich,",
+            "Netzfreischaltung",
+            "Größe: ab 80 x 200 cm"
+          ],
+          "price": 2398,
+          "priceRegular": 2998,
+          "pricePrefix": "ab",
+          "cta": {
+            "label": "Beratungstermin",
+            "href": "/beratungstermin/"
+          }
+        }
+      ]
+    },
+    {
+      "component": "snippet",
+      "snippet": "beratungstermin-vereinbaren"
+    }
+  ]
+}

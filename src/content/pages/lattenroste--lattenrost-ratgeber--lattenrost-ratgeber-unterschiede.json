@@ -1,0 +1,160 @@
+{
+  "path": "/lattenroste/lattenrost-ratgeber/lattenrost-ratgeber-unterschiede/",
+  "title": "Lattenrost Ratgeber | Unterschiede bei Lattenrosten",
+  "source": {
+    "id": 2113,
+    "link": "https://gesunde-matratzen.de/lattenroste/lattenrost-ratgeber/lattenrost-ratgeber-unterschiede/",
+    "modified": "2024-03-01T14:38:45"
+  },
+  "seo": {
+    "title": "Lattenrost Ratgeber | Unterschiede bei Lattenrosten",
+    "description": "Welche Unterschiede gibt es bei Lattenrosten? Standardlattenrost, Anmessrahmen, Rollrost oder Tellerrahmen?",
+    "canonical": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/lattenrost-ratgeber-unterschiede/",
+    "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+    "openGraph": {
+      "locale": "de_DE",
+      "type": "article",
+      "title": "Lattenrost Ratgeber | Unterschiede bei Lattenrosten",
+      "description": "Welche Unterschiede gibt es bei Lattenrosten? Standardlattenrost, Anmessrahmen, Rollrost oder Tellerrahmen?",
+      "url": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/lattenrost-ratgeber-unterschiede/",
+      "site_name": "Gesunde Matratzen"
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://gesunde-matratzen.de/#website",
+          "url": "https://gesunde-matratzen.de/",
+          "name": "Gesunde Matratzen",
+          "description": "Riesenauswahl mit 2 Filialen im Norden",
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": "https://gesunde-matratzen.de/?s={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          ],
+          "inLanguage": "de-DE"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/lattenrost-ratgeber-unterschiede/#webpage",
+          "url": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/lattenrost-ratgeber-unterschiede/",
+          "name": "Lattenrost Ratgeber | Unterschiede bei Lattenrosten",
+          "isPartOf": {
+            "@id": "https://gesunde-matratzen.de/#website"
+          },
+          "datePublished": "2017-05-09T11:18:29+00:00",
+          "dateModified": "2024-03-01T14:38:45+00:00",
+          "description": "Welche Unterschiede gibt es bei Lattenrosten? Standardlattenrost, Anmessrahmen, Rollrost oder Tellerrahmen?",
+          "inLanguage": "de-DE",
+          "potentialAction": [
+            {
+              "@type": "ReadAction",
+              "target": [
+                "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/lattenrost-ratgeber-unterschiede/"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "body": [
+    {
+      "component": "content",
+      "items": [
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "Welche Unterschiede gibt es bei Lattenrosten?"
+        }
+      ]
+    },
+    {
+      "component": "cardGrid",
+      "columns": 2,
+      "imageFit": "contain",
+      "cards": [
+        {
+          "title": "Der Rollrost",
+          "titleTag": "h3",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/05/lattenrost-ratgeber-unterschied-rollrost.png",
+            "alt": "Lattenrost Ratgeber Rollrost"
+          },
+          "text": [
+            "Der Rollrost ist die einfachste Bauvariante eines Lattenrostes. Im Ursprung sind alle Latten mit einem Band verbunden und werden einfach im Bettgestell ausgerollt. Als Alternative dazu kann man auch die Latten auf zwei langen Leisten festnageln oder schrauben. Einen vergleichbaren Unterbau findet man auch bei einer Spannplatte in der kleine Löcher oder Schlitze gesägt wurden.",
+            "All diese Varianten lassen sich nicht einstellen und bieten weder der Matratze noch dem Körper eine Unterstützung oder Federung.",
+            "Matratzenempfehlung: Die einzige Matratze die annähernd mit diesem Unterbau zurechtkommt, wäre eine Federkernmatratze. Da diese eine eigene Federung bietet und auch die Klimatisierung selbst übernehmen kann."
+          ]
+        },
+        {
+          "title": "Der Tellerrahmen",
+          "titleTag": "h3",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/05/lattenrost-ratgeber-unterschied-tellerrahmen.png",
+            "alt": "Lattenrost Ratgeber Tellerrahmen"
+          },
+          "text": [
+            "Bei dieser Unterfederung sind nicht die Leisten, die sich ergonomisch anpassen, sondern die elastischen Federelemente die auf den Latten befestigt sind. Jeder einzelne Teller ist flexibel und kann sich so punktuell und individuell die Matratze und den Körper unterstützen.",
+            "Die Einstellungsmöglichkeiten und die Punktelastizität sind deutlich größer und auch spürbarer als bei einem Lattenrost. Das Ergebnis ist eine optimale Druckverteilung und ein erholsamer Schlaf.",
+            "[> Hier erfahren Sie mehr zum Tellerrahmen](/lattenroste/teller-lattenrahmen/lattenrahmen-silwa-comfort/)"
+          ]
+        }
+      ]
+    },
+    {
+      "component": "cardGrid",
+      "columns": 2,
+      "imageFit": "contain",
+      "cards": [
+        {
+          "title": "Der Standardlattenrost",
+          "titleTag": "h3",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/05/lattenrost-ratgeber-unterschied-standardlattenrost.png",
+            "alt": "Lattenrost Ratgeber Standardlattenrost"
+          },
+          "text": [
+            "Der Standardlattenrost besitzt einzelne oder doppelte Leisten, die in federnden Kunststoff- oder Kautschukkappen gelagert sind. Die Leisten sind meistens leicht gebogen. Durch diese Biegung und die federnden Kappen kann sich der Lattenrost flexibel anpassen. Idealerweise finden Sie im Taillen- und Hüftbereich Schieberegler, die zwei untereinander liegende Leisten verbinden. Durch ein Verschieben dieser Regler, können Sie die Federung härter oder weicher stellen.",
+            "So ein Standardlattenrost sollte mindestens 24 Leisten vorweisen. Zum Einen ist die Anpassung mit mehr Leisten besser und zum Anderen ist der Abstand zwischen den Leisten nicht so groß, dass sich die Matratze zwischen den Leisten durchdrückt und verformt.",
+            "Matratzenempfehlung: Dieser Aufbau unterstützt körperzonenorienterte Kaltschaum-, Latex-, und Taschenfederkernmatratzen.",
+            "[> Hier erfahren Sie mehr zum Standardlattenrost](/silwa-pro-federleistenrahmen/)"
+          ]
+        },
+        {
+          "title": "Der Anmessrahmen",
+          "titleTag": "h3",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/05/lattenrost-ratgeber-unterschied-anmessrahmen.png",
+            "alt": "Lattenrost Ratgeber Anmessrahmen"
+          },
+          "text": [
+            "Mit so einem High-end-Lattenrahmen lassen sich Körpergröße und Körperbau konturgenau nachzeichnen. Der neu entwickelte Einlegerahmen wird aufgrund verschiedener Messdaten für jede Person individuell angefertigt. Jedes Bett wird so zum Unikat, das sich in Kombination mit der passenden Matratze wie ein Maßanzug perfekt an den Körper anschmiegt.",
+            "Im Gegensatz zum normalen Lattenrost kann hier nicht die Festigkeit sondern die Höhe individuell und immer wieder aufs Neue eingestellt und auf den Schläfer angepasst werden. So entstehen zum Einen eine maximale Druckentlastung und zum Anderen eine perfekte Unterstützung. Achten Sie bei solchen Vermessungssystemen dass Ihr Fachberater in der Lage ist, das System auf Ihre Bedürfnisse individuell einzustellen.",
+            "[> Hier erfahren Sie mehr zum Anmessrahmen und zur Liegediagnostik](/silwa-alu-systemrahmen/)"
+          ]
+        }
+      ]
+    },
+    {
+      "component": "content",
+      "items": [
+        {
+          "type": "paragraph",
+          "text": "Ihnen stehen in unserem Showroom in [Lübeck](/matratzen-luebeck/) oder [Hamburg](/filialen/filiale-hamburg/) viele verschiedene Varianten von Unterfederungen zur Verfügung."
+        },
+        {
+          "type": "paragraph",
+          "text": "**[zurück zum Lattenrost-Ratgeber](/lattenroste/lattenrost-ratgeber/)**"
+        }
+      ]
+    },
+    {
+      "component": "snippet",
+      "snippet": "beratungstermin-vereinbaren"
+    }
+  ]
+}

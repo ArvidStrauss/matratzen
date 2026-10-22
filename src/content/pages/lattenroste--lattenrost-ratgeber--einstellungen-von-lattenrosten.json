@@ -1,0 +1,112 @@
+{
+  "path": "/lattenroste/lattenrost-ratgeber/einstellungen-von-lattenrosten/",
+  "title": "Einstellung von Lattenrosten | Gesunde Matratzen.de",
+  "source": {
+    "id": 2195,
+    "link": "https://gesunde-matratzen.de/lattenroste/lattenrost-ratgeber/einstellungen-von-lattenrosten/",
+    "modified": "2024-03-01T14:40:24"
+  },
+  "seo": {
+    "title": "Einstellung von Lattenrosten | Gesunde Matratzen.de",
+    "description": "Einstellung von Lattenrosten. Lassen Sie ihr Lattenrost für einen gesunden, bequemen Schlaf in Hamburg und Lübeck einstellen.",
+    "canonical": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/einstellungen-von-lattenrosten/",
+    "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+    "openGraph": {
+      "locale": "de_DE",
+      "type": "article",
+      "title": "Einstellung von Lattenrosten | Gesunde Matratzen.de",
+      "description": "Einstellung von Lattenrosten. Lassen Sie ihr Lattenrost für einen gesunden, bequemen Schlaf in Hamburg und Lübeck einstellen.",
+      "url": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/einstellungen-von-lattenrosten/",
+      "site_name": "Gesunde Matratzen"
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://gesunde-matratzen.de/#website",
+          "url": "https://gesunde-matratzen.de/",
+          "name": "Gesunde Matratzen",
+          "description": "Riesenauswahl mit 2 Filialen im Norden",
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": "https://gesunde-matratzen.de/?s={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          ],
+          "inLanguage": "de-DE"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/einstellungen-von-lattenrosten/#webpage",
+          "url": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/einstellungen-von-lattenrosten/",
+          "name": "Einstellung von Lattenrosten | Gesunde Matratzen.de",
+          "isPartOf": {
+            "@id": "https://gesunde-matratzen.de/#website"
+          },
+          "datePublished": "2017-05-10T07:34:43+00:00",
+          "dateModified": "2024-03-01T14:40:24+00:00",
+          "description": "Einstellung von Lattenrosten. Lassen Sie ihr Lattenrost für einen gesunden, bequemen Schlaf in Hamburg und Lübeck einstellen.",
+          "inLanguage": "de-DE",
+          "potentialAction": [
+            {
+              "@type": "ReadAction",
+              "target": [
+                "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/einstellungen-von-lattenrosten/"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "body": [
+    {
+      "component": "content",
+      "items": [
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "Einstellungen von Lattenrosten"
+        },
+        {
+          "type": "paragraph",
+          "text": "Voraussetzung für einen gesunden Schlaf, ist ein guter Lattenrost, den man mindestens über Schieberegler in der Härte verstellen kann. Je hochwertiger die Lattenroste sind, desto mehr Einstellmöglichkeiten haben diese. Vor allem sehr preisgünstige Unterfederungen bieten dem Schläfer keinen derartigen Komfort. Sollten Sie mit Rückenproblemen auf so einer Unterfederung morgens wach werden, sollten Sie sich eventuell überlegen, ob eine Neuanschaffung mit Verstellmöglichkeiten, nicht eine erhebliche Besserung bringen würde."
+        },
+        {
+          "type": "paragraph",
+          "text": "Während des Schlafens ist es wichtig, dass Ihre Wirbelsäule in Ihrer natürlichen Form bleibt. Das heißt für Seitenschläfer muss die Wirbelsäule gerade sein und für Rückenschläfer muss die Wirbelsäule in der natürlichen S-Form sein."
+        },
+        {
+          "type": "paragraph",
+          "text": "Um den Schläfer ergonomisch korrekt einsinken zu lassen, muss die Person im Schulter- und Beckenbereich einsinken, um dadurch im Taillen- und Lordosenbereich gut unterstützt zu werden. Ist der Lattenrost im Beckenbereich zu weich eingestellt oder hat dort an Spannkraft verloren, hängt der Körper in dem Bereich durch, die Wirbelsäule bekommt ein Knick nach unten und schon bald werden Sie das im Rücken spüren. Stellen Sie den Lattenrost allerdings zu hart ein, macht Ihre Wirbelsäule einen Knick nach oben und über kurz oder lang wird sich der Rücken melden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die detaillierte und individuelle Einstellung ist von Ihrer Körpergröße, -form und Gewicht abhängig und kann man nicht so pauschal beantworten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eine Verstellung bei einem Tellerrahmen ist nicht notwendig, da seine kleinen Federelemente sich automatisch ergonomisch richtig anpassen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Während einer persönlichen Beratung in einer unserer Filialen in Lübeck oder Hamburg wird einer unserer kompetenten Schlafberater den passenden Lattenrost für Sie finden und ergonomisch einstellen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Während einer persönlichen Beratung in einer unserer Filialen in [Lübeck](/matratzen-luebeck/) oder [Hamburg](/filialen/filiale-hamburg/) wird einer unserer kompetenten Schlafberater den passenden Lattenrost für Sie finden und ergonomisch einstellen."
+        },
+        {
+          "type": "paragraph",
+          "text": "**[zurück zum Lattenrost-Ratgeber](/lattenroste/lattenrost-ratgeber/)**"
+        }
+      ]
+    },
+    {
+      "component": "snippet",
+      "snippet": "beratungstermin-vereinbaren"
+    }
+  ]
+}

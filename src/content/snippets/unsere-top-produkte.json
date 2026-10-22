@@ -1,0 +1,114 @@
+{
+  "name": "unsere-top-produkte",
+  "sources": [
+    3546,
+    3553,
+    3557,
+    3571,
+    3648,
+    3680,
+    3697,
+    3710,
+    41169,
+    41172,
+    41176
+  ],
+  "body": [
+    {
+      "component": "cardGrid",
+      "heading": "Unsere Top Produkte",
+      "columns": 4,
+      "imageFit": "contain",
+      "cards": [
+        {
+          "title": "SILWA 4 feelings Einheitsmatratzen",
+          "titleTag": "p",
+          "href": "/produkte/silwa-schlafsystem/silwa-4-feelings-matratzen/",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/04/silwa-4-feelings-einheitsmatratze.png",
+            "alt": "Silwa 4 feelings Einheitsmatratze Abbildung"
+          },
+          "price": 899,
+          "pricePrefix": "ab"
+        },
+        {
+          "title": "SILWA Dreams Boxpringmatratze",
+          "titleTag": "p",
+          "href": "/produkte/silwa-schlafsystem/silwa-dreams-boxspringmatratze/",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/04/silwa-dreams-boxspringmatratze.png",
+            "alt": "Silwa Dreams Boxspringmatratze Abbildung"
+          },
+          "price": 1249,
+          "pricePrefix": "ab"
+        },
+        {
+          "title": "SILWA Motion Lattenrost",
+          "titleTag": "p",
+          "href": "/produkte/silwa-schlafsystem/silwa-motion-lattenrahmen/",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2022/06/Silwa-Motion-Lattenrahmen-Schraegansicht-e1655810618500.png",
+            "alt": "Silwa Motion Lattenrahmen Schrägansicht"
+          },
+          "price": 625,
+          "pricePrefix": "ab"
+        },
+        {
+          "title": "Boxspringbetten",
+          "titleTag": "p",
+          "href": "/produkte/boxspringbetten/",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2019/01/boxspringbett-silwa-smart.jpg",
+            "alt": "Boxspringbett Silwa Smart"
+          },
+          "price": 899,
+          "pricePrefix": "ab"
+        },
+        {
+          "title": "Komplettbetten",
+          "titleTag": "p",
+          "href": "/komplettbetten/",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2018/02/komplettbetten-angebote-teaser.png",
+            "alt": "Komplettbetten Angebote"
+          },
+          "price": 999,
+          "pricePrefix": "ab"
+        },
+        {
+          "title": "Hasena Dekor-Betten",
+          "titleTag": "p",
+          "href": "/produkte/bettgestelle/bettgestelle-angebote/",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/05/hasena-movie-line-dekor-star-spyd.jpg",
+            "alt": "Hasena Dekorbett Movie-Line Star Spyd"
+          },
+          "price": 407,
+          "pricePrefix": "ab"
+        },
+        {
+          "title": "Hasena Massivholz-Bett Wood-Line",
+          "titleTag": "p",
+          "href": "/produkte/bettgestelle/bettgestelle-angebote/",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/05/hasena-wood-line-c16-duo.jpg",
+            "alt": "Hasena Massivholzbett Wood-Line C16 Duo"
+          },
+          "price": 535,
+          "pricePrefix": "ab"
+        },
+        {
+          "title": "Hasena Massivholz-Bett Oak-Line",
+          "titleTag": "p",
+          "href": "/produkte/bettgestelle/bettgestelle-angebote/",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/05/hasena-oak-line-varus.jpg",
+            "alt": "Hasena Massivholzbett Oak-Line Varus"
+          },
+          "price": 899,
+          "pricePrefix": "ab"
+        }
+      ]
+    }
+  ]
+}

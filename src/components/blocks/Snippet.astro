@@ -1,0 +1,18 @@
+---
+import { getEntry } from 'astro:content';
+import type { Block } from '../../content.config';
+import BlockRenderer from '../BlockRenderer.astro';
+import Content from './Content.astro';
+
+type Props = Extract<Block, { component: 'snippet' }> & { inline?: boolean };
+const { snippet, inline = false } = Astro.props;
+const entry = await getEntry(snippet);
+if (!entry) throw new Error(`Snippet "${snippet.id}" not found`);
+const body = entry.data.body;
+---
+
+{
+  inline
+    ? body.map((block) => (block.component === 'content' ? <Content {...block} bare /> : null))
+    : <BlockRenderer blocks={body} />
+}

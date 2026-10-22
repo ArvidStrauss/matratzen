@@ -1,0 +1,131 @@
+{
+  "path": "/lattenroste/teller-lattenrahmen/",
+  "title": "Teller-Lattenrahmen in den Ausstellungen Lübeck, Hamburg",
+  "source": {
+    "id": 2998,
+    "link": "https://gesunde-matratzen.de/lattenroste/teller-lattenrahmen/",
+    "modified": "2026-09-08T13:19:53"
+  },
+  "seo": {
+    "title": "Teller-Lattenrahmen in den Ausstellungen Lübeck, Hamburg",
+    "description": "Unterschiedliche Teller-Lattenrahmen Ausführungen mit festen oder verstellbaren Kopf- und Fußteilen | große Auswahl in den Filialen",
+    "canonical": "https://gesunde-matratzen.de/lattenroste/teller-lattenrahmen/",
+    "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+    "openGraph": {
+      "locale": "de_DE",
+      "type": "article",
+      "title": "Teller-Lattenrahmen in den Ausstellungen Lübeck, Hamburg",
+      "description": "Unterschiedliche Teller-Lattenrahmen Ausführungen mit festen oder verstellbaren Kopf- und Fußteilen | große Auswahl in den Filialen",
+      "url": "https://gesunde-matratzen.de/lattenroste/teller-lattenrahmen/",
+      "site_name": "Gesunde Matratzen"
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://gesunde-matratzen.de/#website",
+          "url": "https://gesunde-matratzen.de/",
+          "name": "Gesunde Matratzen",
+          "description": "Riesenauswahl mit 2 Filialen im Norden",
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": "https://gesunde-matratzen.de/?s={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          ],
+          "inLanguage": "de-DE"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://gesunde-matratzen.de/lattenroste/teller-lattenrahmen/#webpage",
+          "url": "https://gesunde-matratzen.de/lattenroste/teller-lattenrahmen/",
+          "name": "Teller-Lattenrahmen in den Ausstellungen Lübeck, Hamburg",
+          "isPartOf": {
+            "@id": "https://gesunde-matratzen.de/#website"
+          },
+          "datePublished": "2017-05-16T09:10:19+00:00",
+          "dateModified": "2026-09-08T13:19:53+00:00",
+          "description": "Unterschiedliche Teller-Lattenrahmen Ausführungen mit festen oder verstellbaren Kopf- und Fußteilen | große Auswahl in den Filialen",
+          "inLanguage": "de-DE",
+          "potentialAction": [
+            {
+              "@type": "ReadAction",
+              "target": [
+                "https://gesunde-matratzen.de/lattenroste/teller-lattenrahmen/"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "body": [
+    {
+      "component": "content",
+      "items": [
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "Teller-Lattenrahmen"
+        }
+      ]
+    },
+    {
+      "component": "cardGrid",
+      "columns": 3,
+      "imageFit": "contain",
+      "cards": [
+        {
+          "eyebrow": "Rabatt",
+          "title": "Lattenrahmen Silwa Comfort",
+          "titleTag": "h2",
+          "href": "/lattenroste/teller-lattenrahmen/lattenrahmen-silwa-comfort/",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/04/produktgruppe-silwa-comfort.png",
+            "alt": "Silwa Comfort Tellerlattenrahmen"
+          },
+          "text": [
+            "Silwa Comfort Rahmen – komfortabler Schlaf für Körper und Geist.",
+            "Größe: ab 90 x 200 cm"
+          ],
+          "price": 499,
+          "priceRegular": 549,
+          "pricePrefix": "ab",
+          "cta": {
+            "label": "Beratungstermin",
+            "href": "/beratungstermin/"
+          }
+        },
+        {
+          "eyebrow": "Rabatt",
+          "title": "Tempur Systemrahmen Flex 500",
+          "titleTag": "h2",
+          "image": {
+            "src": "https://gesunde-matratzen.de/wp-content/uploads/2021/06/produkt-tempur-systemrahmen-p-flex-500.png",
+            "alt": "Tempur Systemrahmen Flex 500"
+          },
+          "text": [
+            "starrer Rahmen,",
+            "11.5 cm Aufbauhöhe,",
+            "3 Reihen individuell fixierbare Schulterabsenkung,",
+            "3 Reihen individuell einstellbarer Lordose- und Beckenbereich",
+            "Größe: ab 80 x 200 cm"
+          ],
+          "price": 638,
+          "priceRegular": 798,
+          "pricePrefix": "ab",
+          "cta": {
+            "label": "Beratungstermin",
+            "href": "/beratungstermin/"
+          }
+        }
+      ]
+    },
+    {
+      "component": "snippet",
+      "snippet": "beratungstermin-vereinbaren"
+    }
+  ]
+}

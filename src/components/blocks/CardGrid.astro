@@ -51,16 +51,25 @@ const mixed = cards.some((c) => c.image) && cards.some((c) => !c.image);
             <div class:list={['flex flex-1 flex-col p-6', mixed && !card.image && 'justify-center sm:p-10']}>
               {card.eyebrow && <p class="text-xs font-semibold tracking-[0.18em] text-accent-600 uppercase">{card.eyebrow}</p>}
               {card.title && (
-                <h3 class:list={['mt-1 leading-snug font-bold text-brand-800', mixed && !card.image ? 'text-2xl sm:text-3xl' : 'text-lg']}>
-                  {card.href && !card.linkLabel ? (
-                    <a href={card.href} class="hover:text-brand-600" target={external ? '_blank' : undefined} rel={external ? 'noopener' : undefined}>
-                      {card.title}
-                    </a>
-                  ) : (
-                    card.title
-                  )}
-                </h3>
+                <Fragment>
+                  {(() => {
+                    const Tag = card.titleTag;
+                    const classes = ['mt-1 leading-snug font-bold text-brand-800', mixed && !card.image ? 'text-2xl sm:text-3xl' : 'text-lg'];
+                    return (
+                      <Tag class:list={classes}>
+                        {card.href && !card.linkLabel ? (
+                          <a href={card.href} class="hover:text-brand-600" target={external ? '_blank' : undefined} rel={external ? 'noopener' : undefined}>
+                            {card.title}
+                          </a>
+                        ) : (
+                          card.title
+                        )}
+                      </Tag>
+                    );
+                  })()}
+                </Fragment>
               )}
+              {card.subtitle && <Md text={card.subtitle} class="mt-1 text-sm text-ink/75" />}
               {card.text.length > 0 && (
                 <div class="mt-2 space-y-2 text-sm leading-relaxed text-ink/75">
                   {card.text.map((t) => (
@@ -80,7 +89,19 @@ const mixed = cards.some((c) => c.image) && cards.some((c) => !c.image);
                   ))}
                 </ul>
               )}
-              {card.price !== undefined && <p class="mt-1 text-xl font-bold text-brand-700">{formatEuro(card.price)}</p>}
+              {card.price !== undefined && (
+                <p class="mt-3 flex flex-wrap items-baseline gap-x-2">
+                  {card.priceRegular !== undefined && <s class="text-sm text-muted">{formatEuro(card.priceRegular)}</s>}
+                  {card.pricePrefix && <span class="text-sm text-muted">{card.pricePrefix}</span>}
+                  <span class="text-xl font-bold text-brand-700">{formatEuro(card.price)}</span>
+                </p>
+              )}
+              {card.note && <p class="mt-1 text-xs text-muted">{card.note}</p>}
+              {card.cta && (
+                <a href={card.cta.href} class="btn-primary mt-4 self-start">
+                  {card.cta.label}
+                </a>
+              )}
               {card.linkLabel && card.href && (
                 <a href={card.href} class:list={['inline-flex pt-4 text-sm font-semibold text-brand-700 hover:text-brand-600', !(mixed && !card.image) && 'mt-auto']}>
                   {card.linkLabel}

@@ -1,0 +1,208 @@
+{
+  "path": "/lattenroste/federleisten-rahmen/systemrahmen-silwa-alu-nv/",
+  "title": "Systemrahmen SILWA Pro NV | Gesunde Matratzen",
+  "source": {
+    "id": 3571,
+    "link": "https://gesunde-matratzen.de/lattenroste/federleisten-rahmen/systemrahmen-silwa-alu-nv/",
+    "modified": "2026-04-14T09:13:41"
+  },
+  "seo": {
+    "title": "Systemrahmen SILWA Pro NV | Gesunde Matratzen",
+    "description": "Systemrahmen Silwa Alu NV aus 24 stabilen Fiberglasleisten für nahezu jede Matratze verwendbar.",
+    "canonical": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/federleisten-rahmen/systemrahmen-silwa-alu-nv/",
+    "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+    "openGraph": {
+      "locale": "de_DE",
+      "type": "article",
+      "title": "Systemrahmen SILWA Pro NV | Gesunde Matratzen",
+      "description": "Systemrahmen Silwa Alu NV aus 24 stabilen Fiberglasleisten für nahezu jede Matratze verwendbar.",
+      "url": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/federleisten-rahmen/systemrahmen-silwa-alu-nv/",
+      "site_name": "Gesunde Matratzen"
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://gesunde-matratzen.de/#website",
+          "url": "https://gesunde-matratzen.de/",
+          "name": "Gesunde Matratzen",
+          "description": "Riesenauswahl mit 2 Filialen im Norden",
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": "https://gesunde-matratzen.de/?s={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          ],
+          "inLanguage": "de-DE"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/federleisten-rahmen/systemrahmen-silwa-alu-nv/#webpage",
+          "url": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/federleisten-rahmen/systemrahmen-silwa-alu-nv/",
+          "name": "Systemrahmen SILWA Pro NV | Gesunde Matratzen",
+          "isPartOf": {
+            "@id": "https://gesunde-matratzen.de/#website"
+          },
+          "datePublished": "2017-06-01T08:49:20+00:00",
+          "dateModified": "2026-04-14T09:13:41+00:00",
+          "description": "Systemrahmen Silwa Alu NV aus 24 stabilen Fiberglasleisten für nahezu jede Matratze verwendbar.",
+          "inLanguage": "de-DE",
+          "potentialAction": [
+            {
+              "@type": "ReadAction",
+              "target": [
+                "https://gesunde-matratzen.de/produkte__trashed/lattenroste/federleisten-rahmen/systemrahmen-silwa-alu-nv/"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "body": [
+    {
+      "component": "productHeader",
+      "heading": "Systemrahmen SILWA Alu NV",
+      "headingLevel": "h1",
+      "image": {
+        "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/04/produkt-silwa-lattenrahmen-alu-nv.png",
+        "alt": "Silwa Systemrahmen Alu nicht verstellbar"
+      },
+      "seals": [
+        {
+          "src": "https://gesunde-matratzen.de/wp-content/uploads/2026/04/20-jahre-garantie.png",
+          "alt": "20 Jahre Garantie Logo"
+        }
+      ],
+      "price": {
+        "from": 925,
+        "regular": 1020,
+        "prefix": "ab"
+      },
+      "body": [
+        "Größe : 90 x 200 cm",
+        "Nicht verstellbar",
+        "Die SILWA-Alu-Unterfederung bietet einen besonders individuellen Liegekomfort, welcher dank des Messsystems sehr exakt ermittelt und eingestellt wird."
+      ],
+      "snippet": "unsere-filialen-im-norden"
+    },
+    {
+      "component": "tabs",
+      "tabs": [
+        {
+          "title": "Produktbeschreibung",
+          "body": [
+            {
+              "component": "content",
+              "items": [
+                {
+                  "type": "image",
+                  "image": {
+                    "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/06/silwa-alu-frau.jpg",
+                    "alt": "Silwa Alu Systemrahmen"
+                  }
+                },
+                {
+                  "type": "heading",
+                  "level": 2,
+                  "text": "Silwa Alu NV"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Mit dem Alu-Systemrahmen lassen sich Körpergröße und Körperbau konturgenau nachzeichnen. Der neu entwickelte Einlegerahmen wird aufgrund verschiedener Messdaten für jede Person individuell angefertigt. Jedes Bett wird so zum Unilkat, das sich in Kombination mit der passenden Matratze wie ein Maßanzug perfekt an den Körper anschmiegt."
+                }
+              ]
+            },
+            {
+              "component": "mediaText",
+              "body": [],
+              "bullets": [
+                "nicht verstellbar",
+                "24 stabile Fiberglasleisten",
+                "zusätzliche Einstellung durch 3 Härtegradeinstellungen",
+                "individuelle Feinjustierung auch nach Jahren möglich",
+                "ergonomisch richtige Lagerung in Rücken- und Seitenlage",
+                "mit nahezu jeder Matratze verwendbar",
+                "maximale Druckentlastung durch langlebige Unterfederung",
+                "individuelle Leisteneinstellung nach Computer-Messung",
+                "Rahmenhöhe zwischen 7,8 cm – 12 cm",
+                "Federweg von 5 cm"
+              ],
+              "image": {
+                "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/06/silwa-alu-nv.png",
+                "alt": "Systemrahmen Silwa Alu NV"
+              },
+              "imageFit": "contain"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "component": "testimonials",
+      "heading": "Kundenmeinungen Systemrahmen SILWA Alu",
+      "items": [
+        {
+          "author": "Frau D. aus Timmendorf",
+          "text": [
+            "Ich bin aber tatsächlich eines besseren belehrt worden mit der Vermessung und mit dem einstellbaren Rahmen Silwa-Alu. Ich habe dieses Mal nicht sparen wollen und mich auf die Anpassung eingelassen, welche mir eine Freundin bereits empfohlen hatte. Der Rahmen ist auf meine Bedürfnisse angepasst worden und vor Ort bei mir daheim noch mal von einem Monteur kontrolliert worden. Ich habe zwar ein Rückgaberecht, aber das kommt für mich gar nicht in Frage, denn ich habe gerade in der Schulter gar keine Schmerzen mehr und bin total begeistert."
+          ],
+          "rating": 5,
+          "summary": "Ich habe mich in Lübeck auf den Rahmen SILWA-Alu beraten lassen und bin total begeistert. Ich hatte mir vor einiger Zeit ein günstiges Lattenrost gekauft, da es ja laut Stiftung Warentest völlig unwichtig ist, was unter der Matratze liegt."
+        },
+        {
+          "author": "Frau N. aus Pansdorf",
+          "text": [
+            "Nachdem ich dort gelegen habe und es sofort spürbar war, was ein Lattenrost tatsächlich leisten kann und ich das auf einem Boxspringbett nicht entfernt so spüren konnte, war klar was ich kaufe. Ich hab mich für den Silwa Alurahmen entschieden, kombiniert mit einer Druckentlastenden Matratze bei der ich zugegeben etwas gespart habe. Ich spürte im Laden und mittlerweile auch zu Hause die totale Entlastung und wenn der Rahmen tatsächlich 30 Jahre aushält, hat sich die Investition gelohnt. Mittlerweile habe ich auch eine gute Freundin davon überzeugt zu Gunsten des guten Schlafes etwas mehr zu investieren und Sie hat auch zugeschlagen und schläft bestens und schmerzfrei auf dem Alu Rahmen."
+          ],
+          "rating": 5,
+          "summary": "Ich wollte eigentlich unbedingt ein Boxspringbett kaufen und bin auf Empfehlung in den Laden gegangen. Hier hat man mir nach ausführlicher Analyse und Erklärungen zu der ergomischen Unterstützung, die wichtig für entspanntes und schmerzfreies Schlafen ist, eine Vermessung auf einem Simulator angeboten, welche ich auch ausprobiert habe."
+        },
+        {
+          "author": "Herr K. Hamburg-Ohlsdorf",
+          "text": [
+            "Zudem an einem Samstag! Wir empfehlen das Unternehmen gerne weiter!"
+          ],
+          "rating": 5,
+          "summary": "Wir wollten nur einmal schauen. Nach der Vermessung auf der ALU-Station und der tollen Beratung stand fest, wir trennen uns von unserem 7 Jahre alten Schlafsystem. Die Lieferung erfolgte schneller als erwartet und pünktlich zum angegebenen Zeitpunkt."
+        },
+        {
+          "author": "Frau O. Hamburg-Eppendorf",
+          "text": [
+            "Nach ca. 6 Wochen wurde das komplette Schlafsystem mit auf uns eingestelltem Lattenrost, einer viel weicheren Matratze als vorher und einem auf uns abgestimmten Kopfkissen geliefert. Siehe da, ich schlafe seitdem gut und mein Masseur hat leider nur noch wenig zu tun. Ein toller Service. Von der wirklich hervorragenden und individuelle Beratung bis hin zum Ausliefern des neuen Bettes. Pünktlich auf die Minute und das an einem Samstag. Vielen Dank."
+          ],
+          "rating": 5,
+          "summary": "Mein Mann und ich litten unter starken Verspannungen, welche unser Masseur nicht mehr in den Griff bekommen hat. Dieser empfahl uns das Unternehmen. Eher skeptisch wurde ich auf einem Lattenrost vermessen. Mein Mann war gleich überzeugt."
+        }
+      ]
+    },
+    {
+      "component": "content",
+      "items": [
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Weitere Produkte, die Sie interessieren könnten"
+        }
+      ]
+    },
+    {
+      "component": "snippet",
+      "snippet": "silwa-4-feelings-21-vs-einheitsmatratze"
+    },
+    {
+      "component": "snippet",
+      "snippet": "beratungstermin-vereinbaren"
+    },
+    {
+      "component": "snippet",
+      "snippet": "matratzen-systeme"
+    },
+    {
+      "component": "snippet",
+      "snippet": "unsere-top-produkte"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "matratzen-systeme",
+  "sources": [
+    3546,
+    3553,
+    3557,
+    3571,
+    3648,
+    3680,
+    3697,
+    3710,
+    41169,
+    41172,
+    41176
+  ],
+  "body": [
+    {
+      "component": "content",
+      "items": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Matratzen-Systeme"
+        },
+        {
+          "type": "list",
+          "items": [
+            "[Tempur](/produkte/tempur-sortiment/)",
+            "**[SILWA – unsere Gesundheitsmarke](/produkte/silwa-schlafsystem/)**",
+            "[Testsieger & getestete Matratzen](/testsieger-matratzen/)",
+            "[Marken-Matratzen](/produkte/marken-matratzen/)"
+          ]
+        }
+      ]
+    }
+  ]
+}

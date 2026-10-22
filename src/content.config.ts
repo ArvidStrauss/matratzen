@@ -80,13 +80,81 @@ const products = defineCollection({
 const card = z.object({
   eyebrow: z.string().optional(),
   title: z.string().optional(),
+  titleTag: z.enum(['h2', 'h3', 'h4', 'p']).default('h3'),
+  subtitle: md.optional(),
   href: href.optional(),
   image: image.optional(),
   text: z.array(md).default([]),
   bullets: z.array(md).default([]),
   price: euro.optional(),
+  priceRegular: euro.optional(),
+  pricePrefix: z.string().optional(),
+  note: z.string().optional(),
+  cta: link.optional(),
   linkLabel: z.string().optional(),
   isVideo: z.boolean().default(false),
+});
+
+const mediaText = z.object({
+  component: z.literal('mediaText'),
+  eyebrow: z.string().optional(),
+  heading: z.string().optional(),
+  headingLevel: z.enum(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).default('h2'),
+  headingHref: href.optional(),
+  body: z.array(md).default([]),
+  bullets: z.array(md).default([]),
+  outro: z.array(md).default([]),
+  price: price.optional(),
+  image: image.optional(),
+  imageHref: href.optional(),
+  imageFit: z.enum(['cover', 'contain']).default('cover'),
+  ctas: z.array(link).default([]),
+  reverse: z.boolean().default(false),
+  tone: z.enum(['plain', 'sand', 'brand', 'accent']).default('plain'),
+});
+
+const cardGrid = z.object({
+  component: z.literal('cardGrid'),
+  eyebrow: z.string().optional(),
+  heading: z.string().optional(),
+  headingHref: href.optional(),
+  intro: z.array(md).default([]),
+  columns: z.union([z.literal(2), z.literal(3), z.literal(4)]).default(3),
+  imageFit: z.enum(['cover', 'contain']).default('cover'),
+  cards: z.array(card),
+  ctas: z.array(link).default([]),
+  tone: z.enum(['plain', 'sand', 'brand']).default('plain'),
+});
+
+// Importer: flowing text of a WordPress row (headings, paragraphs, lists, images, buttons) in source order.
+// `id` carries in-page anchors (`#frage1`).
+const contentItem = z.discriminatedUnion('type', [
+  z.object({ type: z.literal('heading'), level: z.number().int().min(1).max(6), text: md, id: z.string().optional() }),
+  z.object({ type: z.literal('paragraph'), text: md, lead: z.boolean().default(false), id: z.string().optional() }),
+  z.object({ type: z.literal('list'), ordered: z.boolean().default(false), items: z.array(md), id: z.string().optional() }),
+  z.object({ type: z.literal('image'), image, href: href.optional(), id: z.string().optional() }),
+  z.object({ type: z.literal('button'), link, style: z.enum(['primary', 'secondary']).default('primary') }),
+]);
+
+const content = z.object({
+  component: z.literal('content'),
+  items: z.array(contentItem),
+  tone: z.enum(['plain', 'sand']).default('plain'),
+});
+
+// Importer fallback for markup no block recognises: sanitised HTML (see scripts/import/sanitize.mjs).
+const richText = z.object({
+  component: z.literal('richText'),
+  html: z.string(),
+  reason: z.string().optional(),
+});
+
+const tableCell = z.object({ text: z.array(md).default([]), images: z.array(image).default([]) });
+const table = z.object({
+  component: z.literal('table'),
+  heading: z.string().optional(),
+  head: z.array(tableCell).default([]),
+  rows: z.array(z.array(tableCell)),
 });
 
 const blocks = z.discriminatedUnion('component', [
@@ -114,23 +182,7 @@ const blocks = z.discriminatedUnion('component', [
     image: image.optional(),
     items: z.array(z.object({ label: z.string(), price: euro, href })),
   }),
-  z.object({
-    component: z.literal('mediaText'),
-    eyebrow: z.string().optional(),
-    heading: z.string().optional(),
-    headingLevel: z.enum(['h2', 'h3']).default('h2'),
-    headingHref: href.optional(),
-    body: z.array(md).default([]),
-    bullets: z.array(md).default([]),
-    outro: z.array(md).default([]),
-    price: price.optional(),
-    image: image.optional(),
-    imageHref: href.optional(),
-    imageFit: z.enum(['cover', 'contain']).default('cover'),
-    ctas: z.array(link).default([]),
-    reverse: z.boolean().default(false),
-    tone: z.enum(['plain', 'sand', 'brand', 'accent']).default('plain'),
-  }),
+  mediaText,
   z.object({
     component: z.literal('productGrid'),
     heading: z.string(),
@@ -142,23 +194,21 @@ const blocks = z.discriminatedUnion('component', [
     products: z.array(reference('products')),
     appointment: link,
   }),
-  z.object({
-    component: z.literal('cardGrid'),
-    eyebrow: z.string().optional(),
-    heading: z.string().optional(),
-    headingHref: href.optional(),
-    intro: z.array(md).default([]),
-    columns: z.union([z.literal(2), z.literal(3), z.literal(4)]).default(3),
-    imageFit: z.enum(['cover', 'contain']).default('cover'),
-    cards: z.array(card),
-    ctas: z.array(link).default([]),
-    tone: z.enum(['plain', 'sand', 'brand']).default('plain'),
-  }),
+  cardGrid,
   z.object({
     component: z.literal('testimonials'),
     heading: z.string(),
     intro: md.optional(),
-    items: z.array(z.object({ author: z.string(), meta: z.string().optional(), product: z.string().optional(), text: z.array(z.string()) })),
+    items: z.array(
+      z.object({
+        author: z.string(),
+        meta: z.string().optional(),
+        product: z.string().optional(),
+        rating: z.number().int().min(1).max(5).optional(),
+        summary: md.optional(),
+        text: z.array(z.string()),
+      }),
+    ),
     cta: link.optional(),
   }),
   z.object({
@@ -195,17 +245,68 @@ const blocks = z.discriminatedUnion('component', [
     heading: z.string(),
     links: z.array(link),
   }),
+  content,
+  richText,
+  table,
+  z.object({
+    component: z.literal('accordion'),
+    heading: z.string().optional(),
+    items: z.array(z.object({ title: md, body: z.array(md).default([]), open: z.boolean().default(false) })),
+  }),
+  z.object({
+    component: z.literal('productHeader'),
+    heading: z.string().optional(),
+    headingLevel: z.enum(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).default('h2'),
+    headingHref: href.optional(),
+    image: image.optional(),
+    seals: z.array(image).default([]),
+    price: price.optional(),
+    body: z.array(md).default([]),
+    reverse: z.boolean().default(false),
+    snippet: reference('snippets').optional(),
+  }),
+  z.object({
+    component: z.literal('tabs'),
+    tabs: z.array(z.object({ title: z.string(), body: z.array(z.discriminatedUnion('component', [content, mediaText, cardGrid, richText, table])) })),
+  }),
+  // Shared block group (WPBakery "templatera" template); the group lives in src/content/snippets/.
+  z.object({
+    component: z.literal('snippet'),
+    snippet: reference('snippets'),
+  }),
 ]);
 
 export type Block = z.infer<typeof blocks>;
+
+const seo = z.object({
+  title: z.string(),
+  description: z.string().optional(),
+  canonical: z.string().url().optional(),
+  robots: z.string().optional(),
+  openGraph: z.record(z.string(), z.string()).default({}),
+  schema: z.unknown().optional(),
+});
 
 const pages = defineCollection({
   loader: glob({ pattern: '*.json', base: 'src/content/pages' }),
   schema: z.object({
     path: z.string().regex(/^\/(.*\/)?$/, 'path must start and end with /'),
     title: z.string(),
+    // Set by the importer (scripts/import.mjs); hand-written prototype pages have no source.
+    source: z.object({ id: z.number().int(), link: z.string().url(), modified: z.string() }).optional(),
+    seo: seo.optional(),
     body: z.array(blocks),
   }),
 });
 
-export const collections = { settings, branches, products, pages };
+const snippets = defineCollection({
+  loader: glob({ pattern: '*.json', base: 'src/content/snippets' }),
+  schema: z.object({
+    name: z.string(),
+    // WordPress page ids whose HTML contains this template (used by verify-content).
+    sources: z.array(z.number().int()),
+    body: z.array(blocks),
+  }),
+});
+
+export const collections = { settings, branches, products, pages, snippets };

@@ -3,3 +3,15 @@ dist/
 .astro/
 .env
 .env.*
+
+# Internal documentation and agent instructions (the repo is public)
+*.md
+AGENTS.md
+docs/
+.github/copilot-instructions.md
+.github/instructions/
+.github/prompts/
+.github/agents/
+.github/skills/
+.claude/
+.copilot/

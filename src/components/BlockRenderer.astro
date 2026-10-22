@@ -13,6 +13,13 @@ import BranchList from './blocks/BranchList.astro';
 import BranchHero from './blocks/BranchHero.astro';
 import Gallery from './blocks/Gallery.astro';
 import LinkList from './blocks/LinkList.astro';
+import Content from './blocks/Content.astro';
+import RichText from './blocks/RichText.astro';
+import Table from './blocks/Table.astro';
+import Accordion from './blocks/Accordion.astro';
+import ProductHeader from './blocks/ProductHeader.astro';
+import Tabs from './blocks/Tabs.astro';
+import Snippet from './blocks/Snippet.astro';
 
 interface Props {
   blocks: Block[];
@@ -33,6 +40,13 @@ const registry = {
   branchHero: BranchHero,
   gallery: Gallery,
   linkList: LinkList,
+  content: Content,
+  richText: RichText,
+  table: Table,
+  accordion: Accordion,
+  productHeader: ProductHeader,
+  tabs: Tabs,
+  snippet: Snippet,
 } satisfies Record<Block['component'], unknown>;
 
 const { blocks } = Astro.props;

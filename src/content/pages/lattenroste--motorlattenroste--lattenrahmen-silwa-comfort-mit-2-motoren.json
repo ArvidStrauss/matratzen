@@ -1,0 +1,154 @@
+{
+  "path": "/lattenroste/motorlattenroste/lattenrahmen-silwa-comfort-mit-2-motoren/",
+  "title": "Lattenrahmen Silwa Comfort – Rahmen mit 2 Motoren",
+  "source": {
+    "id": 3710,
+    "link": "https://gesunde-matratzen.de/lattenroste/motorlattenroste/lattenrahmen-silwa-comfort-mit-2-motoren/",
+    "modified": "2026-09-08T13:17:00"
+  },
+  "seo": {
+    "title": "Lattenrahmen Silwa Comfort – Rahmen mit 2 Motoren",
+    "description": "Lattenrahmen Silwa Comfort mit 2 Motoren mit Netzfreischaltung | Bis zu 10 Jahre Garantie.",
+    "canonical": "https://gesunde-matratzen.de/lattenroste/motorlattenroste/lattenrahmen-silwa-comfort-mit-2-motoren/",
+    "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+    "openGraph": {
+      "locale": "de_DE",
+      "type": "article",
+      "title": "Lattenrahmen Silwa Comfort – Rahmen mit 2 Motoren",
+      "description": "Lattenrahmen Silwa Comfort mit 2 Motoren mit Netzfreischaltung | Bis zu 10 Jahre Garantie.",
+      "url": "https://gesunde-matratzen.de/lattenroste/motorlattenroste/lattenrahmen-silwa-comfort-mit-2-motoren/",
+      "site_name": "Gesunde Matratzen"
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://gesunde-matratzen.de/#website",
+          "url": "https://gesunde-matratzen.de/",
+          "name": "Gesunde Matratzen",
+          "description": "Riesenauswahl mit 2 Filialen im Norden",
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": "https://gesunde-matratzen.de/?s={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          ],
+          "inLanguage": "de-DE"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://gesunde-matratzen.de/lattenroste/motorlattenroste/lattenrahmen-silwa-comfort-mit-2-motoren/#webpage",
+          "url": "https://gesunde-matratzen.de/lattenroste/motorlattenroste/lattenrahmen-silwa-comfort-mit-2-motoren/",
+          "name": "Lattenrahmen Silwa Comfort – Rahmen mit 2 Motoren",
+          "isPartOf": {
+            "@id": "https://gesunde-matratzen.de/#website"
+          },
+          "datePublished": "2017-06-02T07:28:03+00:00",
+          "dateModified": "2026-09-08T13:17:00+00:00",
+          "description": "Lattenrahmen Silwa Comfort mit 2 Motoren mit Netzfreischaltung | Bis zu 10 Jahre Garantie.",
+          "inLanguage": "de-DE",
+          "potentialAction": [
+            {
+              "@type": "ReadAction",
+              "target": [
+                "https://gesunde-matratzen.de/lattenroste/motorlattenroste/lattenrahmen-silwa-comfort-mit-2-motoren/"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "body": [
+    {
+      "component": "productHeader",
+      "heading": "Lattenrahmen SILWA Comfort mit 2 Motoren",
+      "headingLevel": "h1",
+      "image": {
+        "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/05/produkt-silwa-lattenrahmen-comfort-2-motorig.png",
+        "alt": "Silwa Comfort Tellerlattenrahmen mit Motoren"
+      },
+      "price": {
+        "from": 1259,
+        "regular": 1385,
+        "prefix": "ab"
+      },
+      "body": [
+        "Größe : 90 x 200 cm",
+        "2-motorig mit Netzfreischaltung",
+        "Silwa Comfort Rahmen – komfortabler Schlaf für Körper und Geist."
+      ],
+      "snippet": "unsere-filialen-im-norden"
+    },
+    {
+      "component": "tabs",
+      "tabs": [
+        {
+          "title": "Produktbeschreibung",
+          "body": [
+            {
+              "component": "mediaText",
+              "heading": "Silwa Comfort Rahmen mit 2 Motoren",
+              "body": [
+                "**Individuell, da punktuell**",
+                "Silwa Comfort gewährleistet durch die Flächenauflösung in einzelne Federelemente einen harmonischen Druckausgleich. Der Körper wird punktuell und damit körperindividuell unterstützt. Die Ausrichtung der Wirbelsäule verläuft orthopädisch richtig; Muskulatur und Bänder können entspannen. Das Comfort-Bettsystem bietet langfristig gesunden und erholsamen Schlaf für mehr Flexibilität und Vitalität am Tag.",
+                "**Flexibilität und Vitalität**",
+                "Eine Vielzahl hoch elastischer Federelemente bieten dem Körper komfortablen Schlafkomfort. Die Federelemente reagieren sanft auf den individuelle Bewegungsablauf und passen sich flexibel der Körperkontur und dem Auflagegewicht an."
+              ],
+              "image": {
+                "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/06/silwa-comfort-rahmen-mit-abbildungen.png",
+                "alt": "Silwa Comfort Tellerlattenrahmen ohne Verstellung"
+              },
+              "imageFit": "contain"
+            }
+          ]
+        },
+        {
+          "title": "Garantie",
+          "body": [
+            {
+              "component": "content",
+              "items": [
+                {
+                  "type": "image",
+                  "image": {
+                    "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/06/silwa-comfort-garantie.jpg",
+                    "alt": "Silwa Comfort Tellerlattenrahmen Garantie"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "component": "content",
+      "items": [
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Weitere Produkte, die Sie interessieren könnten"
+        }
+      ]
+    },
+    {
+      "component": "snippet",
+      "snippet": "silwa-4-feelings-21-vs-einheitsmatratze"
+    },
+    {
+      "component": "snippet",
+      "snippet": "beratungstermin-vereinbaren"
+    },
+    {
+      "component": "snippet",
+      "snippet": "matratzen-systeme"
+    },
+    {
+      "component": "snippet",
+      "snippet": "unsere-top-produkte"
+    }
+  ]
+}

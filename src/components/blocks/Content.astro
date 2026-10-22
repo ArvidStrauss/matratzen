@@ -1,0 +1,80 @@
+---
+import type { Block } from '../../content.config';
+import Section from '../Section.astro';
+import Img from '../Img.astro';
+import Md from '../Md.astro';
+import { inlineMd } from '../../lib/md';
+import { isExternal } from '../../lib/format';
+
+type Props = Extract<Block, { component: 'content' }> & { bare?: boolean };
+const { items, tone, bare = false } = Astro.props;
+
+const sizes: Record<number, string> = {
+  1: 'text-3xl sm:text-4xl',
+  2: 'text-2xl sm:text-3xl',
+  3: 'text-xl sm:text-2xl',
+  4: 'text-lg',
+  5: 'text-base',
+  6: 'text-base',
+};
+
+// Consecutive buttons share one row.
+type Item = Props['items'][number];
+const groups: (Item | Item[])[] = [];
+for (const item of items) {
+  const last = groups.at(-1);
+  if (item.type === 'button' && Array.isArray(last)) last.push(item);
+  else groups.push(item.type === 'button' ? [item] : item);
+}
+const Wrapper = bare ? 'div' : Section;
+---
+
+<Wrapper {...(bare ? { class: 'space-y-4' } : { tone, class: '!py-8 sm:!py-10' })}>
+  <div class:list={['space-y-4', !bare && 'max-w-4xl']}>
+    {
+      groups.map((item) => {
+        if (Array.isArray(item)) {
+          return (
+            <div class="flex flex-wrap gap-3 pt-2">
+              {item.map((b) => {
+                if (b.type !== 'button') return null;
+                const external = isExternal(b.link.href);
+                return (
+                  <a href={b.link.href} class={b.style === 'primary' ? 'btn-primary' : 'btn-ghost'} target={external ? '_blank' : undefined} rel={external ? 'noopener' : undefined}>
+                    {b.link.label}
+                  </a>
+                );
+              })}
+            </div>
+          );
+        }
+        if (item.type === 'heading') {
+          const Tag = `h${item.level}` as 'h2';
+          return <Tag id={item.id} class:list={['prose-link scroll-mt-24 leading-tight font-bold tracking-tight text-brand-800', sizes[item.level], item.level > 1 && 'pt-4']} set:html={inlineMd(item.text)} />;
+        }
+        if (item.type === 'paragraph') return <Md text={item.text} class:list={['leading-relaxed text-ink/80', item.lead && 'text-lg text-ink', item.id && 'scroll-mt-24']} />;
+        if (item.type === 'list') {
+          const ListTag = item.ordered ? 'ol' : 'ul';
+          return (
+            <ListTag id={item.id} class:list={['space-y-1.5 pl-6 leading-relaxed text-ink/80 marker:text-brand-500', item.ordered ? 'list-decimal' : 'list-disc']}>
+              {item.items.map((t) => (
+                <Md text={t} as="li" />
+              ))}
+            </ListTag>
+          );
+        }
+        if (item.type === 'image') {
+          const img = <Img src={item.image.src} alt={item.image.alt} class="h-auto max-w-full rounded-card" />;
+          return item.href ? (
+            <a href={item.href} class="block w-fit max-w-full">
+              {img}
+            </a>
+          ) : (
+            <div class="w-fit max-w-full">{img}</div>
+          );
+        }
+        return null;
+      })
+    }
+  </div>
+</Wrapper>

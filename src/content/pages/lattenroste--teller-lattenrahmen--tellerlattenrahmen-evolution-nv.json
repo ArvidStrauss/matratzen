@@ -1,0 +1,155 @@
+{
+  "path": "/lattenroste/teller-lattenrahmen/tellerlattenrahmen-evolution-nv/",
+  "title": "Tellerlattenrahmen Evolution 2 NV | Gesunde Matratzen",
+  "source": {
+    "id": 3680,
+    "link": "https://gesunde-matratzen.de/lattenroste/teller-lattenrahmen/tellerlattenrahmen-evolution-nv/",
+    "modified": "2019-04-05T07:53:38"
+  },
+  "seo": {
+    "title": "Tellerlattenrahmen Evolution 2 NV | Gesunde Matratzen",
+    "description": "Der Evolution Tellerlattenrahmen bietet Funktionalität, Druckausgleich und Design in einem Rahmen.",
+    "canonical": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/teller-lattenrahmen/tellerlattenrahmen-evolution-nv/",
+    "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+    "openGraph": {
+      "locale": "de_DE",
+      "type": "article",
+      "title": "Tellerlattenrahmen Evolution 2 NV | Gesunde Matratzen",
+      "description": "Der Evolution Tellerlattenrahmen bietet Funktionalität, Druckausgleich und Design in einem Rahmen.",
+      "url": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/teller-lattenrahmen/tellerlattenrahmen-evolution-nv/",
+      "site_name": "Gesunde Matratzen"
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://gesunde-matratzen.de/#website",
+          "url": "https://gesunde-matratzen.de/",
+          "name": "Gesunde Matratzen",
+          "description": "Riesenauswahl mit 2 Filialen im Norden",
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": "https://gesunde-matratzen.de/?s={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          ],
+          "inLanguage": "de-DE"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/teller-lattenrahmen/tellerlattenrahmen-evolution-nv/#webpage",
+          "url": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/teller-lattenrahmen/tellerlattenrahmen-evolution-nv/",
+          "name": "Tellerlattenrahmen Evolution 2 NV | Gesunde Matratzen",
+          "isPartOf": {
+            "@id": "https://gesunde-matratzen.de/#website"
+          },
+          "datePublished": "2017-06-01T16:32:19+00:00",
+          "dateModified": "2019-04-05T07:53:38+00:00",
+          "description": "Der Evolution Tellerlattenrahmen bietet Funktionalität, Druckausgleich und Design in einem Rahmen.",
+          "inLanguage": "de-DE",
+          "potentialAction": [
+            {
+              "@type": "ReadAction",
+              "target": [
+                "https://gesunde-matratzen.de/produkte__trashed/lattenroste/teller-lattenrahmen/tellerlattenrahmen-evolution-nv/"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "body": [
+    {
+      "component": "productHeader",
+      "heading": "Tellerlattenrahmen Evolution 2 NV",
+      "headingLevel": "h1",
+      "image": {
+        "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/06/evolution2-nv.jpg",
+        "alt": "Tellerrahmen Evolution 2 NV"
+      },
+      "price": {
+        "from": 347,
+        "regular": 365,
+        "prefix": "ab"
+      },
+      "body": [
+        "Größe ab 80 x 200 cm",
+        "Ohne Verstellung",
+        "Der Evolution Tellerlattenrahmen verbindet Funktionalität, punktuellen Druckausgleich und Design in einer hochauflösenden Mehrzonenliegefläche mit 70 hochflexiblen Modulen.",
+        "**Lieferzeit:** ca. 10-15 Werktage."
+      ],
+      "snippet": "unsere-filialen-im-norden"
+    },
+    {
+      "component": "tabs",
+      "tabs": [
+        {
+          "title": "Produktbeschreibung",
+          "body": [
+            {
+              "component": "mediaText",
+              "heading": "Evolution 2 NV",
+              "body": [
+                "Der Evolution Rahmen verfügt über 70 einzeln gelagerte, flexible Modulelemente. Der Körper wird, dank des so entstehenden harmonischen Druckausgleiches, punktuell und damit körperindividuell unterstützt. Die Federelemente reagieren sanft auf den individuellen Bewegungsablauf und passen sich flexibel der Körperkontur und dem Auflagegewicht an.",
+                "Durch die geringe Aufbauhöhe von nur 7,5 cm, kann dieser Rahmen in nahezu jedes Bettgestell eingebaut werden. Der dennoch extrem hohe Federweg sorgt für einen traumhaft schönen Liegekomfort. Die über die gesamte Breite des Rahmens aufgebauten Teller verhindern effektiv die Bildung einer Besucherritze.",
+                "Eine Abschlussleiste am Kopf- und am Fußende verhindert ein Abklappen der Matratze."
+              ],
+              "image": {
+                "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/06/evolution2_nv.png",
+                "alt": "Tellerlattenrahmen Evolution 2 NV"
+              },
+              "imageFit": "contain"
+            }
+          ]
+        },
+        {
+          "title": "Garantie",
+          "body": [
+            {
+              "component": "content",
+              "items": [
+                {
+                  "type": "paragraph",
+                  "text": "Bei diesem Produkt aus unserem Shop bestehen die gesetzlichen Gewährleistungsrechte."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bitte beachten Sie die entsprechenden Pflegehinweise. Diese befinden sich an Ihrem Produkt."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "component": "content",
+      "items": [
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Weitere Produkte, die Sie interessieren könnten"
+        }
+      ]
+    },
+    {
+      "component": "snippet",
+      "snippet": "silwa-4-feelings-21-vs-einheitsmatratze"
+    },
+    {
+      "component": "snippet",
+      "snippet": "beratungstermin-vereinbaren"
+    },
+    {
+      "component": "snippet",
+      "snippet": "matratzen-systeme"
+    },
+    {
+      "component": "snippet",
+      "snippet": "unsere-top-produkte"
+    }
+  ]
+}
