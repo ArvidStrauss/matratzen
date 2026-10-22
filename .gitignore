@@ -15,3 +15,9 @@ docs/
 .github/skills/
 .claude/
 .copilot/
+
+# Local-only helpers, not needed to build or deploy the site
+reference/extracted/
+scripts/capture.mjs
+scripts/extract.mjs
+scripts/dump.mjs
