@@ -11,13 +11,17 @@
     "description": "SILWA PRO Leistenrahmen mit hoher Funktionalität, ausgezeichneten Komfort und Preisgünstig!",
     "canonical": "https://gesunde-matratzen.de/lattenroste/federleisten-rahmen/lattenrahmen-silwa-pro-44-kf/",
     "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-    "openGraph": {
-      "locale": "de_DE",
-      "type": "article",
-      "title": "Lattenrahmen SILWA Pro 44 KF | Gesunde-Matratzen.de",
-      "description": "SILWA PRO Leistenrahmen mit hoher Funktionalität, ausgezeichneten Komfort und Preisgünstig!",
-      "url": "https://gesunde-matratzen.de/lattenroste/federleisten-rahmen/lattenrahmen-silwa-pro-44-kf/",
-      "site_name": "Gesunde Matratzen"
+    "meta": {
+      "og:locale": "de_DE",
+      "og:type": "article",
+      "og:title": "Lattenrahmen SILWA Pro 44 KF | Gesunde-Matratzen.de",
+      "og:description": "SILWA PRO Leistenrahmen mit hoher Funktionalität, ausgezeichneten Komfort und Preisgünstig!",
+      "og:url": "https://gesunde-matratzen.de/lattenroste/federleisten-rahmen/lattenrahmen-silwa-pro-44-kf/",
+      "og:site_name": "Gesunde Matratzen",
+      "article:modified_time": "2026-06-23T10:56:05+00:00",
+      "twitter:card": "summary",
+      "twitter:label1": "Geschätzte Lesezeit",
+      "twitter:data1": "2 Minuten"
     },
     "schema": {
       "@context": "https://schema.org",

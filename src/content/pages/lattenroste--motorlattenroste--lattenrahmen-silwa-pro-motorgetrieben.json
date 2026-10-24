@@ -11,13 +11,17 @@
     "description": "Der Silwa Pro ist motorgetrieben, 28 Federholzleisten sichern den Schlafkomfort. Elektrisch verstellbar.",
     "canonical": "https://gesunde-matratzen.de/lattenroste/motorlattenroste/lattenrahmen-silwa-pro-motorgetrieben/",
     "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-    "openGraph": {
-      "locale": "de_DE",
-      "type": "article",
-      "title": "Lattenrahmen SILWA Pro motorgetrieben",
-      "description": "Der Silwa Pro ist motorgetrieben, 28 Federholzleisten sichern den Schlafkomfort. Elektrisch verstellbar.",
-      "url": "https://gesunde-matratzen.de/lattenroste/motorlattenroste/lattenrahmen-silwa-pro-motorgetrieben/",
-      "site_name": "Gesunde Matratzen"
+    "meta": {
+      "og:locale": "de_DE",
+      "og:type": "article",
+      "og:title": "Lattenrahmen SILWA Pro motorgetrieben",
+      "og:description": "Der Silwa Pro ist motorgetrieben, 28 Federholzleisten sichern den Schlafkomfort. Elektrisch verstellbar.",
+      "og:url": "https://gesunde-matratzen.de/lattenroste/motorlattenroste/lattenrahmen-silwa-pro-motorgetrieben/",
+      "og:site_name": "Gesunde Matratzen",
+      "article:modified_time": "2026-06-23T10:55:10+00:00",
+      "twitter:card": "summary",
+      "twitter:label1": "Geschätzte Lesezeit",
+      "twitter:data1": "2 Minuten"
     },
     "schema": {
       "@context": "https://schema.org",

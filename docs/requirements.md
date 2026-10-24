@@ -150,7 +150,7 @@ gesunde-matratzen.de or more presences): OPEN.
 | 3 | Optimise campaign performance (4.7) | DECIDED |
 | 4 | Agentic GEO and search queries from chatbots (G6) | DECIDED |
 
-## 6. Impact on earlier decisions (AGENTS.md)
+## 6. Impact on earlier decisions (CLAUDE.md)
 
 - **Content parity / "migrate as it is"**: C2, C3, C6, C9 and H1 change content. Interpretation (PROPOSED): these are the
   "small changes" of phase 1. Removed pages (Massagesessel, Tempur) need 301 redirects (SEO parity).

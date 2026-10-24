@@ -11,13 +11,17 @@
     "description": "Lattenrahmen Silwa Comfort starre Version | Ohne weitere Verstelloptionen | Bis zu 10 Jahre Garantie.",
     "canonical": "https://gesunde-matratzen.de/lattenroste/teller-lattenrahmen/lattenrahmen-silwa-comfort/",
     "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-    "openGraph": {
-      "locale": "de_DE",
-      "type": "article",
-      "title": "Tellerlattenrahmen SILWA Comfort starre Version",
-      "description": "Lattenrahmen Silwa Comfort starre Version | Ohne weitere Verstelloptionen | Bis zu 10 Jahre Garantie.",
-      "url": "https://gesunde-matratzen.de/lattenroste/teller-lattenrahmen/lattenrahmen-silwa-comfort/",
-      "site_name": "Gesunde Matratzen"
+    "meta": {
+      "og:locale": "de_DE",
+      "og:type": "article",
+      "og:title": "Tellerlattenrahmen SILWA Comfort starre Version",
+      "og:description": "Lattenrahmen Silwa Comfort starre Version | Ohne weitere Verstelloptionen | Bis zu 10 Jahre Garantie.",
+      "og:url": "https://gesunde-matratzen.de/lattenroste/teller-lattenrahmen/lattenrahmen-silwa-comfort/",
+      "og:site_name": "Gesunde Matratzen",
+      "article:modified_time": "2026-09-08T13:14:57+00:00",
+      "twitter:card": "summary",
+      "twitter:label1": "Geschätzte Lesezeit",
+      "twitter:data1": "1 Minute"
     },
     "schema": {
       "@context": "https://schema.org",

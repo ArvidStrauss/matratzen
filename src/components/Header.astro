@@ -35,14 +35,15 @@ const isActive = (href?: string) => !!href && href !== '/' && current.startsWith
       <Img src={settings.logo.src} alt={settings.logo.alt} class="h-12 w-auto" loading="eager" />
     </a>
 
-    <nav aria-label="Hauptmenü" class="hidden lg:block">
-      <ul class="flex items-center gap-0.5 whitespace-nowrap">
+    <nav aria-label="Hauptmenü" class="hidden self-stretch lg:block">
+      <ul class="flex h-full gap-0.5 whitespace-nowrap">
         {
           settings.navigation.map((item, index) => {
             const isMega = item.children?.some((c) => c.children?.length);
             const alignRight = index >= settings.navigation.length - 3;
+            // Items span the full header height, so the pointer never leaves the item between button and flyout.
             return (
-              <li class:list={['group', !isMega && 'relative']}>
+              <li class:list={['group flex items-center', !isMega && 'relative']}>
                 {item.children ? (
                   <button
                     type="button"
@@ -65,7 +66,8 @@ const isActive = (href?: string) => !!href && href !== '/' && current.startsWith
                 {item.children && (
                   <div
                     class:list={[
-                      'invisible absolute top-full pt-2 opacity-0 transition group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100',
+                      // Opens at once, closes after 150 ms, so a diagonal move towards the flyout does not close it.
+                      'invisible absolute top-full pt-2 opacity-0 transition delay-150 group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100 group-hover:delay-0',
                       isMega ? 'inset-x-5 sm:inset-x-8' : alignRight ? 'right-0 min-w-72' : 'left-0 min-w-72',
                     ]}
                   >

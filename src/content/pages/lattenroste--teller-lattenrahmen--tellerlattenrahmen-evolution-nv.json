@@ -9,15 +9,19 @@
   "seo": {
     "title": "Tellerlattenrahmen Evolution 2 NV | Gesunde Matratzen",
     "description": "Der Evolution Tellerlattenrahmen bietet Funktionalität, Druckausgleich und Design in einem Rahmen.",
-    "canonical": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/teller-lattenrahmen/tellerlattenrahmen-evolution-nv/",
+    "canonical": "https://gesunde-matratzen.de/lattenroste/teller-lattenrahmen/tellerlattenrahmen-evolution-nv/",
     "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-    "openGraph": {
-      "locale": "de_DE",
-      "type": "article",
-      "title": "Tellerlattenrahmen Evolution 2 NV | Gesunde Matratzen",
-      "description": "Der Evolution Tellerlattenrahmen bietet Funktionalität, Druckausgleich und Design in einem Rahmen.",
-      "url": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/teller-lattenrahmen/tellerlattenrahmen-evolution-nv/",
-      "site_name": "Gesunde Matratzen"
+    "meta": {
+      "og:locale": "de_DE",
+      "og:type": "article",
+      "og:title": "Tellerlattenrahmen Evolution 2 NV | Gesunde Matratzen",
+      "og:description": "Der Evolution Tellerlattenrahmen bietet Funktionalität, Druckausgleich und Design in einem Rahmen.",
+      "og:url": "https://gesunde-matratzen.de/lattenroste/teller-lattenrahmen/tellerlattenrahmen-evolution-nv/",
+      "og:site_name": "Gesunde Matratzen",
+      "article:modified_time": "2019-04-05T07:53:38+00:00",
+      "twitter:card": "summary",
+      "twitter:label1": "Geschätzte Lesezeit",
+      "twitter:data1": "2 Minuten"
     },
     "schema": {
       "@context": "https://schema.org",
@@ -39,8 +43,8 @@
         },
         {
           "@type": "WebPage",
-          "@id": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/teller-lattenrahmen/tellerlattenrahmen-evolution-nv/#webpage",
-          "url": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/teller-lattenrahmen/tellerlattenrahmen-evolution-nv/",
+          "@id": "https://gesunde-matratzen.de/lattenroste/teller-lattenrahmen/tellerlattenrahmen-evolution-nv/#webpage",
+          "url": "https://gesunde-matratzen.de/lattenroste/teller-lattenrahmen/tellerlattenrahmen-evolution-nv/",
           "name": "Tellerlattenrahmen Evolution 2 NV | Gesunde Matratzen",
           "isPartOf": {
             "@id": "https://gesunde-matratzen.de/#website"
@@ -53,7 +57,7 @@
             {
               "@type": "ReadAction",
               "target": [
-                "https://gesunde-matratzen.de/produkte__trashed/lattenroste/teller-lattenrahmen/tellerlattenrahmen-evolution-nv/"
+                "https://gesunde-matratzen.de/lattenroste/teller-lattenrahmen/tellerlattenrahmen-evolution-nv/"
               ]
             }
           ]

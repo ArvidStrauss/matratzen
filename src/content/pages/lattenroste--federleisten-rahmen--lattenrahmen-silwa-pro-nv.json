@@ -11,13 +11,17 @@
     "description": "SILWA PRO Leistenrahmen mit hoher Funktionalität, ausgezeichneten Komfort und Preisgünstig!",
     "canonical": "https://gesunde-matratzen.de/lattenroste/federleisten-rahmen/lattenrahmen-silwa-pro-nv/",
     "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-    "openGraph": {
-      "locale": "de_DE",
-      "type": "article",
-      "title": "Lattenrahmen SILWA Pro NV | Gesunde-Matratzen.de",
-      "description": "SILWA PRO Leistenrahmen mit hoher Funktionalität, ausgezeichneten Komfort und Preisgünstig!",
-      "url": "https://gesunde-matratzen.de/lattenroste/federleisten-rahmen/lattenrahmen-silwa-pro-nv/",
-      "site_name": "Gesunde Matratzen"
+    "meta": {
+      "og:locale": "de_DE",
+      "og:type": "article",
+      "og:title": "Lattenrahmen SILWA Pro NV | Gesunde-Matratzen.de",
+      "og:description": "SILWA PRO Leistenrahmen mit hoher Funktionalität, ausgezeichneten Komfort und Preisgünstig!",
+      "og:url": "https://gesunde-matratzen.de/lattenroste/federleisten-rahmen/lattenrahmen-silwa-pro-nv/",
+      "og:site_name": "Gesunde Matratzen",
+      "article:modified_time": "2026-06-23T10:54:08+00:00",
+      "twitter:card": "summary",
+      "twitter:label1": "Geschätzte Lesezeit",
+      "twitter:data1": "1 Minute"
     },
     "schema": {
       "@context": "https://schema.org",

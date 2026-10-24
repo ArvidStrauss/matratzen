@@ -11,13 +11,17 @@
     "description": "Federleisten-Rahmen ab 165 € | über 15 versch. Lattenroste in den Ausstellungen | Federleisten, Modul-Rost, Tellerlattenroste | alle Preislagen",
     "canonical": "https://gesunde-matratzen.de/lattenroste/federleisten-rahmen/",
     "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-    "openGraph": {
-      "locale": "de_DE",
-      "type": "article",
-      "title": "Lattenrost Riesenauswahl, große Ausstellungen in Hamburg und Lübeck",
-      "description": "Federleisten-Rahmen ab 165 € | über 15 versch. Lattenroste in den Ausstellungen | Federleisten, Modul-Rost, Tellerlattenroste | alle Preislagen",
-      "url": "https://gesunde-matratzen.de/lattenroste/federleisten-rahmen/",
-      "site_name": "Gesunde Matratzen"
+    "meta": {
+      "og:locale": "de_DE",
+      "og:type": "article",
+      "og:title": "Lattenrost Riesenauswahl, große Ausstellungen in Hamburg und Lübeck",
+      "og:description": "Federleisten-Rahmen ab 165 € | über 15 versch. Lattenroste in den Ausstellungen | Federleisten, Modul-Rost, Tellerlattenroste | alle Preislagen",
+      "og:url": "https://gesunde-matratzen.de/lattenroste/federleisten-rahmen/",
+      "og:site_name": "Gesunde Matratzen",
+      "article:modified_time": "2026-08-27T17:04:43+00:00",
+      "twitter:card": "summary",
+      "twitter:label1": "Geschätzte Lesezeit",
+      "twitter:data1": "3 Minuten"
     },
     "schema": {
       "@context": "https://schema.org",

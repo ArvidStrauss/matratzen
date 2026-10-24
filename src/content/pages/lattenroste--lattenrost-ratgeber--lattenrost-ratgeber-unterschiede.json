@@ -9,15 +9,19 @@
   "seo": {
     "title": "Lattenrost Ratgeber | Unterschiede bei Lattenrosten",
     "description": "Welche Unterschiede gibt es bei Lattenrosten? Standardlattenrost, Anmessrahmen, Rollrost oder Tellerrahmen?",
-    "canonical": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/lattenrost-ratgeber-unterschiede/",
+    "canonical": "https://gesunde-matratzen.de/lattenroste/lattenrost-ratgeber/lattenrost-ratgeber-unterschiede/",
     "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-    "openGraph": {
-      "locale": "de_DE",
-      "type": "article",
-      "title": "Lattenrost Ratgeber | Unterschiede bei Lattenrosten",
-      "description": "Welche Unterschiede gibt es bei Lattenrosten? Standardlattenrost, Anmessrahmen, Rollrost oder Tellerrahmen?",
-      "url": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/lattenrost-ratgeber-unterschiede/",
-      "site_name": "Gesunde Matratzen"
+    "meta": {
+      "og:locale": "de_DE",
+      "og:type": "article",
+      "og:title": "Lattenrost Ratgeber | Unterschiede bei Lattenrosten",
+      "og:description": "Welche Unterschiede gibt es bei Lattenrosten? Standardlattenrost, Anmessrahmen, Rollrost oder Tellerrahmen?",
+      "og:url": "https://gesunde-matratzen.de/lattenroste/lattenrost-ratgeber/lattenrost-ratgeber-unterschiede/",
+      "og:site_name": "Gesunde Matratzen",
+      "article:modified_time": "2024-03-01T14:38:45+00:00",
+      "twitter:card": "summary",
+      "twitter:label1": "Geschätzte Lesezeit",
+      "twitter:data1": "4 Minuten"
     },
     "schema": {
       "@context": "https://schema.org",
@@ -39,8 +43,8 @@
         },
         {
           "@type": "WebPage",
-          "@id": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/lattenrost-ratgeber-unterschiede/#webpage",
-          "url": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/lattenrost-ratgeber-unterschiede/",
+          "@id": "https://gesunde-matratzen.de/lattenroste/lattenrost-ratgeber/lattenrost-ratgeber-unterschiede/#webpage",
+          "url": "https://gesunde-matratzen.de/lattenroste/lattenrost-ratgeber/lattenrost-ratgeber-unterschiede/",
           "name": "Lattenrost Ratgeber | Unterschiede bei Lattenrosten",
           "isPartOf": {
             "@id": "https://gesunde-matratzen.de/#website"
@@ -53,7 +57,7 @@
             {
               "@type": "ReadAction",
               "target": [
-                "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/lattenrost-ratgeber-unterschiede/"
+                "https://gesunde-matratzen.de/lattenroste/lattenrost-ratgeber/lattenrost-ratgeber-unterschiede/"
               ]
             }
           ]

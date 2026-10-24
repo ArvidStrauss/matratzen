@@ -9,15 +9,19 @@
   "seo": {
     "title": "Lattenrost-Tipps vom Profi in Lübeck und Hamburg",
     "description": "Lattenrost Erfahrungen in Lübeck und Hamburg | Roste ab 99 € | Rückgaberechte möglich.",
-    "canonical": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/lattenrost-empfehlungen/",
+    "canonical": "https://gesunde-matratzen.de/lattenroste/lattenrost-ratgeber/lattenrost-empfehlungen/",
     "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-    "openGraph": {
-      "locale": "de_DE",
-      "type": "article",
-      "title": "Lattenrost-Tipps vom Profi in Lübeck und Hamburg",
-      "description": "Lattenrost Erfahrungen in Lübeck und Hamburg | Roste ab 99 € | Rückgaberechte möglich.",
-      "url": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/lattenrost-empfehlungen/",
-      "site_name": "Gesunde Matratzen"
+    "meta": {
+      "og:locale": "de_DE",
+      "og:type": "article",
+      "og:title": "Lattenrost-Tipps vom Profi in Lübeck und Hamburg",
+      "og:description": "Lattenrost Erfahrungen in Lübeck und Hamburg | Roste ab 99 € | Rückgaberechte möglich.",
+      "og:url": "https://gesunde-matratzen.de/lattenroste/lattenrost-ratgeber/lattenrost-empfehlungen/",
+      "og:site_name": "Gesunde Matratzen",
+      "article:modified_time": "2024-03-01T14:38:17+00:00",
+      "twitter:card": "summary",
+      "twitter:label1": "Geschätzte Lesezeit",
+      "twitter:data1": "3 Minuten"
     },
     "schema": {
       "@context": "https://schema.org",
@@ -39,8 +43,8 @@
         },
         {
           "@type": "WebPage",
-          "@id": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/lattenrost-empfehlungen/#webpage",
-          "url": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/lattenrost-empfehlungen/",
+          "@id": "https://gesunde-matratzen.de/lattenroste/lattenrost-ratgeber/lattenrost-empfehlungen/#webpage",
+          "url": "https://gesunde-matratzen.de/lattenroste/lattenrost-ratgeber/lattenrost-empfehlungen/",
           "name": "Lattenrost-Tipps vom Profi in Lübeck und Hamburg",
           "isPartOf": {
             "@id": "https://gesunde-matratzen.de/#website"
@@ -53,7 +57,7 @@
             {
               "@type": "ReadAction",
               "target": [
-                "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/lattenrost-empfehlungen/"
+                "https://gesunde-matratzen.de/lattenroste/lattenrost-ratgeber/lattenrost-empfehlungen/"
               ]
             }
           ]

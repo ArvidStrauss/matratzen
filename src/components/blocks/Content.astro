@@ -56,7 +56,7 @@ const Wrapper = bare ? 'div' : Section;
         if (item.type === 'list') {
           const ListTag = item.ordered ? 'ol' : 'ul';
           return (
-            <ListTag id={item.id} class:list={['space-y-1.5 pl-6 leading-relaxed text-ink/80 marker:text-brand-500', item.ordered ? 'list-decimal' : 'list-disc']}>
+            <ListTag id={item.id} start={item.start} class:list={['space-y-1.5 pl-6 leading-relaxed text-ink/80 marker:text-brand-500', item.ordered ? 'list-decimal' : 'list-disc']}>
               {item.items.map((t) => (
                 <Md text={t} as="li" />
               ))}

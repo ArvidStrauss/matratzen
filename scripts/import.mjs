@@ -8,7 +8,7 @@ import { INDEX_FILE, contentOf, fetchGroup, loadCached, pathOf } from './import/
 import { makeLinks, plainText } from './import/html.mjs';
 import { createParser } from './import/elements.mjs';
 import { createConverter } from './import/blocks.mjs';
-import { parseYoast } from './import/seo.mjs';
+import { fixTrashedCanonical, parseYoast } from './import/seo.mjs';
 
 const args = Object.fromEntries(process.argv.slice(2).map((a) => a.replace(/^--/, '').split('=')).map(([k, v]) => [k, v ?? true]));
 const group = args.group ?? '/lattenroste/';
@@ -99,6 +99,7 @@ async function main() {
 
   const rows = [];
   const canonicalMismatch = [];
+  const canonicalFixed = [];
   const pageOutputs = [];
   for (const raw of raws) {
     const root = parse(contentOf(raw));
@@ -106,6 +107,8 @@ async function main() {
     const path = pathOf(raw.link);
     const title = plainText(parse(`<p>${raw.title.rendered}</p>`));
     const seo = parseYoast(raw.yoast_head, title);
+    const trashed = fixTrashedCanonical(seo, raw.link);
+    if (trashed) canonicalFixed.push(`${path} (was ${trashed})`);
     const page = { path, title: seo.title, source: { id: raw.id, link: raw.link, modified: raw.modified }, seo, body };
     if (seo.canonical && pathOf(seo.canonical) !== path) canonicalMismatch.push(`${path} -> ${seo.canonical}`);
     await writeFile(join(PAGES_DIR, fileName(path)), json(page), 'utf8');
@@ -140,6 +143,7 @@ async function main() {
   console.log('\nPatterns (block count across pages):', [...patterns].sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k} ${v}`).join(', '));
   console.log('Snippets:', written.map((s) => `${s.name} (${s.sources.size} pages)`).join(', ') || '-');
   console.log('Inline formatting dropped:', [...notes.dropped].join(', ') || '-');
+  if (canonicalFixed.length) console.log(`Yoast canonical of a trashed parent page replaced by the page URL (${canonicalFixed.length}):\n  ${canonicalFixed.join('\n  ')}`);
   if (canonicalMismatch.length) console.log(`Yoast canonical differs from the page URL (${canonicalMismatch.length}):\n  ${canonicalMismatch.join('\n  ')}`);
   const dropped = rows.flatMap((r) => r.dropped.map((d) => `${r.path}: <${d}>`));
   if (dropped.length) console.log('Dropped fallback elements:', dropped.join('; '));

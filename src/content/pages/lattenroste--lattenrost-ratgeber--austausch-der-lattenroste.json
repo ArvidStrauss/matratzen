@@ -9,15 +9,19 @@
   "seo": {
     "title": "Lattenrost tauschen | Gesunde Matratzen",
     "description": "Lattenrost tauschen bei Gesunde-Matratzen.de - Ihr kompetenter Partner beim Tausch von Ihrem Lattenrost zum optimalen Schlaferlebnis.",
-    "canonical": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/austausch-der-lattenroste/",
+    "canonical": "https://gesunde-matratzen.de/lattenroste/lattenrost-ratgeber/austausch-der-lattenroste/",
     "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-    "openGraph": {
-      "locale": "de_DE",
-      "type": "article",
-      "title": "Lattenrost tauschen | Gesunde Matratzen",
-      "description": "Lattenrost tauschen bei Gesunde-Matratzen.de - Ihr kompetenter Partner beim Tausch von Ihrem Lattenrost zum optimalen Schlaferlebnis.",
-      "url": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/austausch-der-lattenroste/",
-      "site_name": "Gesunde Matratzen"
+    "meta": {
+      "og:locale": "de_DE",
+      "og:type": "article",
+      "og:title": "Lattenrost tauschen | Gesunde Matratzen",
+      "og:description": "Lattenrost tauschen bei Gesunde-Matratzen.de - Ihr kompetenter Partner beim Tausch von Ihrem Lattenrost zum optimalen Schlaferlebnis.",
+      "og:url": "https://gesunde-matratzen.de/lattenroste/lattenrost-ratgeber/austausch-der-lattenroste/",
+      "og:site_name": "Gesunde Matratzen",
+      "article:modified_time": "2024-03-01T14:40:54+00:00",
+      "twitter:card": "summary",
+      "twitter:label1": "Geschätzte Lesezeit",
+      "twitter:data1": "2 Minuten"
     },
     "schema": {
       "@context": "https://schema.org",
@@ -39,8 +43,8 @@
         },
         {
           "@type": "WebPage",
-          "@id": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/austausch-der-lattenroste/#webpage",
-          "url": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/austausch-der-lattenroste/",
+          "@id": "https://gesunde-matratzen.de/lattenroste/lattenrost-ratgeber/austausch-der-lattenroste/#webpage",
+          "url": "https://gesunde-matratzen.de/lattenroste/lattenrost-ratgeber/austausch-der-lattenroste/",
           "name": "Lattenrost tauschen | Gesunde Matratzen",
           "isPartOf": {
             "@id": "https://gesunde-matratzen.de/#website"
@@ -53,7 +57,7 @@
             {
               "@type": "ReadAction",
               "target": [
-                "https://gesunde-matratzen.de/produkte__trashed/lattenroste/lattenrost-ratgeber/austausch-der-lattenroste/"
+                "https://gesunde-matratzen.de/lattenroste/lattenrost-ratgeber/austausch-der-lattenroste/"
               ]
             }
           ]

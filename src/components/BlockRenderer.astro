@@ -50,11 +50,19 @@ const registry = {
 } satisfies Record<Block['component'], unknown>;
 
 const { blocks } = Astro.props;
+// Live site hides `desktoponly` rows up to a device width of 667 px; sm (640 px) is the closest breakpoint.
+const visibilityClass = { desktop: 'max-sm:hidden', mobile: 'sm:hidden' };
 ---
 
 {
-  blocks.map((block) => {
+  blocks.map(({ visibility, ...block }) => {
     const Component = registry[block.component] as any;
-    return <Component {...block} />;
+    return visibility ? (
+      <div class={visibilityClass[visibility]}>
+        <Component {...block} />
+      </div>
+    ) : (
+      <Component {...block} />
+    );
   })
 }

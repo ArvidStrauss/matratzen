@@ -11,13 +11,17 @@
     "description": "Über 15 verschiedene Lattenroste in den Ausstellungen Hamburg und Lübeck | Federleisten, Modul-Rost, Tellerrahmen, 6 Marken",
     "canonical": "https://gesunde-matratzen.de/lattenroste/",
     "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-    "openGraph": {
-      "locale": "de_DE",
-      "type": "article",
-      "title": "Lattenroste ab 99 € | in Hamburg und Lübeck",
-      "description": "Über 15 verschiedene Lattenroste in den Ausstellungen Hamburg und Lübeck | Federleisten, Modul-Rost, Tellerrahmen, 6 Marken",
-      "url": "https://gesunde-matratzen.de/lattenroste/",
-      "site_name": "Gesunde Matratzen"
+    "meta": {
+      "og:locale": "de_DE",
+      "og:type": "article",
+      "og:title": "Lattenroste ab 99 € | in Hamburg und Lübeck",
+      "og:description": "Über 15 verschiedene Lattenroste in den Ausstellungen Hamburg und Lübeck | Federleisten, Modul-Rost, Tellerrahmen, 6 Marken",
+      "og:url": "https://gesunde-matratzen.de/lattenroste/",
+      "og:site_name": "Gesunde Matratzen",
+      "article:modified_time": "2026-06-23T10:34:57+00:00",
+      "twitter:card": "summary",
+      "twitter:label1": "Geschätzte Lesezeit",
+      "twitter:data1": "3 Minuten"
     },
     "schema": {
       "@context": "https://schema.org",
@@ -149,8 +153,11 @@
       "component": "content",
       "items": [
         {
-          "type": "paragraph",
-          "text": "[Großer Lattenrost-Ratgeber »](/lattenroste/lattenrost-ratgeber/)"
+          "type": "button",
+          "link": {
+            "label": "Großer Lattenrost-Ratgeber »",
+            "href": "/lattenroste/lattenrost-ratgeber/"
+          }
         }
       ]
     },

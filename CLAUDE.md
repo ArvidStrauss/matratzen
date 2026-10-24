@@ -1,6 +1,6 @@
-# AGENTS.md — gesunde-matratzen.de relaunch
+# CLAUDE.md — gesunde-matratzen.de relaunch
 
-Always-loaded project context for AI agents. Keep it short and factual.
+Always-loaded project context for Claude Code (the only agent used on this project since 2026-10-24). Keep it short and factual.
 Mark everything as **DECIDED**, **PROPOSED** or **OPEN**. Update it when a decision changes.
 
 ## Goal
@@ -40,6 +40,7 @@ must be fast and prepared for a good **Google Ads** setup (landing-page experien
 | `src/variants/` | Design variants A/B/C of the SILWA Classic page (presentation only, see [Design variants](#design-variants)) |
 | `src/pages/silwa-classic-matratzen/variant_*.astro` | One route per variant (one route each, so each page bundles only its own CSS) |
 | `scripts/verify-content.mjs` | Parity gate: every text/price in `src/content` must exist verbatim in `reference/raw` |
+| `.claude/settings.json` | Claude Code permissions: hard-blocks the agent rules below (see [Agent rules](#agent-rules)) |
 | `docs/` | `requirements.md` (EN, internal) + `anforderungen.md` (DE, customer copy), `phase1.md` (phase 1 steps, architecture, estimate), `requirements-questions.md` (content questions) |
 
 ## Commands
@@ -47,7 +48,13 @@ must be fast and prepared for a good **Google Ads** setup (landing-page experien
 - `npm run dev` / `npm run build` / `npm run preview`
 - `npm run import -- --group=/lattenroste/ [--offline]` = fetch a URL group from the WP REST API and (re)write `src/content/pages/<path>.json` + `snippets/`;
   prints the fallback share per page. Imported pages carry `source` (WP id) and `seo` (from `yoast_head`) and stay `noindex`. Never edit them by hand, re-import instead
-- `npm run verify` = content parity + `astro check` + build + output parity (headings, image alts, in-page anchors of imported pages vs. source). **Must be green before handing work back.**
+- `npm run verify` = content parity + `astro check` + build + output parity (SEO head vs. `yoast_head`, headings, image alts, in-page anchors,
+  internal links of imported pages vs. source; every built page `noindex` unless `INDEXABLE=true`). **Must be green before handing work back.**
+  It also lists links to WordPress pages that are not imported yet (404 on the preview until their group is imported).
+- `node scripts/screens.mjs --group=/lattenroste/ [--viewport=mobile|desktop]` (needs `npm run preview` running) = live vs. new
+  screenshots as side-by-side tiles in `.screens/` (gitignored). Uses the installed Chrome via Playwright (no Edge on this PC).
+- SEO head: `src/layouts/Layout.astro` renders `seo` verbatim (title, description, canonical, og/article/twitter meta, JSON-LD).
+  Robots stays `noindex, nofollow` until the production build sets `INDEXABLE=true`.
 - Inline rich text in content JSON: `[label](href)` and `**bold**` only (rendered by `src/lib/md.ts`, HTML-escaped).
 - Prices are numbers (`priceFrom`, `priceRegular`, `price.from`), formatted with `Intl` de-DE. Never store price strings.
 
@@ -128,10 +135,16 @@ each with **identical content** (same JSON as the original page, nothing new or 
 - **No information leaves this repo.** This project is completely separate from TrackingHub and the LLM wiki: never write to
   the `dao-llm-wiki` MCP (or any other wiki, knowledge base or external memory store), never use Telecontext or other company
   tools for this project, and never send repo content to third-party services.
+  For Claude Code this also means: no Artifacts, no Claude Docs, no Google Drive or other connectors for project content.
+- **Knowledge lives in the repo, not in Claude's memory.** Do not save project facts to Claude Code auto-memory
+  (`~/.claude/projects/.../memory/`); write decisions and findings into this file or `docs/` so they are versioned and visible.
+- Hard guardrails are enforced in [.claude/settings.json](.claude/settings.json) (`permissions.deny`): no `git commit`/`git push`,
+  no edits under `reference/`, no wiki/Docs/Drive/Artifact tools. Do not work around a denied call; ask the user instead.
 
 ## Environment
 
-- Windows, PowerShell 5.1. Node v20.9.0 (pick tool versions that support it; Node 22 comes with a new PC).
+- Windows, PowerShell 5.1. **Node v24.22.1** since the move to the new PC (2026-10-24). The Node 20.9 pins below still apply
+  but can now be lifted (separate task, not done yet). Line endings: `.gitattributes` = `* text=auto eol=lf`.
 - Pinned for Node 20.9: `astro@5.18.2` (Astro 6+/7 need Node 22), root `vite@6.4.4` (Vite 8/rolldown needs Node 20.12+),
   `overrides: @astrojs/language-server@2.16.16` (2.17+ needs Node 20.19). Lift these on the Node 22 PC.
 - `@types/node@20.19.43` (dev) so `astro check` accepts `process.env` in `astro.config.mjs`; bump with the Node upgrade.
@@ -146,10 +159,16 @@ each with **identical content** (same JSON as the original page, nothing new or 
 - Some upload file names use **decomposed (NFD) umlauts** (`fachma\u0308nnische…`). Copy URLs byte-exact from `reference/raw`.
 - Long German compounds ("Kaltschaummatratzen" ≈ 10 em) overflow phones; browsers often have no German hyphenation dictionary.
   Size headings so the word fits the column (≥ 360 px) and keep `overflow-wrap: break-word` as fallback; grid children need `min-w-0`.
-- Headless Edge `--screenshot` cannot render below ~500 px width; use `npx playwright screenshot --channel=msedge --viewport-size=390,844`.
+- Headless Chrome/Edge `--screenshot` cannot render below ~500 px width; use Playwright (`scripts/screens.mjs`, channel `chrome`).
+  Single full-page screenshots fail above ~16,000 px, so the script shoots clipped tiles.
+- Live theme CSS hides `.desktoponly` rows on phones (`max-width:480px` / `max-device-width:667px`) and shows `.mobilonly`
+  (sic) only there. The importer keeps this as block `visibility: desktop|mobile` (rendered `max-sm:hidden` / `sm:hidden`).
+- Ultimate Addons buttons are `<a class="ubtn-link"><button>…</button></a>`; `<ol start="7">` continues a numbered list.
+  Customer reviews are `<details>` (collapsed, "Mehr Info…" is a CSS label, not content).
+- Some Yoast canonicals point to `/produkte__trashed/…` (404). The importer replaces them with the page URL (Q7).
 
 ## Open content questions for the customer
 
 Tracked in [docs/requirements-questions.md](docs/requirements-questions.md) (colour scheme / design variant, baked-in image text, Kiel data,
-Lohmühle spelling, Bettgestelle price, SILWA Classic 15 naming, SEO migration). Update answers there, not here.
+Lohmühle spelling, Bettgestelle price, SILWA Classic 15 naming, trashed canonicals, SEO migration). Update answers there, not here.
 Open questions from the 2026-10-22 meeting (O1–O10) are in [docs/requirements.md](docs/requirements.md).

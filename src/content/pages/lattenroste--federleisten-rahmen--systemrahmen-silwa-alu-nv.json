@@ -9,15 +9,19 @@
   "seo": {
     "title": "Systemrahmen SILWA Pro NV | Gesunde Matratzen",
     "description": "Systemrahmen Silwa Alu NV aus 24 stabilen Fiberglasleisten für nahezu jede Matratze verwendbar.",
-    "canonical": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/federleisten-rahmen/systemrahmen-silwa-alu-nv/",
+    "canonical": "https://gesunde-matratzen.de/lattenroste/federleisten-rahmen/systemrahmen-silwa-alu-nv/",
     "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-    "openGraph": {
-      "locale": "de_DE",
-      "type": "article",
-      "title": "Systemrahmen SILWA Pro NV | Gesunde Matratzen",
-      "description": "Systemrahmen Silwa Alu NV aus 24 stabilen Fiberglasleisten für nahezu jede Matratze verwendbar.",
-      "url": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/federleisten-rahmen/systemrahmen-silwa-alu-nv/",
-      "site_name": "Gesunde Matratzen"
+    "meta": {
+      "og:locale": "de_DE",
+      "og:type": "article",
+      "og:title": "Systemrahmen SILWA Pro NV | Gesunde Matratzen",
+      "og:description": "Systemrahmen Silwa Alu NV aus 24 stabilen Fiberglasleisten für nahezu jede Matratze verwendbar.",
+      "og:url": "https://gesunde-matratzen.de/lattenroste/federleisten-rahmen/systemrahmen-silwa-alu-nv/",
+      "og:site_name": "Gesunde Matratzen",
+      "article:modified_time": "2026-04-14T09:13:41+00:00",
+      "twitter:card": "summary",
+      "twitter:label1": "Geschätzte Lesezeit",
+      "twitter:data1": "2 Minuten"
     },
     "schema": {
       "@context": "https://schema.org",
@@ -39,8 +43,8 @@
         },
         {
           "@type": "WebPage",
-          "@id": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/federleisten-rahmen/systemrahmen-silwa-alu-nv/#webpage",
-          "url": "https://gesunde-matratzen.de/produkte__trashed/lattenroste/federleisten-rahmen/systemrahmen-silwa-alu-nv/",
+          "@id": "https://gesunde-matratzen.de/lattenroste/federleisten-rahmen/systemrahmen-silwa-alu-nv/#webpage",
+          "url": "https://gesunde-matratzen.de/lattenroste/federleisten-rahmen/systemrahmen-silwa-alu-nv/",
           "name": "Systemrahmen SILWA Pro NV | Gesunde Matratzen",
           "isPartOf": {
             "@id": "https://gesunde-matratzen.de/#website"
@@ -53,7 +57,7 @@
             {
               "@type": "ReadAction",
               "target": [
-                "https://gesunde-matratzen.de/produkte__trashed/lattenroste/federleisten-rahmen/systemrahmen-silwa-alu-nv/"
+                "https://gesunde-matratzen.de/lattenroste/federleisten-rahmen/systemrahmen-silwa-alu-nv/"
               ]
             }
           ]

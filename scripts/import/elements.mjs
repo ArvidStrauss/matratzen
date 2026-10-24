@@ -2,7 +2,8 @@
 // Every element keeps its source `node`, so any element can still be emitted through the sanitised fallback.
 import { imgSrc, inlineParagraphs, plainText } from './html.mjs';
 
-const BLOCK_SELECTOR = 'p,div,h1,h2,h3,h4,h5,h6,ul,ol,li,table,img,figure,iframe,video,details,form,hr';
+// `button`: Ultimate Addons buttons are `<a class="ubtn-link"><button>…</button></a>`, a block-level button, not inline text.
+const BLOCK_SELECTOR = 'p,div,h1,h2,h3,h4,h5,h6,ul,ol,li,table,img,figure,iframe,video,details,form,hr,button';
 const INLINE_TAGS = new Set(['a', 'strong', 'b', 'em', 'i', 'u', 'span', 'small', 'font', 'sup', 'sub', 'br', 'mark']);
 const SKIP_CLASSES = ['vc_empty_space', 'upb_color', 'vc_hidden'];
 const SKIP_TAGS = new Set(['script', 'style', 'noscript', 'link', 'meta', 'hr', 'br']);
@@ -75,7 +76,8 @@ export function createParser({ rewrite, notes }) {
   function parseList(n, out) {
     const items = n.querySelectorAll('li');
     if (n.querySelector('li ul, li ol') || items.some((li) => li.querySelector('p, div, img, table'))) return out.push(el('raw', n, { reason: 'complex list' }));
-    out.push(el('list', n, { ordered: n.tagName.toLowerCase() === 'ol', items: items.map((li) => inlineParagraphs(li, rewrite, notes).join(' ')).filter(Boolean), id: n.getAttribute('id') || undefined }));
+    const start = Number(n.getAttribute('start')) || undefined;
+    out.push(el('list', n, { ordered: n.tagName.toLowerCase() === 'ol', start, items: items.map((li) => inlineParagraphs(li, rewrite, notes).join(' ')).filter(Boolean), id: n.getAttribute('id') || undefined }));
   }
 
   function parseTable(n, out) {
@@ -128,7 +130,8 @@ export function createParser({ rewrite, notes }) {
       const w = c.classList.value.map((k) => k.match(/^vc_col-sm-(\d+)$/)?.[1]).find(Boolean);
       return { width: w ? Number(w) : undefined, els };
     });
-    out.push(el('row', n, { cols: parsed.filter((c) => c.els.some((e) => e.t !== 'sep')), id: n.getAttribute('id') || undefined }));
+    const visibility = cls(n, 'desktoponly') ? 'desktop' : cls(n, 'mobilonly') ? 'mobile' : undefined;
+    out.push(el('row', n, { cols: parsed.filter((c) => c.els.some((e) => e.t !== 'sep')), id: n.getAttribute('id') || undefined, visibility }));
   }
 
   function parseNode(n, out) {

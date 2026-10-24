@@ -131,7 +131,7 @@ const cardGrid = z.object({
 const contentItem = z.discriminatedUnion('type', [
   z.object({ type: z.literal('heading'), level: z.number().int().min(1).max(6), text: md, id: z.string().optional() }),
   z.object({ type: z.literal('paragraph'), text: md, lead: z.boolean().default(false), id: z.string().optional() }),
-  z.object({ type: z.literal('list'), ordered: z.boolean().default(false), items: z.array(md), id: z.string().optional() }),
+  z.object({ type: z.literal('list'), ordered: z.boolean().default(false), start: z.number().int().optional(), items: z.array(md), id: z.string().optional() }),
   z.object({ type: z.literal('image'), image, href: href.optional(), id: z.string().optional() }),
   z.object({ type: z.literal('button'), link, style: z.enum(['primary', 'secondary']).default('primary') }),
 ]);
@@ -157,7 +157,7 @@ const table = z.object({
   rows: z.array(z.array(tableCell)),
 });
 
-const blocks = z.discriminatedUnion('component', [
+const blockTypes = z.discriminatedUnion('component', [
   z.object({
     component: z.literal('promoTiles'),
     tiles: z.array(z.object({ title: z.string(), subtitle: z.string(), href, image, tour360: z.boolean().default(false) })),
@@ -276,6 +276,9 @@ const blocks = z.discriminatedUnion('component', [
   }),
 ]);
 
+// Every block can be limited to one device class, like the live site's `desktoponly` / `mobilonly` rows.
+const blocks = blockTypes.and(z.object({ visibility: z.enum(['desktop', 'mobile']).optional() }));
+
 export type Block = z.infer<typeof blocks>;
 
 const seo = z.object({
@@ -283,9 +286,11 @@ const seo = z.object({
   description: z.string().optional(),
   canonical: z.string().url().optional(),
   robots: z.string().optional(),
-  openGraph: z.record(z.string(), z.string()).default({}),
+  // Other head meta tags by property/name, verbatim: og:*, article:*, twitter:*.
+  meta: z.record(z.string(), z.string()).default({}),
   schema: z.unknown().optional(),
 });
+export type Seo = z.infer<typeof seo>;
 
 const pages = defineCollection({
   loader: glob({ pattern: '*.json', base: 'src/content/pages' }),

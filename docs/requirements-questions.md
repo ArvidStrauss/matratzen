@@ -81,6 +81,19 @@ Status values: **OPEN**, **ANSWERED**, **DECIDED**. Fill in *Answer* and *Decisi
 
 ---
 
+## Q7: Canonical URLs pointing to a deleted page
+
+| | |
+|---|---|
+| **Finding** | 7 of the 21 `/lattenroste/` pages (2026-10-24) have a Yoast canonical, `og:url` and JSON-LD URL below `/produkte__trashed/…`, the URL of a parent page that was moved to the WordPress trash. These URLs return **404**, e.g. `/produkte__trashed/lattenroste/federleisten-rahmen/systemrahmen-silwa-alu-nv/` (the page itself is live at `/lattenroste/federleisten-rahmen/systemrahmen-silwa-alu-nv/`). Affected: `systemrahmen-silwa-alu-nv`, the 4 Lattenrost-Ratgeber sub-pages, `tellerlattenrahmen-evolution-2-kf`, `tellerlattenrahmen-evolution-nv`. More groups may be affected. |
+| **Question** | May we replace these canonicals with the real page URL in the new site? (Recommended: yes. A canonical to a 404 page is ignored by Google at best and can keep the page out of the index at worst.) |
+| **Why it matters** | SEO parity means keeping the Yoast setup, but copying a broken canonical would carry an existing SEO error over to the new site. |
+| **Status** | OPEN. PROPOSED and already applied in the importer (`fixTrashedCanonical` in `scripts/import/seo.mjs`): the trashed URL is replaced by the page URL in canonical, `og:url` and JSON-LD; `npm run import` lists every fixed page. |
+| **Answer** | |
+| **Decision** | |
+
+---
+
 ## Not yet captured (to be clarified when the scope grows)
 
 - 360° virtual tour embed (Hamburg, Lübeck, Kiel) and the Google reviews widget: source and licence.

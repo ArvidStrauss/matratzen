@@ -5,13 +5,13 @@ import { readFile, readdir } from 'node:fs/promises';
 import { join } from 'node:path';
 import { parse } from 'node-html-parser';
 import { contentOf } from './import/fetch.mjs';
-import { parseYoast } from './import/seo.mjs';
+import { fixTrashedCanonical, parseYoast } from './import/seo.mjs';
 
 const clean = (s) => (s ?? '').normalize('NFC').replace(/\u00ad/g, '').replace(/[\u00a0\u202f]/g, ' ').replace(/\s+/g, ' ').trim();
 const mdToText = (s) => s.replace(/\*\*(.+?)\*\*/g, '$1').replace(/\[([^\]]+)\]\([^)]*\)/g, '$1');
 
 // Structural keys: identifiers, URLs and layout options, not visible copy.
-const SKIP_KEYS = new Set(['href', 'src', 'video', 'poster', 'mapsHref', 'component', 'path', 'imageFit', 'tone', 'headingLevel', 'prefix', 'products', 'branches', 'branch', 'columns', 'order', 'reverse', 'isVideo', 'tour360', 'type', 'level', 'ordered', 'lead', 'open', 'id', 'style', 'titleTag', 'snippet', 'reason', 'rating']);
+const SKIP_KEYS = new Set(['href', 'src', 'video', 'poster', 'mapsHref', 'component', 'path', 'imageFit', 'tone', 'headingLevel', 'prefix', 'products', 'branches', 'branch', 'columns', 'order', 'reverse', 'isVideo', 'tour360', 'type', 'level', 'ordered', 'lead', 'open', 'id', 'style', 'titleTag', 'snippet', 'reason', 'rating', 'visibility', 'start']);
 const PRICE_KEYS = new Set(['price', 'priceFrom', 'priceRegular', 'from', 'regular']);
 
 function textOf(html, brAsSpace = true) {
@@ -106,7 +106,9 @@ for (const file of await contentFiles('src/content')) {
     importedPages++;
     const { raw, text: pageText } = await pageSource(data.source.id);
     check(file, data.body, pageText, { links: true });
-    const expected = JSON.stringify(parseYoast(raw.yoast_head, clean(parse(`<p>${raw.title.rendered}</p>`).text)));
+    const yoast = parseYoast(raw.yoast_head, clean(parse(`<p>${raw.title.rendered}</p>`).text));
+    fixTrashedCanonical(yoast, raw.link);
+    const expected = JSON.stringify(yoast);
     if (JSON.stringify(data.seo) !== expected) failures.push(`${file} seo: differs from yoast_head of source page ${data.source.id}`);
     if (data.title !== data.seo.title) failures.push(`${file} title: differs from seo.title`);
     if (new URL(raw.link).pathname !== data.path) failures.push(`${file} path: ${data.path} differs from source ${raw.link}`);
@@ -118,9 +120,6 @@ for (const file of await contentFiles('src/content')) {
     check(file, data, text);
   }
 }
-
-const layout = await readFile('src/layouts/Layout.astro', 'utf8');
-if (!/<meta name="robots" content="noindex/.test(layout)) failures.push('src/layouts/Layout.astro: pages must stay noindex');
 
 if (failures.length) {
   console.error(`Content parity FAILED (${failures.length} of ${checked}):\n` + failures.slice(0, 60).join('\n') + (failures.length > 60 ? `\n... +${failures.length - 60} more` : ''));

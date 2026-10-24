@@ -11,13 +11,17 @@
     "description": "Über 6 verschiedene Motor-Rahmen in Hamburg und Lübeck | 2- bis 4-motorig | 4 Marken | Lattenrost ab 165 € | Lattenroste mit Rückgaberecht",
     "canonical": "https://gesunde-matratzen.de/lattenroste/motorlattenroste/",
     "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-    "openGraph": {
-      "locale": "de_DE",
-      "type": "article",
-      "title": "Motorlattenrost-Riesenauswahl in Hamburg und Lübeck",
-      "description": "Über 6 verschiedene Motor-Rahmen in Hamburg und Lübeck | 2- bis 4-motorig | 4 Marken | Lattenrost ab 165 € | Lattenroste mit Rückgaberecht",
-      "url": "https://gesunde-matratzen.de/lattenroste/motorlattenroste/",
-      "site_name": "Gesunde Matratzen"
+    "meta": {
+      "og:locale": "de_DE",
+      "og:type": "article",
+      "og:title": "Motorlattenrost-Riesenauswahl in Hamburg und Lübeck",
+      "og:description": "Über 6 verschiedene Motor-Rahmen in Hamburg und Lübeck | 2- bis 4-motorig | 4 Marken | Lattenrost ab 165 € | Lattenroste mit Rückgaberecht",
+      "og:url": "https://gesunde-matratzen.de/lattenroste/motorlattenroste/",
+      "og:site_name": "Gesunde Matratzen",
+      "article:modified_time": "2026-09-08T13:20:32+00:00",
+      "twitter:card": "summary",
+      "twitter:label1": "Geschätzte Lesezeit",
+      "twitter:data1": "6 Minuten"
     },
     "schema": {
       "@context": "https://schema.org",
@@ -156,8 +160,11 @@
       "component": "content",
       "items": [
         {
-          "type": "paragraph",
-          "text": "[Großer Lattenrost Ratgeber »](/lattenroste/lattenrost-ratgeber/)"
+          "type": "button",
+          "link": {
+            "label": "Großer Lattenrost Ratgeber »",
+            "href": "/lattenroste/lattenrost-ratgeber/"
+          }
         }
       ]
     },
@@ -309,7 +316,8 @@
             "href": "/beratungstermin/"
           }
         }
-      ]
+      ],
+      "visibility": "desktop"
     },
     {
       "component": "snippet",

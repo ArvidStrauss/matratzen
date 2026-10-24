@@ -11,13 +11,17 @@
     "description": "Unterschiedliche Teller-Lattenrahmen Ausführungen mit festen oder verstellbaren Kopf- und Fußteilen | große Auswahl in den Filialen",
     "canonical": "https://gesunde-matratzen.de/lattenroste/teller-lattenrahmen/",
     "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-    "openGraph": {
-      "locale": "de_DE",
-      "type": "article",
-      "title": "Teller-Lattenrahmen in den Ausstellungen Lübeck, Hamburg",
-      "description": "Unterschiedliche Teller-Lattenrahmen Ausführungen mit festen oder verstellbaren Kopf- und Fußteilen | große Auswahl in den Filialen",
-      "url": "https://gesunde-matratzen.de/lattenroste/teller-lattenrahmen/",
-      "site_name": "Gesunde Matratzen"
+    "meta": {
+      "og:locale": "de_DE",
+      "og:type": "article",
+      "og:title": "Teller-Lattenrahmen in den Ausstellungen Lübeck, Hamburg",
+      "og:description": "Unterschiedliche Teller-Lattenrahmen Ausführungen mit festen oder verstellbaren Kopf- und Fußteilen | große Auswahl in den Filialen",
+      "og:url": "https://gesunde-matratzen.de/lattenroste/teller-lattenrahmen/",
+      "og:site_name": "Gesunde Matratzen",
+      "article:modified_time": "2026-09-08T13:19:53+00:00",
+      "twitter:card": "summary",
+      "twitter:label1": "Geschätzte Lesezeit",
+      "twitter:data1": "1 Minute"
     },
     "schema": {
       "@context": "https://schema.org",

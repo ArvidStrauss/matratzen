@@ -82,6 +82,9 @@ DNS (registrar) → points the domain to the static host
 
 ### Step 3: Importer
 - Pilot `/lattenroste/` (21 pages) imported 2026-10-22 with `npm run import`; checked by `npm run verify`.
+- 2026-10-24: SEO head rendered and verified against `yoast_head`; visual review mobile + desktop with `scripts/screens.mjs`.
+  Fixed: `desktoponly` rows, Ultimate buttons, `<ol start>`, collapsed reviews, trashed canonicals (Q7), internal-link check.
+  Open: desktop layout (multi-column rows are flattened to one column), spacing ~10–35 % taller than live on mobile.
 - [ ] **Start with the pilot** `/lattenroste/` (21 pages) end to end, track the hours, then roll out by URL group
       (largest first: 80 `/produkte/`, 44 `/komplettbetten/`, …)
 - [ ] Fetch all pages via REST (incl. `yoast_head`), map recognised WPBakery HTML patterns → blocks; everything else goes

@@ -11,13 +11,17 @@
     "description": "Viele Lattenrost-Kauftipps | Worauf Sie beim Kauf unbedingt achten sollten | Hamburg, Lübeck und Kiel | Lattenrost schon ab 99 €.",
     "canonical": "https://gesunde-matratzen.de/lattenroste/lattenrost-ratgeber/",
     "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-    "openGraph": {
-      "locale": "de_DE",
-      "type": "article",
-      "title": "Großer Lattenrost-Ratgeber Hamburg, Lübeck, Kiel",
-      "description": "Viele Lattenrost-Kauftipps | Worauf Sie beim Kauf unbedingt achten sollten | Hamburg, Lübeck und Kiel | Lattenrost schon ab 99 €.",
-      "url": "https://gesunde-matratzen.de/lattenroste/lattenrost-ratgeber/",
-      "site_name": "Gesunde Matratzen"
+    "meta": {
+      "og:locale": "de_DE",
+      "og:type": "article",
+      "og:title": "Großer Lattenrost-Ratgeber Hamburg, Lübeck, Kiel",
+      "og:description": "Viele Lattenrost-Kauftipps | Worauf Sie beim Kauf unbedingt achten sollten | Hamburg, Lübeck und Kiel | Lattenrost schon ab 99 €.",
+      "og:url": "https://gesunde-matratzen.de/lattenroste/lattenrost-ratgeber/",
+      "og:site_name": "Gesunde Matratzen",
+      "article:modified_time": "2026-08-27T17:14:09+00:00",
+      "twitter:card": "summary",
+      "twitter:label1": "Geschätzte Lesezeit",
+      "twitter:data1": "14 Minuten"
     },
     "schema": {
       "@context": "https://schema.org",
@@ -148,6 +152,7 @@
         {
           "type": "list",
           "ordered": true,
+          "start": 7,
           "items": [
             "[Warum habe ich mit meinem neuen Lattenrost Schlafprobleme? Wie stelle ich ein Lattenrost richtig ein?](#frage7)",
             "[Wie pflege ich einen Lattenrost richtig?](#frage8)",
@@ -276,7 +281,8 @@
           "level": 4,
           "text": "Vergleichen Sie die Lattenroste von Stiftung Warentest mit unseren Kundensieger-Lattenrost"
         }
-      ]
+      ],
+      "visibility": "desktop"
     },
     {
       "component": "table",
@@ -558,7 +564,8 @@
             ]
           }
         ]
-      ]
+      ],
+      "visibility": "desktop"
     },
     {
       "component": "content",
@@ -567,7 +574,8 @@
           "type": "paragraph",
           "text": "[nach oben](#oben)"
         }
-      ]
+      ],
+      "visibility": "desktop"
     },
     {
       "component": "snippet",

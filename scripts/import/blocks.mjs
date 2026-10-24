@@ -281,7 +281,7 @@ export function createConverter({ rewrite, parser, snippets }) {
           e.paras.forEach((text) => add({ type: 'paragraph', text, lead: e.lead }));
           break;
         case 'list':
-          add({ type: 'list', ordered: e.ordered, items: e.items });
+          add({ type: 'list', ordered: e.ordered, ...(e.ordered && e.start ? { start: e.start } : {}), items: e.items });
           break;
         case 'img':
           add({ type: 'image', image: { src: e.src, alt: e.alt }, ...(e.href ? { href: e.href } : {}) });
@@ -296,7 +296,7 @@ export function createConverter({ rewrite, parser, snippets }) {
           break;
         case 'row':
           flush();
-          out.push(...rowToBlocks(e));
+          out.push(...rowToBlocks(e).map((b) => (e.visibility && !b.visibility ? { ...b, visibility: e.visibility } : b)));
           break;
         case 'tabs':
           flush();

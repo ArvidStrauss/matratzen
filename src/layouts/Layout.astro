@@ -2,12 +2,19 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import type { Seo } from '../content.config';
 
 interface Props {
   title: string;
+  /** Yoast SEO data of imported pages, rendered verbatim. */
+  seo?: Seo;
 }
 
-const { title } = Astro.props;
+const { title, seo } = Astro.props;
+// Prototype and staging builds stay out of the index; set INDEXABLE=true for the production build only.
+const robots = import.meta.env.INDEXABLE === 'true' && seo?.robots ? seo.robots : 'noindex, nofollow';
+// `<` escaped so the JSON can never close the script tag.
+const jsonLd = seo?.schema ? JSON.stringify(seo.schema).replace(/</g, '\\u003c') : undefined;
 ---
 
 <!doctype html>
@@ -15,8 +22,16 @@ const { title } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex, nofollow" />
-    <title>{title}</title>
+    <title>{seo?.title ?? title}</title>
+    {seo?.description && <meta name="description" content={seo.description} />}
+    <meta name="robots" content={robots} />
+    {seo?.canonical && <link rel="canonical" href={seo.canonical} />}
+    {
+      Object.entries(seo?.meta ?? {}).map(([key, content]) =>
+        key.startsWith('twitter:') ? <meta name={key} content={content} /> : <meta property={key} content={content} />,
+      )
+    }
+    {jsonLd && <script type="application/ld+json" set:html={jsonLd} />}
   </head>
   <body class="min-h-screen">
     <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded focus:bg-white focus:p-2">Zum Inhalt springen</a>

@@ -25,10 +25,25 @@ const { heading, intro, items, cta } = Astro.props;
             </p>
           )}
           <blockquote class="mt-3 space-y-3 text-sm leading-relaxed text-ink/80">
-            {item.summary && <Md text={item.summary} class="font-semibold text-ink" />}
-            {item.text.map((t) => (
-              <p>{t}</p>
-            ))}
+            {item.summary && item.text.length ? (
+              // Collapsed like the live site (<details>, "Mehr Info…" is its UI label, not content).
+              <details class="group space-y-3">
+                <summary class="cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                  <Md text={item.summary} as="span" class="font-semibold text-ink" />{' '}
+                  <span class="prose-link text-brand-700 underline group-open:hidden">Mehr Info…</span>
+                </summary>
+                {item.text.map((t) => (
+                  <p>{t}</p>
+                ))}
+              </details>
+            ) : (
+              <>
+                {item.summary && <Md text={item.summary} class="font-semibold text-ink" />}
+                {item.text.map((t) => (
+                  <p>{t}</p>
+                ))}
+              </>
+            )}
           </blockquote>
           <p class="mt-auto pt-5 text-sm font-semibold text-ink">
             {item.author}
