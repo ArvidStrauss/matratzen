@@ -4,20 +4,3 @@ dist/
 .env
 .env.*
 
-# Internal documentation and agent instructions (the repo is public)
-*.md
-AGENTS.md
-docs/
-.github/copilot-instructions.md
-.github/instructions/
-.github/prompts/
-.github/agents/
-.github/skills/
-.claude/
-.copilot/
-
-# Local-only helpers, not needed to build or deploy the site
-reference/extracted/
-scripts/capture.mjs
-scripts/extract.mjs
-scripts/dump.mjs

@@ -1,0 +1,21 @@
+  [p] Gesunde-Matratzen.de
+  [text] Im Hause natürlich Wasserbetten GmbH, Bei der Lohmühle 21a, 23554 Lübeck
+  [a] "0451 / 7 70 07" -> tel:+4945177007
+  [a] "info@gesunde-matratzen.de" -> mailto:info@gesunde-matratzen.de
+  [p] Quick Links
+  [li] Über uns
+  [li] Bewertungen
+  [li] Kontakt
+  [p] Service
+  [li] Kompetenz-Zentrum
+  [li] Finanzierung
+  [li] Lieferung
+  [p] Filialen
+  [li] Lübeck 0451 / 7 70 07
+  [li] Hamburg 040 / 52 90 1000
+  [text] Copyright natürlich Wasserbetten GmbH. Alle Rechte vorbehalten. |
+  [a] "Impressum" -> https://gesunde-matratzen.de/impressum/
+  [text] |
+  [a] "Datenschutz" -> https://gesunde-matratzen.de/datenschutz
+  [text] |
+  [a] "AGBs" -> https://gesunde-matratzen.de/agbs
