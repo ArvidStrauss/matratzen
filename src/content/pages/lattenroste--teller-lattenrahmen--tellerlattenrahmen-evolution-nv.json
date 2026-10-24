@@ -67,93 +67,108 @@
   },
   "body": [
     {
-      "component": "productHeader",
-      "heading": "Tellerlattenrahmen Evolution 2 NV",
-      "headingLevel": "h1",
-      "image": {
-        "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/06/evolution2-nv.jpg",
-        "alt": "Tellerrahmen Evolution 2 NV"
-      },
-      "price": {
-        "from": 347,
-        "regular": 365,
-        "prefix": "ab"
-      },
-      "body": [
-        "Größe ab 80 x 200 cm",
-        "Ohne Verstellung",
-        "Der Evolution Tellerlattenrahmen verbindet Funktionalität, punktuellen Druckausgleich und Design in einer hochauflösenden Mehrzonenliegefläche mit 70 hochflexiblen Modulen.",
-        "**Lieferzeit:** ca. 10-15 Werktage."
-      ],
-      "snippet": "unsere-filialen-im-norden"
-    },
-    {
-      "component": "tabs",
-      "tabs": [
+      "component": "columns",
+      "columns": [
         {
-          "title": "Produktbeschreibung",
+          "span": 9,
           "body": [
             {
-              "component": "mediaText",
-              "heading": "Evolution 2 NV",
-              "body": [
-                "Der Evolution Rahmen verfügt über 70 einzeln gelagerte, flexible Modulelemente. Der Körper wird, dank des so entstehenden harmonischen Druckausgleiches, punktuell und damit körperindividuell unterstützt. Die Federelemente reagieren sanft auf den individuellen Bewegungsablauf und passen sich flexibel der Körperkontur und dem Auflagegewicht an.",
-                "Durch die geringe Aufbauhöhe von nur 7,5 cm, kann dieser Rahmen in nahezu jedes Bettgestell eingebaut werden. Der dennoch extrem hohe Federweg sorgt für einen traumhaft schönen Liegekomfort. Die über die gesamte Breite des Rahmens aufgebauten Teller verhindern effektiv die Bildung einer Besucherritze.",
-                "Eine Abschlussleiste am Kopf- und am Fußende verhindert ein Abklappen der Matratze."
-              ],
+              "component": "productHeader",
+              "heading": "Tellerlattenrahmen Evolution 2 NV",
+              "headingLevel": "h1",
               "image": {
-                "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/06/evolution2_nv.png",
-                "alt": "Tellerlattenrahmen Evolution 2 NV"
+                "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/06/evolution2-nv.jpg",
+                "alt": "Tellerrahmen Evolution 2 NV"
               },
-              "imageFit": "contain"
-            }
-          ]
-        },
-        {
-          "title": "Garantie",
-          "body": [
+              "price": {
+                "from": 347,
+                "regular": 365,
+                "prefix": "ab"
+              },
+              "body": [
+                "Größe ab 80 x 200 cm",
+                "Ohne Verstellung",
+                "Der Evolution Tellerlattenrahmen verbindet Funktionalität, punktuellen Druckausgleich und Design in einer hochauflösenden Mehrzonenliegefläche mit 70 hochflexiblen Modulen.",
+                "**Lieferzeit:** ca. 10-15 Werktage."
+              ],
+              "snippet": "unsere-filialen-im-norden"
+            },
+            {
+              "component": "tabs",
+              "tabs": [
+                {
+                  "title": "Produktbeschreibung",
+                  "body": [
+                    {
+                      "component": "mediaText",
+                      "heading": "Evolution 2 NV",
+                      "body": [
+                        "Der Evolution Rahmen verfügt über 70 einzeln gelagerte, flexible Modulelemente. Der Körper wird, dank des so entstehenden harmonischen Druckausgleiches, punktuell und damit körperindividuell unterstützt. Die Federelemente reagieren sanft auf den individuellen Bewegungsablauf und passen sich flexibel der Körperkontur und dem Auflagegewicht an.",
+                        "Durch die geringe Aufbauhöhe von nur 7,5 cm, kann dieser Rahmen in nahezu jedes Bettgestell eingebaut werden. Der dennoch extrem hohe Federweg sorgt für einen traumhaft schönen Liegekomfort. Die über die gesamte Breite des Rahmens aufgebauten Teller verhindern effektiv die Bildung einer Besucherritze.",
+                        "Eine Abschlussleiste am Kopf- und am Fußende verhindert ein Abklappen der Matratze."
+                      ],
+                      "image": {
+                        "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/06/evolution2_nv.png",
+                        "alt": "Tellerlattenrahmen Evolution 2 NV"
+                      },
+                      "imageFit": "contain"
+                    }
+                  ]
+                },
+                {
+                  "title": "Garantie",
+                  "body": [
+                    {
+                      "component": "content",
+                      "items": [
+                        {
+                          "type": "paragraph",
+                          "text": "Bei diesem Produkt aus unserem Shop bestehen die gesetzlichen Gewährleistungsrechte."
+                        },
+                        {
+                          "type": "paragraph",
+                          "text": "Bitte beachten Sie die entsprechenden Pflegehinweise. Diese befinden sich an Ihrem Produkt."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
             {
               "component": "content",
               "items": [
                 {
-                  "type": "paragraph",
-                  "text": "Bei diesem Produkt aus unserem Shop bestehen die gesetzlichen Gewährleistungsrechte."
-                },
-                {
-                  "type": "paragraph",
-                  "text": "Bitte beachten Sie die entsprechenden Pflegehinweise. Diese befinden sich an Ihrem Produkt."
+                  "type": "heading",
+                  "level": 3,
+                  "text": "Weitere Produkte, die Sie interessieren könnten"
                 }
               ]
+            },
+            {
+              "component": "snippet",
+              "snippet": "silwa-4-feelings-21-vs-einheitsmatratze"
+            },
+            {
+              "component": "snippet",
+              "snippet": "beratungstermin-vereinbaren"
+            }
+          ]
+        },
+        {
+          "span": 3,
+          "body": [
+            {
+              "component": "snippet",
+              "snippet": "matratzen-systeme"
+            },
+            {
+              "component": "snippet",
+              "snippet": "unsere-top-produkte"
             }
           ]
         }
       ]
-    },
-    {
-      "component": "content",
-      "items": [
-        {
-          "type": "heading",
-          "level": 3,
-          "text": "Weitere Produkte, die Sie interessieren könnten"
-        }
-      ]
-    },
-    {
-      "component": "snippet",
-      "snippet": "silwa-4-feelings-21-vs-einheitsmatratze"
-    },
-    {
-      "component": "snippet",
-      "snippet": "beratungstermin-vereinbaren"
-    },
-    {
-      "component": "snippet",
-      "snippet": "matratzen-systeme"
-    },
-    {
-      "component": "snippet",
-      "snippet": "unsere-top-produkte"
     }
   ]
 }

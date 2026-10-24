@@ -185,13 +185,17 @@ export function createConverter({ rewrite, parser, snippets }) {
         }
       }
     }
-    const flat = cols.flatMap((c) => c.els);
-    return toBlocks(row.id ? [{ t: 'anchor', id: row.id }, ...flat] : flat, true);
+    const anchor = row.id ? [{ t: 'anchor', id: row.id }] : [];
+    if (cols.length === 1) return toBlocks([...anchor, ...cols[0].els]);
+    // Any other multi-column row keeps its columns (main + sidebar, text | image, …); source order stays the DOM order.
+    pattern('columns');
+    const span = (c) => c.width ?? Math.round(12 / cols.length);
+    return [{ component: 'columns', columns: cols.map((c, i) => ({ span: span(c), body: toBlocks(i === 0 ? [...anchor, ...c.els] : c.els) })) }];
   }
 
   function tabsBlock(e) {
     pattern('tabs');
-    const ok = new Set(['content', 'mediaText', 'cardGrid', 'richText', 'table']);
+    const ok = new Set(['content', 'mediaText', 'cardGrid', 'richText', 'table', 'columns']);
     return {
       component: 'tabs',
       tabs: e.tabs.map((t) => ({
@@ -231,7 +235,7 @@ export function createConverter({ rewrite, parser, snippets }) {
   }
 
   function nameOf(body) {
-    for (const b of body) {
+    for (const b of body.flatMap((b) => (b.component === 'columns' ? b.columns.flatMap((c) => c.body) : [b]))) {
       const t = b.heading || b.items?.find?.((i) => i.type === 'heading')?.text || b.items?.find?.((i) => i.type === 'button')?.link.label || b.cards?.[0]?.title;
       if (t && typeof t === 'string') return slugify(t) || 'snippet';
     }

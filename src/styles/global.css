@@ -73,3 +73,36 @@
   color: var(--color-white);
   text-decoration-color: rgb(255 255 255 / 0.5);
 }
+
+/* Blocks nested in a column or tab drop their own page frame (container width, side padding, section padding);
+   the parent spaces them with a gap. Toned sections keep a padded, rounded panel. */
+[data-nested] .container-page {
+  max-width: none;
+  padding-inline: 0;
+}
+/* In a cascade layer: important declarations in an earlier layer beat the blocks' `!py-*` utilities. */
+@layer base {
+  [data-nested] section:not([data-tab-panel]) {
+    padding-block: 0 !important;
+  }
+  [data-nested] section:is(.bg-sand-100, .bg-accent-100, .bg-brand-800) {
+    padding: 1.5rem !important;
+    border-radius: var(--radius-2xl);
+  }
+  [data-aside][data-nested] > * {
+    padding: 1.25rem !important;
+  }
+}
+
+[data-nested] [data-columns] {
+  padding-block: 0;
+}
+
+/* Sidebar column (main + aside layout): compact panels with smaller headings. */
+[data-aside][data-nested] > * {
+  border-radius: var(--radius-2xl);
+  background: var(--color-sand-50);
+}
+[data-aside] :is(h2, h3) {
+  font-size: var(--text-xl);
+}

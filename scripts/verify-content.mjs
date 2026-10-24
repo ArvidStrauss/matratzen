@@ -11,7 +11,7 @@ const clean = (s) => (s ?? '').normalize('NFC').replace(/\u00ad/g, '').replace(/
 const mdToText = (s) => s.replace(/\*\*(.+?)\*\*/g, '$1').replace(/\[([^\]]+)\]\([^)]*\)/g, '$1');
 
 // Structural keys: identifiers, URLs and layout options, not visible copy.
-const SKIP_KEYS = new Set(['href', 'src', 'video', 'poster', 'mapsHref', 'component', 'path', 'imageFit', 'tone', 'headingLevel', 'prefix', 'products', 'branches', 'branch', 'columns', 'order', 'reverse', 'isVideo', 'tour360', 'type', 'level', 'ordered', 'lead', 'open', 'id', 'style', 'titleTag', 'snippet', 'reason', 'rating', 'visibility', 'start']);
+const SKIP_KEYS = new Set(['href', 'src', 'video', 'poster', 'mapsHref', 'component', 'path', 'imageFit', 'tone', 'headingLevel', 'prefix', 'products', 'branches', 'branch', 'order', 'reverse', 'isVideo', 'tour360', 'type', 'level', 'ordered', 'lead', 'open', 'id', 'style', 'titleTag', 'snippet', 'reason', 'rating', 'visibility', 'start']);
 const PRICE_KEYS = new Set(['price', 'priceFrom', 'priceRegular', 'from', 'regular']);
 
 function textOf(html, brAsSpace = true) {

@@ -13,10 +13,10 @@ const { heading, headingLevel, headingHref, image, seals, price, body, reverse, 
 
 <Section class="!py-8 sm:!py-12">
   <SectionHeading heading={heading} level={headingLevel} href={headingHref} class="!mb-6" />
-  <div class="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
+  <div class="grid items-center gap-8 @3xl:grid-cols-2 @3xl:gap-16">
     {
       image && (
-        <div class:list={[reverse && 'lg:order-2']}>
+        <div class:list={[reverse && '@3xl:order-2']}>
           <div class="rounded-card bg-sand-50 p-6 shadow-card">
             <Img src={image.src} alt={image.alt} class="mx-auto max-h-96 w-auto object-contain" priority={headingLevel === 'h1'} />
           </div>

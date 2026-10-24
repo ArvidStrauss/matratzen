@@ -29,7 +29,7 @@ for (const item of items) {
 const Wrapper = bare ? 'div' : Section;
 ---
 
-<Wrapper {...(bare ? { class: 'space-y-4' } : { tone, class: '!py-8 sm:!py-10' })}>
+<Wrapper {...(bare ? { class: 'space-y-4' } : { tone, class: '!py-6 sm:!py-10' })}>
   <div class:list={['space-y-4', !bare && 'max-w-4xl']}>
     {
       groups.map((item) => {

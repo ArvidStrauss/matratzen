@@ -25,6 +25,8 @@ for (const f of await readdir('src/content/pages')) {
 async function shoot(context, url) {
   const tab = await context.newPage();
   await tab.goto(url, { waitUntil: 'networkidle', timeout: 60_000 });
+  // Tiles are shot while scrolling; a sticky header would show up in the middle of the page.
+  await tab.addStyleTag({ content: 'header.sticky { position: static !important; }' });
   await tab.evaluate(async () => {
     for (let y = 0; y < document.body.scrollHeight; y += 600) {
       window.scrollTo(0, y);

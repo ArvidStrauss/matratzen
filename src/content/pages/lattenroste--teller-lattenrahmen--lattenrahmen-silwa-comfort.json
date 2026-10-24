@@ -67,92 +67,107 @@
   },
   "body": [
     {
-      "component": "productHeader",
-      "heading": "Lattenrahmen SILWA Comfort starre Version",
-      "headingLevel": "h1",
-      "image": {
-        "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/06/silwa-comfort-rahmen-logo.png",
-        "alt": "Silwa Comfort Tellerlattenrahmen"
-      },
-      "price": {
-        "from": 499,
-        "regular": 549,
-        "prefix": "ab"
-      },
-      "body": [
-        "Größe : 90 x 200 cm",
-        "Ohne Verstellung",
-        "SILWA Comfort Rahmen – komfortabler Schlaf für Körper und Geist."
-      ],
-      "snippet": "unsere-filialen-im-norden"
-    },
-    {
-      "component": "tabs",
-      "tabs": [
+      "component": "columns",
+      "columns": [
         {
-          "title": "Produktbeschreibung",
+          "span": 9,
           "body": [
             {
-              "component": "mediaText",
-              "heading": "Silwa Comfort ohne Verstellung",
-              "body": [
-                "**Individuell, da punktuell**",
-                "Silwa Comfort gewährleistet durch die Flächenauflösung in einzelne Federelemente einen harmonischen Druckausgleich. Der Körper wird punktuell und damit körperindividuell unterstützt. Die Ausrichtung der Wirbelsäule verläuft orthopädisch richtig; Muskulatur und Bänder können entspannen. Das Comfort-Bettsystem bietet langfristig gesunden und erholsamen Schlaf für mehr Flexibilität und Vitalität am Tag.",
-                "**Flexibilität und Vitalität**",
-                "Eine Vielzahl hoch elastischer Federelemente bieten dem Körper komfortablen Schlafkomfort. Die Federelemente reagieren sanft auf den individuelle Bewegungsablauf und passen sich flexibel der Körperkontur und dem Auflagegewicht an."
-              ],
+              "component": "productHeader",
+              "heading": "Lattenrahmen SILWA Comfort starre Version",
+              "headingLevel": "h1",
               "image": {
-                "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/06/silwa-comfort-rahmen-mit-abbildungen.png",
-                "alt": "Silwa Comfort Tellerlattenrahmen ohne Verstellung"
+                "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/06/silwa-comfort-rahmen-logo.png",
+                "alt": "Silwa Comfort Tellerlattenrahmen"
               },
-              "imageFit": "contain"
-            }
-          ]
-        },
-        {
-          "title": "Garantie",
-          "body": [
+              "price": {
+                "from": 499,
+                "regular": 549,
+                "prefix": "ab"
+              },
+              "body": [
+                "Größe : 90 x 200 cm",
+                "Ohne Verstellung",
+                "SILWA Comfort Rahmen – komfortabler Schlaf für Körper und Geist."
+              ],
+              "snippet": "unsere-filialen-im-norden"
+            },
+            {
+              "component": "tabs",
+              "tabs": [
+                {
+                  "title": "Produktbeschreibung",
+                  "body": [
+                    {
+                      "component": "mediaText",
+                      "heading": "Silwa Comfort ohne Verstellung",
+                      "body": [
+                        "**Individuell, da punktuell**",
+                        "Silwa Comfort gewährleistet durch die Flächenauflösung in einzelne Federelemente einen harmonischen Druckausgleich. Der Körper wird punktuell und damit körperindividuell unterstützt. Die Ausrichtung der Wirbelsäule verläuft orthopädisch richtig; Muskulatur und Bänder können entspannen. Das Comfort-Bettsystem bietet langfristig gesunden und erholsamen Schlaf für mehr Flexibilität und Vitalität am Tag.",
+                        "**Flexibilität und Vitalität**",
+                        "Eine Vielzahl hoch elastischer Federelemente bieten dem Körper komfortablen Schlafkomfort. Die Federelemente reagieren sanft auf den individuelle Bewegungsablauf und passen sich flexibel der Körperkontur und dem Auflagegewicht an."
+                      ],
+                      "image": {
+                        "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/06/silwa-comfort-rahmen-mit-abbildungen.png",
+                        "alt": "Silwa Comfort Tellerlattenrahmen ohne Verstellung"
+                      },
+                      "imageFit": "contain"
+                    }
+                  ]
+                },
+                {
+                  "title": "Garantie",
+                  "body": [
+                    {
+                      "component": "content",
+                      "items": [
+                        {
+                          "type": "image",
+                          "image": {
+                            "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/06/silwa-comfort-garantie.jpg",
+                            "alt": "Silwa Comfort Tellerlattenrahmen Garantie"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
             {
               "component": "content",
               "items": [
                 {
-                  "type": "image",
-                  "image": {
-                    "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/06/silwa-comfort-garantie.jpg",
-                    "alt": "Silwa Comfort Tellerlattenrahmen Garantie"
-                  }
+                  "type": "heading",
+                  "level": 3,
+                  "text": "Weitere Produkte, die Sie interessieren könnten"
                 }
               ]
+            },
+            {
+              "component": "snippet",
+              "snippet": "silwa-4-feelings-21-vs-einheitsmatratze"
+            },
+            {
+              "component": "snippet",
+              "snippet": "beratungstermin-vereinbaren"
+            }
+          ]
+        },
+        {
+          "span": 3,
+          "body": [
+            {
+              "component": "snippet",
+              "snippet": "matratzen-systeme"
+            },
+            {
+              "component": "snippet",
+              "snippet": "unsere-top-produkte"
             }
           ]
         }
       ]
-    },
-    {
-      "component": "content",
-      "items": [
-        {
-          "type": "heading",
-          "level": 3,
-          "text": "Weitere Produkte, die Sie interessieren könnten"
-        }
-      ]
-    },
-    {
-      "component": "snippet",
-      "snippet": "silwa-4-feelings-21-vs-einheitsmatratze"
-    },
-    {
-      "component": "snippet",
-      "snippet": "beratungstermin-vereinbaren"
-    },
-    {
-      "component": "snippet",
-      "snippet": "matratzen-systeme"
-    },
-    {
-      "component": "snippet",
-      "snippet": "unsere-top-produkte"
     }
   ]
 }

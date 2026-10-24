@@ -6,7 +6,7 @@ type Props = Extract<Block, { component: 'richText' }>;
 const { html } = Astro.props;
 ---
 
-<Section class="!py-8 sm:!py-10">
+<Section class="!py-6 sm:!py-10">
   <div
     class="prose-link max-w-4xl space-y-4 leading-relaxed text-ink/80 [&_h1]:text-3xl [&_h1]:font-bold [&_h2]:text-2xl [&_h2]:font-bold [&_h3]:text-xl [&_h3]:font-bold [&_h4]:text-lg [&_h4]:font-bold [&_img]:h-auto [&_img]:max-w-full [&_ol]:list-decimal [&_ol]:pl-6 [&_table]:w-full [&_td]:border [&_td]:p-2 [&_th]:border [&_th]:p-2 [&_ul]:list-disc [&_ul]:pl-6"
     set:html={html}

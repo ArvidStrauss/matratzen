@@ -1,0 +1,47 @@
+---
+import type { Block } from '../../content.config';
+import BlockRenderer from '../BlockRenderer.astro';
+
+type Props = Extract<Block, { component: 'columns' }>;
+const { columns } = Astro.props;
+
+// Main content + sidebar (8/4, 9/3 in either order): side by side from lg, the sidebar with a fixed width and the main
+// column taking the rest (a 3/12 share of a 12-track grid is too narrow for product names). Other spans: 12-track grid from md.
+const spans = columns.map((c) => c.span);
+const asideIndex = columns.length === 2 ? spans.findIndex((s, i) => s <= 4 && spans[1 - i] >= 8) : -1;
+const hasAside = asideIndex >= 0;
+const asideGrid =
+  asideIndex === 1
+    ? 'lg:grid-cols-[minmax(0,1fr)_18rem] xl:grid-cols-[minmax(0,1fr)_20rem] xl:gap-x-14'
+    : 'lg:grid-cols-[18rem_minmax(0,1fr)] xl:grid-cols-[20rem_minmax(0,1fr)] xl:gap-x-14';
+const mdSpan: Record<number, string> = {
+  1: 'md:col-span-1',
+  2: 'md:col-span-2',
+  3: 'md:col-span-3',
+  4: 'md:col-span-4',
+  5: 'md:col-span-5',
+  6: 'md:col-span-6',
+  7: 'md:col-span-7',
+  8: 'md:col-span-8',
+  9: 'md:col-span-9',
+  10: 'md:col-span-10',
+  11: 'md:col-span-11',
+  12: 'md:col-span-12',
+};
+---
+
+<div data-columns class="container-page py-4 sm:py-8">
+  <div class:list={['grid gap-y-10', hasAside ? ['gap-x-10', asideGrid] : 'gap-x-8 md:grid-cols-12']}>
+    {
+      columns.map((column, i) => (
+        <div
+          data-nested
+          data-aside={i === asideIndex ? '' : undefined}
+          class:list={['@container flex min-w-0 flex-col gap-8', !hasAside && mdSpan[column.span]]}
+        >
+          <BlockRenderer blocks={column.body} />
+        </div>
+      ))
+    }
+  </div>
+</div>

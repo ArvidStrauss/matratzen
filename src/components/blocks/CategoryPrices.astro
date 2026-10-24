@@ -8,7 +8,7 @@ type Props = Extract<Block, { component: 'categoryPrices' }>;
 const { heading, items } = Astro.props;
 ---
 
-<Section class="!py-10">
+<Section class="!py-8 sm:!py-10">
   <SectionHeading heading={heading} />
   <ul class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
     {

@@ -7,7 +7,7 @@ type Props = Extract<Block, { component: 'tabs' }>;
 const { tabs } = Astro.props;
 ---
 
-<Section class="!py-8 sm:!py-10">
+<Section class="!py-6 sm:!py-10">
   <!-- Without JavaScript all panels stay visible, one below the other. -->
   <div data-tabs>
     <div data-tab-list role="tablist" hidden class="mb-6 flex flex-wrap gap-2 border-b border-sand-200"></div>
@@ -17,7 +17,9 @@ const { tabs } = Astro.props;
           <h4 data-tab-title class="mb-4 text-lg font-bold text-brand-800">
             {tab.title}
           </h4>
-          <BlockRenderer blocks={tab.body} />
+          <div data-nested class="@container flex flex-col gap-8">
+            <BlockRenderer blocks={tab.body} />
+          </div>
         </section>
       ))
     }

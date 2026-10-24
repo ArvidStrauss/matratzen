@@ -67,97 +67,112 @@
   },
   "body": [
     {
-      "component": "content",
-      "items": [
+      "component": "columns",
+      "columns": [
         {
-          "type": "heading",
-          "level": 1,
-          "text": "Unser Lattenrost-Sortiment mit bis zu 90 Tage Rückgaberecht (Einbehalt 59,- €)"
-        }
-      ]
-    },
-    {
-      "component": "cardGrid",
-      "columns": 2,
-      "imageFit": "contain",
-      "cards": [
-        {
-          "title": "Lattenrahmen EASY »",
-          "titleTag": "h2",
-          "href": "/federholzrahmen-easy-nv/",
-          "text": [
-            "Günstiger Einstiegsrahmen – Lagerung der Leisten elastisch und geräuschlos in Duokappen. 28 mehrfach verleimte Federholzleisten für optimalen Liegekomfort."
-          ],
-          "price": 165,
-          "pricePrefix": "ab"
-        },
-        {
-          "title": "Lattenrahmen SILWA Pro »",
-          "titleTag": "h2",
-          "href": "/silwa-pro-federleistenrahmen/",
-          "text": [
-            "Unsere Federholzleistenrahmen bieten Schlafkomfort für höchste Ansprüche. Individuelle Härteverstellung im Lordosen-Bereich mittels einfacher Schieberegler."
-          ],
-          "price": 239,
-          "priceRegular": 289,
-          "pricePrefix": "ab"
-        }
-      ]
-    },
-    {
-      "component": "mediaText",
-      "body": [
-        "In unseren Filialen [Hamburg](/filialen/filiale-hamburg/) und [Lübeck](/matratzen-luebeck/) präsentieren wir Ihnen eine Riesenauswahl an Lattenrosten und Systemrahmen. Unser langjährig ständig weiterentwickeltes Sortiment zeigt Ihnen:"
-      ],
-      "bullets": [
-        "günstige Lattenroste **ab 165,-€** mit vielen Verstellmöglichkeiten",
-        "moderne Teller-Lattenroste mit sehr hohen Federwegen",
-        "Systemrahmen mit vollflächiger Federung",
-        "Fiberglas-LR mit extremer Höhen­ver­stel­lung + Zo­nie­rungs­ein­stel­lung",
-        "Motor-Lattenroste von 2 bis 4 Motoren",
-        "XXL-Lattenroste bis 200 kg Körpergewicht"
-      ],
-      "image": {
-        "src": "https://gesunde-matratzen.de/wp-content/uploads/2025/06/Siegel-Echte-Fachhandel.jpg",
-        "alt": "Siegel Echte Fachhandel"
-      },
-      "imageFit": "contain"
-    },
-    {
-      "component": "accordion",
-      "heading": "Lattenrost Ratgeber & Kauftipps",
-      "items": [
-        {
-          "title": "Was ist ein Lattenrost? Warum ist ein Lattenrost so wichtig?",
+          "span": 8,
           "body": [
-            "Der Lattenrost befindet sich unter der Matratze und unterstützt diese in der ergonomischen Funktion. Der Lattenrahmen sorgt im Zusammenspiel mit der Matratze für einen komfortablen und entlastenden Schlafkomfort. Außerdem entlastet die Unterfederung die Matratze, in dem er sich durch unterschiedlich federnde Zonen individuell an den Körper anpassen kann."
-          ],
-          "open": true
-        },
-        {
-          "title": "Woran erkenne ich eine gute Qualität beim Lattenrost?",
-          "body": [
-            "Ein qualitativ hochwertiger Lattenrost sollte mindestens über verstellbare Leisten im Taillen- und Hüftbereich verfügen. Idealerweise ist die Schulterzone weicher gefedert. So kann der Lattenrost in Kombination mit der Matratze in jeder Schlafposition ergonomisch reagieren."
+            {
+              "component": "content",
+              "items": [
+                {
+                  "type": "heading",
+                  "level": 1,
+                  "text": "Unser Lattenrost-Sortiment mit bis zu 90 Tage Rückgaberecht (Einbehalt 59,- €)"
+                }
+              ]
+            },
+            {
+              "component": "cardGrid",
+              "columns": 2,
+              "imageFit": "contain",
+              "cards": [
+                {
+                  "title": "Lattenrahmen EASY »",
+                  "titleTag": "h2",
+                  "href": "/federholzrahmen-easy-nv/",
+                  "text": [
+                    "Günstiger Einstiegsrahmen – Lagerung der Leisten elastisch und geräuschlos in Duokappen. 28 mehrfach verleimte Federholzleisten für optimalen Liegekomfort."
+                  ],
+                  "price": 165,
+                  "pricePrefix": "ab"
+                },
+                {
+                  "title": "Lattenrahmen SILWA Pro »",
+                  "titleTag": "h2",
+                  "href": "/silwa-pro-federleistenrahmen/",
+                  "text": [
+                    "Unsere Federholzleistenrahmen bieten Schlafkomfort für höchste Ansprüche. Individuelle Härteverstellung im Lordosen-Bereich mittels einfacher Schieberegler."
+                  ],
+                  "price": 239,
+                  "priceRegular": 289,
+                  "pricePrefix": "ab"
+                }
+              ]
+            },
+            {
+              "component": "mediaText",
+              "body": [
+                "In unseren Filialen [Hamburg](/filialen/filiale-hamburg/) und [Lübeck](/matratzen-luebeck/) präsentieren wir Ihnen eine Riesenauswahl an Lattenrosten und Systemrahmen. Unser langjährig ständig weiterentwickeltes Sortiment zeigt Ihnen:"
+              ],
+              "bullets": [
+                "günstige Lattenroste **ab 165,-€** mit vielen Verstellmöglichkeiten",
+                "moderne Teller-Lattenroste mit sehr hohen Federwegen",
+                "Systemrahmen mit vollflächiger Federung",
+                "Fiberglas-LR mit extremer Höhen­ver­stel­lung + Zo­nie­rungs­ein­stel­lung",
+                "Motor-Lattenroste von 2 bis 4 Motoren",
+                "XXL-Lattenroste bis 200 kg Körpergewicht"
+              ],
+              "image": {
+                "src": "https://gesunde-matratzen.de/wp-content/uploads/2025/06/Siegel-Echte-Fachhandel.jpg",
+                "alt": "Siegel Echte Fachhandel"
+              },
+              "imageFit": "contain"
+            }
           ]
         },
         {
-          "title": "Worauf muss ich beim Kauf achten?",
+          "span": 4,
           "body": [
-            "Viele Kunden kennen vor dem Betreten unserer Geschäfte nicht die Wichtigkeit eines Lattenrostes. Beziehungsweise sind viele auch verunsichert durch die große Auswahl der unterschiedlichsten Unterfederungen.",
-            "Unser Team berät Sie gerne persönlich vor Ort und stellt Ihnen die ergonomische Welt der Unterfederungen vor."
+            {
+              "component": "accordion",
+              "heading": "Lattenrost Ratgeber & Kauftipps",
+              "items": [
+                {
+                  "title": "Was ist ein Lattenrost? Warum ist ein Lattenrost so wichtig?",
+                  "body": [
+                    "Der Lattenrost befindet sich unter der Matratze und unterstützt diese in der ergonomischen Funktion. Der Lattenrahmen sorgt im Zusammenspiel mit der Matratze für einen komfortablen und entlastenden Schlafkomfort. Außerdem entlastet die Unterfederung die Matratze, in dem er sich durch unterschiedlich federnde Zonen individuell an den Körper anpassen kann."
+                  ],
+                  "open": true
+                },
+                {
+                  "title": "Woran erkenne ich eine gute Qualität beim Lattenrost?",
+                  "body": [
+                    "Ein qualitativ hochwertiger Lattenrost sollte mindestens über verstellbare Leisten im Taillen- und Hüftbereich verfügen. Idealerweise ist die Schulterzone weicher gefedert. So kann der Lattenrost in Kombination mit der Matratze in jeder Schlafposition ergonomisch reagieren."
+                  ]
+                },
+                {
+                  "title": "Worauf muss ich beim Kauf achten?",
+                  "body": [
+                    "Viele Kunden kennen vor dem Betreten unserer Geschäfte nicht die Wichtigkeit eines Lattenrostes. Beziehungsweise sind viele auch verunsichert durch die große Auswahl der unterschiedlichsten Unterfederungen.",
+                    "Unser Team berät Sie gerne persönlich vor Ort und stellt Ihnen die ergonomische Welt der Unterfederungen vor."
+                  ]
+                }
+              ]
+            },
+            {
+              "component": "content",
+              "items": [
+                {
+                  "type": "button",
+                  "link": {
+                    "label": "Großer Lattenrost-Ratgeber »",
+                    "href": "/lattenroste/lattenrost-ratgeber/"
+                  }
+                }
+              ]
+            }
           ]
-        }
-      ]
-    },
-    {
-      "component": "content",
-      "items": [
-        {
-          "type": "button",
-          "link": {
-            "label": "Großer Lattenrost-Ratgeber »",
-            "href": "/lattenroste/lattenrost-ratgeber/"
-          }
         }
       ]
     },

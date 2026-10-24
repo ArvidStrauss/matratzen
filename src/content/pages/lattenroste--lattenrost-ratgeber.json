@@ -99,27 +99,47 @@
       ]
     },
     {
-      "component": "content",
-      "items": [
+      "component": "columns",
+      "columns": [
         {
-          "type": "paragraph",
-          "text": "Das klassische Schlafsystem besteht aus Matratzen und Lattenrahmen. Dabei übernimmt der Lattenrost rund 30% des Liegegefühls. Daher ist es auch sehr wichtig, die richtige Matratze mit dem richtigen Lattenrost zu kombinieren, um so ergonomisch und komfortabel schlafen zu können."
+          "span": 6,
+          "body": [
+            {
+              "component": "content",
+              "items": [
+                {
+                  "type": "paragraph",
+                  "text": "Das klassische Schlafsystem besteht aus Matratzen und Lattenrahmen. Dabei übernimmt der Lattenrost rund 30% des Liegegefühls. Daher ist es auch sehr wichtig, die richtige Matratze mit dem richtigen Lattenrost zu kombinieren, um so ergonomisch und komfortabel schlafen zu können."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Welcher Lattenrost zu Ihrem individuellen und perfekten Liegegefühl sorgt, sollten Sie bei einer persönlichen und professionellen Schlafberatung in unseren Ausstellungen in Lübeck und Hamburg mit uns"
+                }
+              ]
+            }
+          ]
         },
         {
-          "type": "paragraph",
-          "text": "Welcher Lattenrost zu Ihrem individuellen und perfekten Liegegefühl sorgt, sollten Sie bei einer persönlichen und professionellen Schlafberatung in unseren Ausstellungen in Lübeck und Hamburg mit uns"
-        },
-        {
-          "type": "paragraph",
-          "text": "zusammen herausfinden. Durch eine Liegediagnostik können wir den perfekten ergonomischen Schlafkomfort für Sie erstellen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Um unsere große Lattenrost-Ausstellung immer auf den neusten modischen Stand zu halten, bieten wir einige Ausstellungsmodelle zu einem günstigen Sparpreis an. Ein Besuch in unserer Ausstellung lohnt sich."
-        },
-        {
-          "type": "paragraph",
-          "text": "[> hier geht es zu unserer Auswahl an Lattenrost-Angeboten](/lattenroste/)"
+          "span": 6,
+          "body": [
+            {
+              "component": "content",
+              "items": [
+                {
+                  "type": "paragraph",
+                  "text": "zusammen herausfinden. Durch eine Liegediagnostik können wir den perfekten ergonomischen Schlafkomfort für Sie erstellen."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Um unsere große Lattenrost-Ausstellung immer auf den neusten modischen Stand zu halten, bieten wir einige Ausstellungsmodelle zu einem günstigen Sparpreis an. Ein Besuch in unserer Ausstellung lohnt sich."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "[> hier geht es zu unserer Auswahl an Lattenrost-Angeboten](/lattenroste/)"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -135,32 +155,52 @@
       ]
     },
     {
-      "component": "content",
-      "items": [
+      "component": "columns",
+      "columns": [
         {
-          "type": "list",
-          "ordered": true,
-          "items": [
-            "[Was ist ein Lattenrost? Warum ist ein Lattenrost so wichtig?](#frage1)",
-            "[Lattenrost Testbericht Stiftung Warentest](#frage2)",
-            "[Worauf muss ich achten beim Kauf einer passenden Unterfederung? Welche Unterschiede gibt es bei einem Lattenrosten?](#frage3)",
-            "[Woran erkenne ich gute Qualität beim Lattenrost?](#frage4)",
-            "[Wie oft sollte ich ein Lattenrahmen austauschen? Was mache ich, wenn mein Lattenrost durchhängt?](#frage5)",
-            "[Welche Größe ist sinnvoll?](#frage6)"
+          "span": 6,
+          "body": [
+            {
+              "component": "content",
+              "items": [
+                {
+                  "type": "list",
+                  "ordered": true,
+                  "items": [
+                    "[Was ist ein Lattenrost? Warum ist ein Lattenrost so wichtig?](#frage1)",
+                    "[Lattenrost Testbericht Stiftung Warentest](#frage2)",
+                    "[Worauf muss ich achten beim Kauf einer passenden Unterfederung? Welche Unterschiede gibt es bei einem Lattenrosten?](#frage3)",
+                    "[Woran erkenne ich gute Qualität beim Lattenrost?](#frage4)",
+                    "[Wie oft sollte ich ein Lattenrahmen austauschen? Was mache ich, wenn mein Lattenrost durchhängt?](#frage5)",
+                    "[Welche Größe ist sinnvoll?](#frage6)"
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
-          "type": "list",
-          "ordered": true,
-          "start": 7,
-          "items": [
-            "[Warum habe ich mit meinem neuen Lattenrost Schlafprobleme? Wie stelle ich ein Lattenrost richtig ein?](#frage7)",
-            "[Wie pflege ich einen Lattenrost richtig?](#frage8)",
-            "[Welche Unterfederung passt zu mir?](#frage9)",
-            "[Ein Bett mit Lattenrost oder ein Wasserbett?](#frage10)",
-            "[Ein Boxspringbett oder ein Bett mit Lattenrost?](#frage11)",
-            "[Ein Lattenrost mit oder ohne Motor?](#frage12)",
-            "[Welche Serviceleistungen gibt es bei Lattenrosten?](#frage13)"
+          "span": 6,
+          "body": [
+            {
+              "component": "content",
+              "items": [
+                {
+                  "type": "list",
+                  "ordered": true,
+                  "start": 7,
+                  "items": [
+                    "[Warum habe ich mit meinem neuen Lattenrost Schlafprobleme? Wie stelle ich ein Lattenrost richtig ein?](#frage7)",
+                    "[Wie pflege ich einen Lattenrost richtig?](#frage8)",
+                    "[Welche Unterfederung passt zu mir?](#frage9)",
+                    "[Ein Bett mit Lattenrost oder ein Wasserbett?](#frage10)",
+                    "[Ein Boxspringbett oder ein Bett mit Lattenrost?](#frage11)",
+                    "[Ein Lattenrost mit oder ohne Motor?](#frage12)",
+                    "[Welche Serviceleistungen gibt es bei Lattenrosten?](#frage13)"
+                  ]
+                }
+              ]
+            }
           ]
         }
       ]
@@ -664,40 +704,70 @@
       ]
     },
     {
-      "component": "content",
-      "items": [
+      "component": "columns",
+      "columns": [
         {
-          "type": "image",
-          "image": {
-            "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/05/lattenrost-qualitaet-holzleisten.jpg",
-            "alt": "Lattenrost Ratgeber Qualität Holzleisten"
-          }
+          "span": 4,
+          "body": [
+            {
+              "component": "content",
+              "items": [
+                {
+                  "type": "image",
+                  "image": {
+                    "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/05/lattenrost-qualitaet-holzleisten.jpg",
+                    "alt": "Lattenrost Ratgeber Qualität Holzleisten"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Abb. Holzleisten"
+                }
+              ]
+            }
+          ]
         },
         {
-          "type": "paragraph",
-          "text": "Abb. Holzleisten"
+          "span": 4,
+          "body": [
+            {
+              "component": "content",
+              "items": [
+                {
+                  "type": "image",
+                  "image": {
+                    "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/05/lattenrost-qualitaet-kunststoffteller.jpg",
+                    "alt": "Lattenrost Ratgeber Qualität Kunststoffteller"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Abb. Kunststoffteller"
+                }
+              ]
+            }
+          ]
         },
         {
-          "type": "image",
-          "image": {
-            "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/05/lattenrost-qualitaet-kunststoffteller.jpg",
-            "alt": "Lattenrost Ratgeber Qualität Kunststoffteller"
-          }
-        },
-        {
-          "type": "paragraph",
-          "text": "Abb. Kunststoffteller"
-        },
-        {
-          "type": "image",
-          "image": {
-            "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/05/lattenrost-qualitaet-fiberglasleisten.jpg",
-            "alt": "Lattenrost Ratgeber Qualität Fiberglasleisten"
-          }
-        },
-        {
-          "type": "paragraph",
-          "text": "Abb. Fiberglasleisten"
+          "span": 4,
+          "body": [
+            {
+              "component": "content",
+              "items": [
+                {
+                  "type": "image",
+                  "image": {
+                    "src": "https://gesunde-matratzen.de/wp-content/uploads/2017/05/lattenrost-qualitaet-fiberglasleisten.jpg",
+                    "alt": "Lattenrost Ratgeber Qualität Fiberglasleisten"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Abb. Fiberglasleisten"
+                }
+              ]
+            }
+          ]
         }
       ]
     },

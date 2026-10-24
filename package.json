@@ -13,7 +13,13 @@
     "import": "node scripts/import.mjs",
     "verify:content": "node scripts/verify-content.mjs",
     "verify:output": "node scripts/verify-output.mjs",
-    "verify": "npm run verify:content && npm run check && npm run build && npm run verify:output"
+    "storyblok:generate": "node scripts/storyblok/generate.mjs",
+    "storyblok:check": "node scripts/storyblok/check.mjs",
+    "storyblok:components": "node scripts/storyblok/sync-components.mjs",
+    "storyblok:push": "node scripts/storyblok/push.mjs",
+    "storyblok:roundtrip": "node scripts/storyblok/roundtrip.mjs",
+    "dev:storyblok": "node scripts/storyblok/env.mjs astro dev",
+    "verify": "npm run verify:content && npm run storyblok:check && npm run check && npm run build && npm run verify:output"
   },
   "dependencies": {
     "@fontsource-variable/fraunces": "5.3.0",
@@ -27,6 +33,7 @@
   "devDependencies": {
     "@astrojs/check": "0.9.10",
     "@types/node": "20.19.43",
+    "@vitejs/plugin-basic-ssl": "2.3.0",
     "node-html-parser": "9.0.4",
     "playwright": "1.64.0",
     "typescript": "5.9.3",

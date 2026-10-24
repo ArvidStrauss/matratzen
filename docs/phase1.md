@@ -79,18 +79,36 @@ DNS (registrar) → points the domain to the static host
 - [ ] Components for all blocks + content types (page, product, branch, settings) — scripted from the zod schema
 - [ ] Roles for editors, preview URL, draft token, publish webhook → build hook
 - [ ] Decide the Storyblok plan (seats, roles) with the customer
+- 2026-10-24 (pilot): components generated from `src/lib/schema.ts` → `storyblok/model.json` (50 components), sync script,
+  Astro loader with `CONTENT_SOURCE=storyblok` (local JSON fills the gaps), https dev preview with the Storyblok bridge.
+  Verified offline: all 42 entries survive the JSON → Storyblok → JSON round trip; a build from a mocked CDN with the 21 pilot
+  pages + 5 snippets is byte-identical to the local build.
+  Real trial space (2026-10-24): 51 components synced (second sync: all unchanged), 26 stories pushed as drafts (5 folders),
+  `storyblok:roundtrip` = all 26 equal the local JSON. API facts: start pages return `full_slug` = `folder/`; number fields
+  round-trip as strings; a content type and a block must not share a name (`snippet` block vs. `snippet_group` content type).
+  Sample `home` story + demo blocks removed. `CONTENT_SOURCE=storyblok STORYBLOK_VERSION=draft npm run verify` green; `dist/` is
+  byte-identical to the local build (21 pages + 5 snippets from Storyblok, the rest local). Visual Editor preview tested by the user.
+  Decided: pilot in the developer's trial space (moved later by re-running sync + push); images stay URL fields until P4;
+  hosted preview decided with P1. Not done: `_editable` click-to-edit markers, Storyblok tabs/groups for fields, editor roles, webhook
 
 ### Step 3: Importer
 - Pilot `/lattenroste/` (21 pages) imported 2026-10-22 with `npm run import`; checked by `npm run verify`.
 - 2026-10-24: SEO head rendered and verified against `yoast_head`; visual review mobile + desktop with `scripts/screens.mjs`.
   Fixed: `desktoponly` rows, Ultimate buttons, `<ol start>`, collapsed reviews, trashed canonicals (Q7), internal-link check.
   Open: desktop layout (multi-column rows are flattened to one column), spacing ~10–35 % taller than live on mobile.
+- 2026-10-24 (step 3 for the pilot, "modern redesign, not a layout clone"): new `columns` block (importer keeps multi-column rows),
+  main + sidebar side by side on desktop, compact sidebar product list, blocks use container queries, ~25 % less vertical
+  spacing on mobile. Desktop product pages now ≈ live height (3,091 vs 2,972 px), mobile product pages shorter than live
+  (~5,700 vs ~7,500 px). Long text pages stay ~20 % taller on mobile because of the larger, readable font (16 px vs ~13 px).
+  Approved by the user (desktop + mobile, 3 page types). Pushed to Storyblok: second push into a filled space now updates in place
+  (fixed: start pages share their folder's slug), 26/26 stories equal the local JSON, build from Storyblok drafts green.
 - [ ] **Start with the pilot** `/lattenroste/` (21 pages) end to end, track the hours, then roll out by URL group
       (largest first: 80 `/produkte/`, 44 `/komplettbetten/`, …)
 - [ ] Fetch all pages via REST (incl. `yoast_head`), map recognised WPBakery HTML patterns → blocks; everything else goes
       into a sanitised **fallback rich-text block**, so all 290 URLs render from day one
 - [ ] Report fallback share per page; reduce it template by template towards zero
 - [ ] Output = JSON in `src/content/` (reviewable diffs); separate push script → Storyblok Management API
+      (2026-10-24: `npm run storyblok:push -- --group=…` written, dry run OK for `/lattenroste/`: 7 folders, 26 stories)
 - [ ] Handle the 3 shortcode pages manually or with a small parser
 - [ ] Import media (2,437 items) with alt texts; keep or map URLs (see section 3)
 - [ ] Extract header, mega menu and footer from the page HTML (shared settings)
@@ -175,9 +193,44 @@ DNS (registrar) → points the domain to the static host
 
 ## 7. Hosting and costs
 
-- Current: 137 €/month (also mentioned: 200 €) for 5 web presences; contents of the contract unknown (e-mail, domains,
-  backups, support?). Get the breakdown first.
+- Current (2026-10-24, from the user): **365 degree, Lübeck** (local contact person), about **170 €/month for the 4 big websites**,
+  a Debian server (Intel CPU, details unknown). The live site answers from Apache on Hetzner FSN1, so 365 degree probably runs
+  a (managed) Hetzner server. Earlier figures: 137 € / 200 € for 5 presences. Contract contents (e-mail, domains, backups, support) still unknown.
 - Static hosting typically costs between 0 € and a low double-digit amount per month; Storyblok is billed separately.
+### 7.1 How a Storyblok change reaches the site (any host)
+
+Nothing is rendered on the web server. Publish in Storyblok → webhook → **CI build** (GitHub Actions, `astro build`, ~1–2 min)
+→ upload of `dist/` to the host. The host only serves static files + redirects + HTTPS. So the current server can do it if
+it accepts an automated upload; it does not need Node or any build tooling.
+
+### 7.2 Comparison (PROPOSED, 2026-10-24; prices/limits change, re-check before deciding)
+
+| | 365 degree (current server) | Cloudflare Pages | Netlify | Vercel |
+|---|---|---|---|---|
+| Cost | in the existing ~170 €/month | free tier (500 builds/month) | free tier (300 credits) / Pro ~20 $/month | Hobby is non-commercial → Pro ~20 $/member/month |
+| Build on Storyblok publish | via GitHub Actions + upload (SSH/rsync) | built in (deploy hook) | built in (build hook) | built in (deploy hook) |
+| Staging / preview per change | one staging subdomain, set up by the host | automatic preview URL per branch/commit | automatic deploy previews | automatic preview deployments |
+| Redirects (we may need > 2,000: attachment pages, image URLs) | Apache `.htaccess` / server config, no practical limit | `_redirects` max 2,000 static + 100 dynamic; more via account-level Bulk Redirects | `_redirects` / `netlify.toml` | `vercel.json` max 2,048; Bulk Redirects only on Pro/Enterprise |
+| Hosted Visual Editor preview | draft build to staging on save, or a Node preview process if they run one | draft build on save (counts against builds) | same | same, or SSR preview function |
+| Data location / GDPR | Germany, existing contract | US company, EU edge; DPA needed | US company; DPA needed | US company; DPA needed |
+| Support | local contact person | ticket/community | ticket/community | ticket/community |
+| Ops effort | server updates, TLS, backups by the host (to confirm) | none | none | none |
+
+- CI cost: GitHub Actions is free for public repos; private repos (needed, see P9) include a monthly minute quota on the free plan.
+  Builds on every Storyblok save (hosted preview) can use it up quickly; builds only on publish are uncritical.
+- Speed: for a German audience one server in Germany is fine; Core Web Vitals depend mostly on the static output, which is the same everywhere.
+- **Recommendation (PROPOSED): stay with 365 degree** if they can confirm the questions below. It keeps the local contact,
+  data location and budget, and has no redirect limit. Fallback: Cloudflare Pages (free, best preview workflow).
+
+### 7.3 Questions for 365 degree
+
+1. Can we deploy automatically from GitHub Actions (SSH key / rsync or SFTP into the web root)? Shared hosting or own (managed) server?
+2. Can we manage redirects ourselves (`.htaccess` with `AllowOverride`, or a vhost include), several thousand rules?
+3. A staging subdomain (e.g. `staging.gesunde-matratzen.de`) with password protection (basic auth) and `X-Robots-Tag: noindex`?
+4. HTTPS (Let's Encrypt), HTTP/2 or 3, gzip/brotli, cache headers configurable?
+5. Optional, for the hosted editor preview: may we run a small Node.js process behind the web server?
+6. Backups, monitoring, OS updates included? What exactly do the ~170 €/month cover (e-mail, domains, DNS)?
+
 - PROPOSED: move only gesunde-matratzen.de at go-live; leave the other 4 presences with the current provider for now and
   renegotiate or move them later. Changing everything at once adds risk without benefit for phase 1.
 
@@ -185,7 +238,7 @@ DNS (registrar) → points the domain to the static host
 
 | ID | Decision | Status |
 |---|---|---|
-| P1 | Static host (Netlify / Cloudflare Pages / Vercel / other) | OPEN |
+| P1 | Static host. PROPOSED: current host 365 degree (CI build + upload), fallback Cloudflare Pages; see 7.2/7.3 | OPEN |
 | P2 | Storyblok plan and number of editor seats | OPEN |
 | P3 | Attachment pages (1,638): 301 to the parent page or to the image file | OPEN |
 | P4 | Image URLs. Pages use 1,268 upload files (820 JPG, 410 PNG, 33 PDF, 4 MP4, 1 GIF). Options: A keep the old paths; **B Storyblok + generated 301s (recommended)**; C Storyblok + frozen copy of old files. PDFs/MP4 always get 301s; images depend on Google Images traffic (Search Console → search type "Image"). Google keeps its own thumbnails; without 301s only image-search visibility drops temporarily and external hotlinks break | OPEN |

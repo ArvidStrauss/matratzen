@@ -11,7 +11,7 @@ const { heading, intro, items, cta } = Astro.props;
 <Section>
   <SectionHeading heading={heading} />
   {intro && <Md text={intro} class="-mt-4 mb-8 text-sm text-muted" />}
-  <ul class:list={['grid gap-6 md:grid-cols-2', items.length === 3 ? 'lg:grid-cols-3' : 'xl:grid-cols-4']}>
+  <ul class:list={['grid gap-6 @2xl:grid-cols-2', items.length === 3 ? '@4xl:grid-cols-3' : '@6xl:grid-cols-4']}>
     {
       items.map((item) => (
         <li class="flex flex-col rounded-card bg-sand-100 p-6">

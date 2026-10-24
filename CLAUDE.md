@@ -32,7 +32,10 @@ must be fast and prepared for a good **Google Ads** setup (landing-page experien
 |---|---|
 | `reference/raw/` | Captured HTML + WP REST JSON (read-only, regenerate with `npm run capture`) |
 | `reference/extracted/` | Ordered verbatim content blocks per page (`npm run extract`); `*.txt` = readable dumps (`node scripts/dump.mjs <page> [sections\|menu\|footer\|heroNav]`) |
-| `src/content.config.ts` | Content model (zod). Mirrors future Storyblok: collection = folder, `component` = block name |
+| `src/lib/schema.ts`, `src/content.config.ts` | Content model (zod, plain module so Node scripts can load it) + Astro collections. Collection = Storyblok content type, `component` = block name |
+| `storyblok/model.json` | **Generated** from `src/lib/schema.ts` (`npm run storyblok:generate`): Storyblok components + JSON↔Storyblok field map. Never edit by hand |
+| `scripts/storyblok/` | `generate`, `check` (offline round trip), `sync-components`, `push`, `roundtrip` (remote gate), `env.mjs` (draft-preview launcher) |
+| `src/lib/storyblok/` | `convert.mjs` (JSON↔story, shared by scripts and loader), `cdn.mjs`, `loader.ts` (`CONTENT_SOURCE` switch), `integration.mjs` (dev preview) |
 | `src/content/` | `settings.json` (logo, nav, footer), `pages/`, `products/`, `branches/`, `snippets/` (shared block groups from WPBakery templates) |
 | `scripts/import.mjs`, `scripts/import/` | WordPress importer (REST → blocks), re-runnable; raw REST data cached in `reference/raw/pages/` (read-only), page index in `reference/raw/page-index.json` |
 | `src/components/blocks/` | One Astro component per block; registered in `BlockRenderer.astro` |
@@ -48,11 +51,16 @@ must be fast and prepared for a good **Google Ads** setup (landing-page experien
 - `npm run dev` / `npm run build` / `npm run preview`
 - `npm run import -- --group=/lattenroste/ [--offline]` = fetch a URL group from the WP REST API and (re)write `src/content/pages/<path>.json` + `snippets/`;
   prints the fallback share per page. Imported pages carry `source` (WP id) and `seo` (from `yoast_head`) and stay `noindex`. Never edit them by hand, re-import instead
-- `npm run verify` = content parity + `astro check` + build + output parity (SEO head vs. `yoast_head`, headings, image alts, in-page anchors,
+- `npm run verify` = content parity + Storyblok model/round-trip check + `astro check` + build + output parity (SEO head vs. `yoast_head`, headings, image alts, in-page anchors,
   internal links of imported pages vs. source; every built page `noindex` unless `INDEXABLE=true`). **Must be green before handing work back.**
   It also lists links to WordPress pages that are not imported yet (404 on the preview until their group is imported).
 - `node scripts/screens.mjs --group=/lattenroste/ [--viewport=mobile|desktop]` (needs `npm run preview` running) = live vs. new
   screenshots as side-by-side tiles in `.screens/` (gitignored). Uses the installed Chrome via Playwright (no Edge on this PC).
+- **Storyblok** (setup in `.env`, template `.env.example`; writing commands only when the user asks):
+  `npm run storyblok:generate` after every schema change (`verify` fails if `model.json` is stale) · `npm run storyblok:components [-- --dry-run]` ·
+  `npm run storyblok:push -- --group=/lattenroste/ [--dry-run] [--publish]` (group pages + referenced snippets/products/branches; dry run works without a token) ·
+  `npm run storyblok:roundtrip` (Storyblok content converted back must equal the local JSON) · `npm run dev:storyblok` = https dev server with draft content
+  for the Visual Editor (preview URL `https://localhost:4321/`). `CONTENT_SOURCE=storyblok` makes any build read Storyblok first, local JSON fills the gaps.
 - SEO head: `src/layouts/Layout.astro` renders `seo` verbatim (title, description, canonical, og/article/twitter meta, JSON-LD).
   Robots stays `noindex, nofollow` until the production build sets `INDEXABLE=true`.
 - Inline rich text in content JSON: `[label](href)` and `**bold**` only (rendered by `src/lib/md.ts`, HTML-escaped).
@@ -69,10 +77,13 @@ must be fast and prepared for a good **Google Ads** setup (landing-page experien
 | Performance | DECIDED | Main driver for leaving WordPress. Targets: Lighthouse/Core Web Vitals green on mobile, Google-Ads-ready landing pages (fast LCP, no layout shift, clear call/appointment CTAs) |
 | Design | DECIDED | Modern redesign, not a pixel clone. 2026-10-20 the customer asked for more modern / less colourful; 2026-10-22 they chose the original prototype design anyway |
 | Design direction | DECIDED (2026-10-22) | **Original prototype design** (current `global.css` + `src/components/`, as used by the 3 prototype pages). Variants A/B/C were **not** chosen. Known issue: white text on orange `#e99600` fails WCAG contrast |
+| Page layout | DECIDED (2026-10-24) | **Modern redesign, not a layout clone.** The live layout (columns, spacing) is a reference, not a target: same content, same order, same SEO; layout and spacing follow our design system |
 | Competitor | INFO | https://www.ravensberger-matratzen.de/ — big competitor; variant B borrows its design scheme (never its content or assets) |
 | Architecture | DECIDED | **Static site, permanently.** No shop, no backend, no database — ever. Only a headless CMS |
 | Forms | DECIDED | Client-side embeddable forms only (third-party embed), no own backend |
-| CMS | DECIDED (later) | Storyblok, integrated after the prototype. Must be usable without coding. Content flow: importer → JSON in `src/content/` → push script → Storyblok (then source of truth); see [docs/phase1.md](docs/phase1.md) |
+| CMS | DECIDED | Storyblok. Must be usable without coding. Content flow: importer → JSON in `src/content/` → push script → Storyblok (then source of truth); see [docs/phase1.md](docs/phase1.md) |
+| Storyblok pilot (2026-10-24) | DECIDED | `/lattenroste/` in the **developer's trial space**; moved to the customer org later by re-running `storyblok:components` + `storyblok:push`. Images stay URL + alt text fields (hotlinked) until P4. Hosted editor preview (draft rebuild vs. preview server, which touches "static only") is decided with the host (P1); until then the preview is the local `dev:storyblok` |
+| Storyblok model | DECIDED | Generated from zod, never built by hand in the UI. Technical names snake_case (`mediaText` → `media_text`; `content` is reserved → `content_section`). Pages at the space root (folder tree = URL, a page with children = folder start page, `/` = story `home`), data stories in `data/<collection>/`. Snippets = content type `snippet_group` (`snippet` is the block that inserts one). String lists = textarea, one entry per line |
 | Frontend | DECIDED | Astro + Tailwind |
 | Prototype content | DECIDED | Typed JSON in `src/content/` with schemas that mirror the future Storyblok model |
 | Prototype pages | DECIDED | 1. Home `/`  2. Product page `/silwa-classic-matratzen/`  3. Branch page `/filialen/filiale-hamburg/` |
@@ -132,10 +143,17 @@ each with **identical content** (same JSON as the original page, nothing new or 
 - Get raw site data via the REST API or `Invoke-WebRequest`/`curl`, not via web-page summarisers (they lose characters).
 - The VS Code integrated browser is for inspection only; real clicks need a Playwright spec.
 - Do not commit; the user commits himself.
+- The user tracks project hours himself; do not remind him or ask about hours.
 - **No information leaves this repo.** This project is completely separate from TrackingHub and the LLM wiki: never write to
   the `dao-llm-wiki` MCP (or any other wiki, knowledge base or external memory store), never use Telecontext or other company
   tools for this project, and never send repo content to third-party services.
   For Claude Code this also means: no Artifacts, no Claude Docs, no Google Drive or other connectors for project content.
+  **Exception (DECIDED 2026-10-24): Storyblok.** Site content (`src/content/` JSON, the component schema generated from
+  `src/content.config.ts`) may be sent to the project's Storyblok space (EU region, `mapi.storyblok.com` / `api.storyblok.com`),
+  and the build may read from it. Only through the repo's own scripts (push script, Astro loader), never by hand or via other
+  tools. Nothing else goes there: no `docs/`, no `reference/raw`, no estimates or customer data. Tokens live in `.env`
+  (gitignored) and are never printed, logged or committed. Writing to Storyblok (push, component sync, deletes) is outward-facing:
+  the agent runs it only when the user asks for that run.
 - **Knowledge lives in the repo, not in Claude's memory.** Do not save project facts to Claude Code auto-memory
   (`~/.claude/projects/.../memory/`); write decisions and findings into this file or `docs/` so they are versioned and visible.
 - Hard guardrails are enforced in [.claude/settings.json](.claude/settings.json) (`permissions.deny`): no `git commit`/`git push`,
@@ -150,6 +168,11 @@ each with **identical content** (same JSON as the original page, nothing new or 
 - `@types/node@20.19.43` (dev) so `astro check` accepts `process.env` in `astro.config.mjs`; bump with the Node upgrade.
 - `npm audit` flags Astro <=7.2.7 (XSS via `define:vars`) — **never use `define:vars`**; fixed by the Astro upgrade.
 - PowerShell `Set-Content -Encoding utf8` and `>` add BOM / UTF-16 — never write repo files from the shell.
+- Storyblok's official Astro quickstart (`storyblok create`, Core Blueprint, `@storyblok/astro` with `output: "server"`, demo
+  blocks `page`/`teaser`/`grid`/`feature`) is **deliberately not used**: it scaffolds a separate project, needs SSR (conflicts with
+  "static, permanently") and its demo model is not ours. Our setup = `.env` + `npm run storyblok:components` + `storyblok:push`.
+  Scripts assume the **EU** server location (`mapi.storyblok.com`, `api.storyblok.com`); check Settings → Space before using a new space.
+- Git Bash rewrites `--group=/lattenroste/` into a Windows path; prefix `MSYS_NO_PATHCONV=1` there (PowerShell is fine).
 
 ## Gotchas (verified)
 
@@ -161,6 +184,14 @@ each with **identical content** (same JSON as the original page, nothing new or 
   Size headings so the word fits the column (≥ 360 px) and keep `overflow-wrap: break-word` as fallback; grid children need `min-w-0`.
 - Headless Chrome/Edge `--screenshot` cannot render below ~500 px width; use Playwright (`scripts/screens.mjs`, channel `chrome`).
   Single full-page screenshots fail above ~16,000 px, so the script shoots clipped tiles.
+- **Layout of blocks (2026-10-24):** multi-column WPBakery rows that match no specific block become a `columns` block (`span` in
+  twelfths, recursive: columns hold blocks). `src/components/blocks/Columns.astro`: main + sidebar (8/4, 9/3) side by side from `lg`,
+  other spans from `md`; DOM order = source order (SEO checks unchanged). Blocks nested in a column or tab (`data-nested`) drop their
+  page frame via `global.css`. **Blocks choose their layout with container queries** (`@xl`/`@2xl`/`@3xl`/`@4xl`, `@max-sm` = sidebar
+  width), not viewport breakpoints, so they work at full width and in a column. Use `@…:` for new layout classes in blocks.
+- Tailwind puts `!py-*` utilities in a cascade layer; an unlayered `!important` rule loses against them. Overrides that must beat
+  them go into `@layer base` in `global.css`.
+- Line endings: some files were checked out as CRLF; scripted string edits must handle that (all of `src/` and `scripts/` are LF now).
 - Live theme CSS hides `.desktoponly` rows on phones (`max-width:480px` / `max-device-width:667px`) and shows `.mobilonly`
   (sic) only there. The importer keeps this as block `visibility: desktop|mobile` (rendered `max-sm:hidden` / `sm:hidden`).
 - Ultimate Addons buttons are `<a class="ubtn-link"><button>…</button></a>`; `<ol start="7">` continues a numbered list.

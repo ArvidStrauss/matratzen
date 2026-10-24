@@ -20,6 +20,7 @@ import Accordion from './blocks/Accordion.astro';
 import ProductHeader from './blocks/ProductHeader.astro';
 import Tabs from './blocks/Tabs.astro';
 import Snippet from './blocks/Snippet.astro';
+import Columns from './blocks/Columns.astro';
 
 interface Props {
   blocks: Block[];
@@ -47,6 +48,7 @@ const registry = {
   productHeader: ProductHeader,
   tabs: Tabs,
   snippet: Snippet,
+  columns: Columns,
 } satisfies Record<Block['component'], unknown>;
 
 const { blocks } = Astro.props;
